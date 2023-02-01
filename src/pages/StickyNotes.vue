@@ -1,5 +1,5 @@
 <script>
-import Notes from './components/Notes.vue';
+import Notes from '../components/Notes.vue';
 export default {
   data() {
     return {
@@ -10,17 +10,21 @@ export default {
   methods: {
     getInputValue(){
       this.notes.push(this.inputValue);
+      if(this.$refs.note.value){
+        
+      }
       this.inputValue="";
     },
     deleteNoteHandler(index){
       this.notes.splice(index,1);
     },
     editNoteHandler(index){
-      this.notes.forEach((val, i)=>{
+      this.notes.filter((val, i)=>{
         if(i===index){
           this.$refs.note.value = val;
         }
       });
+
     }
   },
   components: {
