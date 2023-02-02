@@ -4,26 +4,28 @@ export default {
   data() {
     return {
       inputValue: "",
-      notes: []
+      notes: [],
+      editNote: null
     }
   },
   methods: {
-    getInputValue(){
-      this.notes.push(this.inputValue);
-      if(this.$refs.note.value){
-        
-      }
-      this.inputValue="";
-    },
-    deleteNoteHandler(index){
-      this.notes.splice(index,1);
-    },
-    editNoteHandler(index){
-      this.notes.filter((val, i)=>{
-        if(i===index){
-          this.$refs.note.value = val;
+    getInputValue() {
+      if(this.inputValue){
+        if(this.editNote === null){
+          this.notes.push(this.inputValue);
         }
-      });
+        else {
+          this.notes[this.editNote] = this.inputValue;
+        }
+      }
+      this.inputValue = "";
+    },
+    deleteNoteHandler(index) {
+      this.notes.splice(index, 1);
+    },
+    editNoteHandler(index) {
+      this.$refs.note.value = this.notes[index];
+      this.editNote = index;
 
     }
   },
@@ -40,14 +42,8 @@ export default {
       <input type="text" placeholder="Enter your notes" ref="note" v-model="inputValue" @keyup.enter="getInputValue">
     </div>
     <div class="notes_section">
-      <Notes 
-      v-for="(note, index) in notes" 
-      :key="index" 
-      :note="note" 
-      :index="index" 
-      :deleteNoteHandler="deleteNoteHandler" 
-      :editNoteHandler="editNoteHandler"
-      />
+      <Notes v-for="(note, index) in notes" :key="index" :note="note" :index="index"
+        :deleteNoteHandler="deleteNoteHandler" @editNote="editNoteHandler(index)" />
     </div>
   </div>
 </template>
@@ -74,6 +70,7 @@ input {
   border: 1px solid rgb(224, 223, 223);
   border-radius: 8px;
 }
+
 .notes_section {
   margin-top: 50px;
   display: grid;
