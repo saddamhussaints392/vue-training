@@ -10,14 +10,14 @@ export default {
   },
   methods: {
     getInputValue() {
-      if(this.inputValue){
-        if(this.editNote === null){
+      if(this.inputValue.length === 0) return;
+      if(this.editNote === null){ 
           this.notes.push(this.inputValue);
         }
         else {
-          this.notes[this.editNote] = this.inputValue;
+          this.notes[this.editNote] = this.$refs.note.value;
+          this.editNote = null;
         }
-      }
       this.inputValue = "";
     },
     deleteNoteHandler(index) {
@@ -26,7 +26,6 @@ export default {
     editNoteHandler(index) {
       this.$refs.note.value = this.notes[index];
       this.editNote = index;
-
     }
   },
   components: {
@@ -54,7 +53,7 @@ h1 {
 }
 
 .main_section {
-  background-color: #605C3C;
+  background-color: #004D40;
   width: 100%;
   height: 100vh;
 }
@@ -74,6 +73,7 @@ input {
 .notes_section {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 0fr);
+  gap: 20px;
 }
 </style>

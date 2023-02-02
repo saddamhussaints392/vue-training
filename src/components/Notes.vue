@@ -58,8 +58,8 @@ export default {
     cursor: pointer;
 }
 .cross_icon {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     cursor: pointer;
 }
 </style>
