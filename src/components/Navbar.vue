@@ -3,56 +3,99 @@
     <div class="d-flex justify-content-center">
       <img src="../assets/images/Foodtuck.png" alt />
     </div>
-    <div class="d-flex align-items-center justify-content-between">
-      <ul class="navbar_items d-flex align-items-center justify-content-between fw-normal text-light">
-        <li>Home</li>
-        <li>Menu</li>
-        <li>Blog</li>
-        <li>Pages</li>
-        <li>
-          About
-          <b-icon icon="chevron-down" font-scale="1"></b-icon>
+    <div class="navbar_section d-flex align-items-center justify-content-between">
+      <input type="checkbox" name id="check" />
+      <label for="check" class="checkbtn">
+        <b-icon icon="justify-left" variant="light" class="icon_justify_left" font-scale="1.5"></b-icon>
+      </label>
+      <ul
+        class="navbar_items d-flex align-items-center justify-content-between fw-normal text-light"
+      >
+        <li class="x_icon_li">
+          <label for="check" class="uncheckbtn">
+            <b-icon icon="x-lg" variant="light" class="icon_justify_left"></b-icon>
+          </label>
         </li>
-        <li>Shop</li>
-        <li>Contact</li>
+        <li>
+          <a href="#" class="text-light">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-light">Menu</a>
+        </li>
+        <li>
+          <a href="#" class="text-light">Blog</a>
+        </li>
+        <li>
+          <a href="#" class="text-light">Pages</a>
+        </li>
+        <li>
+          <a href="#" class="d-flex align-items-end gap-3 text-light">
+            <span class="d-block">About</span>
+            <b-icon icon="chevron-down" class="d-block ml-2" font-scale="1.1"></b-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-light">Shop</a>
+        </li>
+        <li>
+          <a href="#" class="text-light">Contact</a>
+        </li>
       </ul>
-      <div class="d-flex align-items-center">
+
+      <div class="d-flex align-items-center icons_sections">
         <div class="navbar_input mr-3 position-relative">
           <input type="text" class="text-light" placeholder="Search..." />
           <b-icon icon="search" font-scale="1.5" variant="light"></b-icon>
         </div>
-        <b-icon icon="bag" variant="light" font-scale="1.5"></b-icon>
+        <b-icon icon="search" variant="light" font-scale="1.5" class="icon_search mr-4"></b-icon>
+        <b-icon icon="bag" variant="light" font-scale="1.5" class="icon_bag"></b-icon>
       </div>
     </div>
   </nav>
 </template>
 <script>
-import { BIcon, BIconSearch, BIconBag, BIconChevronDown } from "bootstrap-vue";
+import {
+  BIcon,
+  BIconSearch,
+  BIconBag,
+  BIconChevronDown,
+  BIconXLg,
+  BIconJustifyLeft
+} from "bootstrap-vue";
 export default {
   components: {
     BIcon,
     BIconSearch,
     BIconBag,
-    BIconChevronDown
+    BIconChevronDown,
+    BIconXLg,
+    BIconJustifyLeft
   }
 };
 </script>
 <style scoped>
 nav {
-  height: 80px;
-  padding: 45px 20rem 20px 20rem;
+  height: 90px;
+  /* padding: 45px 20rem 20px 20rem; */
   background-color: transparent;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+.x_icon_li,
+.icon_search,
+.checkbtn {
+  display: none !important;
 }
 .navbar_items {
   list-style: none;
   cursor: pointer;
- 
 }
 .navbar_items > li {
   font-size: 16px;
   line-height: 24px;
   margin-right: 32px;
+}
+.navbar_items > li > a {
+  text-decoration: none;
 }
 .navbar_input > input {
   padding: 16px 26px;
@@ -69,5 +112,85 @@ input::placeholder {
   position: absolute;
   top: 17px;
   right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .x_icon_li,
+  .icon_search,
+  .checkbtn {
+    display: block !important;
+  }
+  .navbar_section {
+    margin-top: 20px !important;
+  }
+  .navbar_items {
+    z-index: 100;
+    display: none !important;
+    background: rgba(13, 13, 13, 0.95) !important;
+    width: 100%;
+    height: 100vh;
+
+  }
+  .navbar_items > li:first-child {
+    padding: 20px 24px;
+  }
+  .navbar_items > li {
+    padding: 20px 42px;
+  }
+  .navbar_input {
+    display: none !important;
+  }
+
+  #check:checked ~ .navbar_items {
+    display: inline-block !important;
+  }
+  #check:checked ~ .checkbtn {
+    display: none !important;
+  }
+  #check:checked ~ .icons_sections {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .x_icon_li,
+  .icon_search,
+  .checkbtn {
+    display: block !important;
+  }
+  .navbar_section {
+    margin-top: 20px !important;
+  }
+  .navbar_items {
+    z-index: 100;
+    display: none !important;
+    /* display: inline-block !important; */
+    background: rgba(13, 13, 13, 0.95);
+    width: 100%;
+    height: 100vh;
+  }
+  .navbar_items > li:first-child {
+    padding: 20px 24px;
+  }
+  .navbar_items > li {
+    padding: 20px 42px;
+  }
+  .navbar_input {
+    display: none !important;
+  }
+
+  #check:checked ~ .navbar_items {
+    display: inline-block !important;
+  }
+  #check:checked ~ .checkbtn {
+    display: none !important;
+  }
+  #check:checked ~ .icons_sections {
+    display: none !important;
+  }
 }
 </style>
