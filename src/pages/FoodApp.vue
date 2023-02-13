@@ -14,30 +14,27 @@ export default {
 
 <template>
   <b-container fluid class="home_main p-0">
-    <b-row>
+    <b-row no-gutters>
       <b-col cols="12" class="p-0">
         <b-container fluid class="home_main_section pt-4">
-          <b-row align-h="center" class="align-items-center mt-4">
-            <b-col cols="10" sm="10" md="10" lg="9" class="pl-4">
+          <b-row align-h="center" class="align-items-center mt-4" no-gutters>
+            <b-col cols="11" sm="11" md="11" lg="9">
               <Navbar />
             </b-col>
           </b-row>
-          <b-row align-h="center" class="align-items-center mt-4">
+          <b-row align-h="center" class="align-items-center mt-4" no-gutters>
             <b-col cols="12" sm="12" md="12" lg="5" class>
-              <b-row>
+              <b-row no-gutters>
                 <b-col cols="1" sm="1" md="1" lg="1" class="text-right">
                   <div>
                     <span class="social_networks position-relative d-block text-center text-light">
-                      <!-- <b-icon icon="facebook" class="d-block ml-4"></b-icon>
-                  <b-icon icon="twitter" class="d-block ml-4 my-4 twitter_icon"></b-icon>
-                      <b-icon icon="twitter" class="d-block ml-4"></b-icon>-->
                       <BIconFacebook class="d-block ml-4" />
                       <BIconTwitter class="d-block ml-4 my-4 twitter_icon" />
                       <BIconTwitter class="d-block ml-4" />
                     </span>
                   </div>
                 </b-col>
-                <b-col cols="11" sm="11" md="11" lg="11" >
+                <b-col cols="11" sm="11" md="11" lg="11">
                   <div class="ml-4">
                     <h2 class="its_quick fw-normal">Its Quick & Amusing!</h2>
                     <span class="the_art_title text-light fw-bold">
@@ -57,187 +54,193 @@ export default {
               <img src="../assets/images/first_food.svg" alt style="width:100%; height: auto;" />
             </b-col>
           </b-row>
-          <!-- <div class="d-flex align-items-center mt-5" style=" justify-content: space-evenly">
-        <div style="display: flex;">
-          <div>
-            <span class="social_networks position-relative d-block text-center text-light">
-              <b-icon icon="facebook" class="d-block ml-4"></b-icon>
-              <b-icon icon="twitter" class="d-block ml-4 my-4 twitter_icon"></b-icon>
-              <b-icon icon="twitter" class="d-block ml-4"></b-icon>
-            </span>
-          </div>
-          <div class="ml-4">
-            <h2 class="its_quick fw-normal">Its Quick & Amusing!</h2>
-            <span class="the_art_title text-light fw-bold">
-              <span class="th">Th</span>e Art of speed
-              <br />food Quality
-            </span>
-            <h6 class="the_art_description fw-normal text-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <br />Varius sed pharetra dictum neque massa congue
-            </h6>
-            <button class="btn_see_menu rounded-pill">See Menu</button>
-          </div>
-        </div>
-        <div>
-          <img src="../assets/images/first_food.svg" alt />
-        </div>
-          </div>-->
         </b-container>
-        <!-- <b-container fluid class="about_section pt-5">
-      <b-row align-h="center">
-        <b-col cols="5">
-          <h2 class="d-block abt_us_text fw-normal">about us</h2>
-          <span class="abt_us_title text-light fw-bold">
-            <span class="abt_we">We</span> Create the best
-            foody product
-          </span>
-          <h6 class="abt_us_description fw-normal text-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
-            <br />pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
-            <br />augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
-            <br />sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in
-            <br />consequat.
-          </h6>
-          <ul class="abt_us_ul my-4">
-            <li>Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-            <li class="my-3">Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          </ul>
-          <button class="btn_read_more text-light rounded-pill">Read More</button>
-        </b-col>
-        <b-col cols="5">
-          <b-row>
-            <b-col cols="12" class="mb-3">
-              <img src="../assets/images/about_us_pic1.png" alt />
-            </b-col>
-            <b-col cols="12">
-              <img src="../assets/images/about_us_pic2.png" class="mr-3" alt />
-              <img src="../assets/images/about_us_pic3.png" alt />
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-      <b-row align-h="center" class="text-center py-5">
-        <b-col cols="12">
-          <h2 class="food_category_text fw-normal">Food Category</h2>
-        </b-col>
-        <b-col cols="12">
-          <span class="food_category_title text-light fw-bold">
-            <span class="food_category_ch">Ch</span>oose Food Item
-          </span>
-        </b-col>
-        <b-row class="mt-5">
-          <b-col cols="3">
-            <div class="position-relative">
-              <img src="../assets/images/food_category_pic1.png" alt />
-              <label class="save_amount_text bg-light">Save 30%</label>
-              <label class="food_type font-weight-bold">Fast Food Dish</label>
-            </div>
-          </b-col>
-          <b-col cols="3">
-            <div class="position-relative">
-              <img src="../assets/images/food_category_pic2.png" alt />
-              <label class="save_amount_text bg-light">Save 30%</label>
-              <label class="food_type font-weight-bold">Fast Food Dish</label>
-            </div>
-          </b-col>
-          <b-col cols="3">
-            <div class="position-relative">
-              <img src="../assets/images/food_category_pic3.png" alt />
-              <label class="save_amount_text bg-light">Save 30%</label>
-              <label class="food_type font-weight-bold">Fast Food Dish</label>
-            </div>
-          </b-col>
-          <b-col cols="3">
-            <div class="position-relative">
-              <img src="../assets/images/food_category_pic4.png" alt />
-              <label class="save_amount_text bg-light">Save 30%</label>
-              <label class="food_type font-weight-bold">Fast Food Dish</label>
-            </div>
-          </b-col>
-        </b-row>
-      </b-row>
-      <b-row align-h="center">
-        <b-col cols="5">
-          <div class="why_choose_us_images d-flex flex-wrap">
-            <img src="../assets/images/why_choose_us_pic4.png" alt class="align-self-end" />
-            <img src="../assets/images/why_choose_us_pic2.png" alt class="align-self-end" />
-            <img src="../assets/images/why_choose_us_pic1.png" alt class="align-self-start" />
-            <img src="../assets/images/why_choose_us_pic3.png" alt class="align-self-start" />
-            <div>
-              <img
-                src="../assets/images/why_choose_us_pic6.png"
-                alt
-                class="d-block align-self-start mb-3"
-              />
-              <img
-                src="../assets/images/why_choose_us_pic5.png"
-                alt
-                class="d-block align-self-start"
-              />
-            </div>
-          </div>
-        </b-col>
-        <b-col cols="5">
-          <b-row>
-            <b-col cols="12">
-              <h2 class="why_choose_text fw-normal">Why Choose us</h2>
-            </b-col>
-            <b-col cols="12">
-              <span class="why_choose_title fw-bold text-light">
-                <span class="why_choose_ex">Ex</span>tra ordinary taste
-                <br />And Experienced
+        <b-container fluid class="about_section pt-5">
+          <b-row align-h="center" class="text-align-center" no-gutters>
+            <b-col cols="12" sm="12" md="12" lg="5" class>
+              <h2 class="d-block abt_us_text fw-normal">about us</h2>
+              <span class="abt_us_title text-light fw-bold">
+                <span class="abt_we">We</span> Create the best
+                foody product
               </span>
-            </b-col>
-            <b-col cols="12">
-              <h6 class="why_choose_desccription fw-normal text-light">
+              <h6 class="abt_us_description fw-normal text-light">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
                 <br />pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
                 <br />augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
-                <br />sed vitae mus risus.
-                Lacus nisi, et ac dapibus sit eu velit in
+                <br />sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in
                 <br />consequat.
               </h6>
+              <ul class="abt_us_ul my-4">
+                <li>Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+                <li class="my-3">Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+              </ul>
+              <button class="btn_read_more text-light rounded-pill">Read More</button>
+            </b-col>
+            <b-col cols="12" sm="12" md="12" lg="5" class="about_us_images">
+              <b-row no-gutters>
+                <b-col cols="12" class="mb-3">
+                  <img
+                    src="../assets/images/about_us_pic1.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                </b-col>
+              </b-row>
+              <b-row no-gutters>
+                <b-col cols="6" class="pr-3">
+                  <img
+                    src="../assets/images/about_us_pic2.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                </b-col>
+                <b-col cols="6">
+                  <img
+                    src="../assets/images/about_us_pic3.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                </b-col>
+              </b-row>
             </b-col>
           </b-row>
-          <b-row class="text-center">
-            <b-col cols="2">
-              <div class="hamburger_icon p-4">
-                <img src="../assets/images/Hamburger.png" alt />
-              </div>
-              <span class="d-block fw-normal text-light mt-2">Fast Food</span>
+          <b-row align-h="center" class="text-center py-5" no-gutters>
+            <b-col cols="12">
+              <h2 class="food_category_text fw-normal">Food Category</h2>
             </b-col>
-            <b-col cols="2">
-              <div class="hamburger_icon p-4">
-                <img src="../assets/images/Cookie.png" alt />
-              </div>
-              <span class="d-block fw-normal text-light mt-2">Lunch</span>
+            <b-col cols="12">
+              <span class="food_category_title text-light fw-bold">
+                <span class="food_category_ch">Ch</span>oose Food Item
+              </span>
             </b-col>
-            <b-col cols="2">
-              <div class="hamburger_icon p-4">
-                <img src="../assets/images/Wine.png" alt />
-              </div>
-              <span class="d-block fw-normal text-light mt-2">Dinner</span>
-            </b-col>
+            <b-row class="mt-5 food_category_cards">
+              <b-col cols="6" sm="6" md="6" lg="3" >
+                <div class="position-relative">
+                  <img
+                    src="../assets/images/food_category_pic1.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                  <label class="save_amount_text bg-light">Save 30%</label>
+                  <label class="food_type font-weight-bold">Fast Food Dish</label>
+                </div>
+              </b-col>
+              <b-col cols="6" sm="6" md="6" lg="3" >
+                <div class="position-relative">
+                  <img
+                    src="../assets/images/food_category_pic2.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                  <label class="save_amount_text bg-light">Save 30%</label>
+                  <label class="food_type font-weight-bold">Fast Food Dish</label>
+                </div>
+              </b-col>
+              <b-col cols="6" sm="6" md="6" lg="3" >
+                <div class="position-relative">
+                  <img
+                    src="../assets/images/food_category_pic3.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                  <label class="save_amount_text bg-light">Save 30%</label>
+                  <label class="food_type font-weight-bold">Fast Food Dish</label>
+                </div>
+              </b-col>
+              <b-col cols="6" sm="6" md="6" lg="3" >
+                <div class="position-relative">
+                  <img
+                    src="../assets/images/food_category_pic4.png"
+                    alt
+                    style="width: 100%; height: auto;"
+                  />
+                  <label class="save_amount_text bg-light">Save 30%</label>
+                  <label class="food_type font-weight-bold">Fast Food Dish</label>
+                </div>
+              </b-col>
+            </b-row>
           </b-row>
-       
-          <div
-            class="experience_section d-flex bg-light mt-4 align-items-center justify-content-around rounded-lg p-2"
-            style="width:374px"
-          >
-            <div>
-              <span class="experience">30+</span>
-            </div>
-            <div class="text-start">
-              <span class="years_of_text d-block fw-normal">years of</span>
-              <span class="experienced_text d-block">Experienced</span>
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-     <Client/>
-        </b-container>-->
+          <!-- <b-row align-h="center">
+            <b-col cols="5">
+              <div class="why_choose_us_images d-flex flex-wrap">
+                <img src="../assets/images/why_choose_us_pic4.png" alt class="align-self-end" />
+                <img src="../assets/images/why_choose_us_pic2.png" alt class="align-self-end" />
+                <img src="../assets/images/why_choose_us_pic1.png" alt class="align-self-start" />
+                <img src="../assets/images/why_choose_us_pic3.png" alt class="align-self-start" />
+                <div>
+                  <img
+                    src="../assets/images/why_choose_us_pic6.png"
+                    alt
+                    class="d-block align-self-start mb-3"
+                  />
+                  <img
+                    src="../assets/images/why_choose_us_pic5.png"
+                    alt
+                    class="d-block align-self-start"
+                  />
+                </div>
+              </div>
+            </b-col>
+            <b-col cols="5">
+              <b-row>
+                <b-col cols="12">
+                  <h2 class="why_choose_text fw-normal">Why Choose us</h2>
+                </b-col>
+                <b-col cols="12">
+                  <span class="why_choose_title fw-bold text-light">
+                    <span class="why_choose_ex">Ex</span>tra ordinary taste
+                    <br />And Experienced
+                  </span>
+                </b-col>
+                <b-col cols="12">
+                  <h6 class="why_choose_desccription fw-normal text-light">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
+                    <br />pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
+                    <br />augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
+                    <br />sed vitae mus risus.
+                    Lacus nisi, et ac dapibus sit eu velit in
+                    <br />consequat.
+                  </h6>
+                </b-col>
+              </b-row>
+              <b-row class="text-center">
+                <b-col cols="2">
+                  <div class="hamburger_icon p-4">
+                    <img src="../assets/images/Hamburger.png" alt />
+                  </div>
+                  <span class="d-block fw-normal text-light mt-2">Fast Food</span>
+                </b-col>
+                <b-col cols="2">
+                  <div class="hamburger_icon p-4">
+                    <img src="../assets/images/Cookie.png" alt />
+                  </div>
+                  <span class="d-block fw-normal text-light mt-2">Lunch</span>
+                </b-col>
+                <b-col cols="2">
+                  <div class="hamburger_icon p-4">
+                    <img src="../assets/images/Wine.png" alt />
+                  </div>
+                  <span class="d-block fw-normal text-light mt-2">Dinner</span>
+                </b-col>
+              </b-row>
+
+              <div
+                class="experience_section d-flex bg-light mt-4 align-items-center justify-content-around rounded-lg p-2"
+                style="width:374px"
+              >
+                <div>
+                  <span class="experience">30+</span>
+                </div>
+                <div class="text-start">
+                  <span class="years_of_text d-block fw-normal">years of</span>
+                  <span class="experienced_text d-block">Experienced</span>
+                </div>
+              </div>
+            </b-col>
+          </b-row>-->
+          <!-- <Client /> -->
+        </b-container>
       </b-col>
     </b-row>
   </b-container>
@@ -459,5 +462,48 @@ export default {
     padding: 8px 28px;
     background: #ff9f0d;
   }
+  .about_us_images {
+    display: none;
+  }
+
+  .save_amount_text {
+  border-radius: 6px;
+  color: #ff9f0d;
+  padding: 5px 8px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 18px;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+.food_type {
+  /* font-weight: 700; */
+  font-size: 12px;
+  line-height: 20px;
+  background: #ff9f0d;
+  border-radius: 6px;
+  color: #fff5f5;
+  padding: 5px 12px;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+}
+.food_category_cards {
+  padding: 15px;
+}
+.food_category_cards > div:first-child {
+  padding: 0 0.5rem 0.5rem 0;
+}
+.food_category_cards > div:nth-child(2){
+  padding: 0 0 0.5rem 0.5rem;
+}
+.food_category_cards > div:nth-child(3){
+  padding: 0.5rem 0.5rem 0 0;
+}
+.food_category_cards > div:nth-child(4){
+  padding: 0.5rem 0 0 0.5rem;
+}
+
 }
 </style>

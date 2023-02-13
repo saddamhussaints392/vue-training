@@ -4,6 +4,7 @@
 
 <style>
 body {
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 </style>
