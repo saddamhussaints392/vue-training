@@ -11,6 +11,7 @@ import {
 } from "bootstrap-vue";
 import Client from "../components/Clients.vue";
 import Footer from "../components/Footer.vue";
+import BlogPostItem from "../components/BlogPostItem.vue";
 import MenuListItem from "../components/MenuListItem.vue";
 export default {
   components: {
@@ -24,7 +25,8 @@ export default {
     BIconHandThumbsUp,
     BIconChatLeftDots,
     BIconShare,
-    Footer
+    Footer,
+    BlogPostItem
   }
 };
 </script>
@@ -133,44 +135,11 @@ export default {
                 </span>
               </b-col>
               <b-row class="mt-5 food_category_cards">
-                <b-col cols="6" sm="6" md="6" lg="3">
+                <b-col v-for="(category, i) in 4" :key="i" cols="6" sm="6" md="6" lg="3">
                   <div class="position-relative">
                     <img
                       src="../assets/images/food_category_pic1.png"
-                      alt
-                      style="width: 100%; height: auto;"
-                    />
-                    <label class="save_amount_text bg-light">Save 30%</label>
-                    <label class="food_type font-weight-bold">Fast Food Dish</label>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative">
-                    <img
-                      src="../assets/images/food_category_pic2.png"
-                      alt
-                      style="width: 100%; height: auto;"
-                    />
-                    <label class="save_amount_text bg-light">Save 30%</label>
-                    <label class="food_type font-weight-bold">Fast Food Dish</label>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative">
-                    <img
-                      src="../assets/images/food_category_pic3.png"
-                      alt
-                      style="width: 100%; height: auto;"
-                    />
-                    <label class="save_amount_text bg-light">Save 30%</label>
-                    <label class="food_type font-weight-bold">Fast Food Dish</label>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative">
-                    <img
-                      src="../assets/images/food_category_pic4.png"
-                      alt
+                      alt="food_category_image"
                       style="width: 100%; height: auto;"
                     />
                     <label class="save_amount_text bg-light">Save 30%</label>
@@ -434,8 +403,11 @@ export default {
                 <b-col cols="6" sm="6" md="6" lg="3" class="text-right">
                   <button class="m-auto font-weight-bold btn_restaurant_read_more">Read More</button>
                 </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3" >
-                  <b-row no-gutters class="btn_and_icon_section d-flex align-items-center justify-content-end">
+                <b-col cols="6" sm="6" md="6" lg="3">
+                  <b-row
+                    no-gutters
+                    class="btn_and_icon_section d-flex align-items-center justify-content-end"
+                  >
                     <b-col cols="2" sm="2" md="2" lg="3">
                       <div class="play_icon d-flex align-items-center justify-content-center">
                         <BIconPlay font-scale="2" class="text-light" />
@@ -464,62 +436,11 @@ export default {
                 </b-col>
               </b-row>
               <b-row class="mt-5 blog_post_cards">
-                <b-col lg="4">
-                  <div class="blog_post_card">
-                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
-                    <div class="blog_post_info">
-                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
-                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <span class="d-block text-light font-weight-normal">Learn More</span>
-                        <span>
-                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
-                          <BIconHandThumbsUp class="text-light"/>
-                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
-                          <BIconShare class="text-light"/>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col lg="4">
-                  <div class="blog_post_card">
-                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
-                    <div class="blog_post_info">
-                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
-                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <span class="d-block text-light font-weight-normal">Learn More</span>
-                        <span>
-                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
-                          <BIconHandThumbsUp class="text-light"/>
-                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
-                          <BIconShare class="text-light"/>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col lg="4">
-                  <div class="blog_post_card">
-                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
-                    <div class="blog_post_info">
-                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
-                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <span class="d-block text-light font-weight-normal">Learn More</span>
-                        <span>
-                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
-                          <BIconHandThumbsUp class="text-light"/>
-                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
-                          <BIconShare class="text-light"/>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                <b-col lg="4" v-for="(post, index) in 3" :key="index">
+                  <BlogPostItem />
                 </b-col>
               </b-row>
-              </b-col>
+            </b-col>
           </b-row>
           <Footer />
         </b-container>
@@ -754,20 +675,7 @@ export default {
   height: 60px;
   border-radius: 50%;
 }
-.blog_post_card {
-  border: 1px solid #FFFFFF;
-}
-.blog_post_info {
-  padding: 30px 43px;
-}
-.blog_post_date {
-  color: #ff9f0d;
-  font-family: 'Inter',sans-serif;
-  font-size: 16px;
-}
-.blog_post_chart_icon {
-  fill: #ff9f0d;
-}
+
 @media screen and (max-width: 480px) {
   .social_networks {
     height: 150px;
@@ -929,30 +837,30 @@ export default {
     font-size: 8px;
   }
   .btn_restaurant_read_more {
-  background: transparent;
-  padding: 8px 28px;
-  border: 1px solid #ff9f0d;
-  border-radius: 25px;
-  font-weight: 400;
-  font-size: 14px;
-}
-.restaurant_active_process div:nth-child(2) {
-  text-align: center !important;
-}
-.play_icon {
-  background-color: #ff9f0d;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-}
-.play_icon > svg > g > path{
-  font-size: 150% !important;
-}
-.btn_and_icon_section {
-  justify-content: start !important;
-}
-.blog_post_cards > div {
-  margin-top: 32px !important;
-}
+    background: transparent;
+    padding: 8px 28px;
+    border: 1px solid #ff9f0d;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .restaurant_active_process div:nth-child(2) {
+    text-align: center !important;
+  }
+  .play_icon {
+    background-color: #ff9f0d;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  .play_icon > svg > g > path {
+    font-size: 150% !important;
+  }
+  .btn_and_icon_section {
+    justify-content: start !important;
+  }
+  .blog_post_cards > div {
+    margin-top: 32px !important;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="p-0">
+  <b-container fluid class="p-0 footer_main_section position-relative">
     <b-row align-h="center" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="10">
         <b-row class="d-flex align-items-center footer_info_section" no-gutters>
@@ -61,31 +61,31 @@
           <b-col cols="12" sm="12" md="12" lg="3">
             <span class="d-block text-light font-weight-bold footer_titles mb-3">Recent Post</span>
             <b-row class="mb-3">
-                <b-col cols="2">
-                    <img src="../assets/images/recent_post.png" alt="" />
-                </b-col>
-                <b-col cols="6">
-                    <span class="d-block text-secondary mb-1">20 Feb 2022</span>
-                    <span class="d-block text-light">Keep Your Business </span>
-                </b-col>
+              <b-col cols="2">
+                <img src="../assets/images/recent_post.png" alt />
+              </b-col>
+              <b-col cols="6">
+                <span class="d-block text-secondary mb-1">20 Feb 2022</span>
+                <span class="d-block text-light">Keep Your Business</span>
+              </b-col>
             </b-row>
             <b-row class="mb-3">
-                <b-col cols="2">
-                    <img src="../assets/images/recent_post.png" alt="" />
-                </b-col>
-                <b-col cols="6">
-                    <span class="d-block text-secondary mb-1">20 Feb 2022</span>
-                    <span class="d-block text-light">Keep Your Business </span>
-                </b-col>
+              <b-col cols="2">
+                <img src="../assets/images/recent_post.png" alt />
+              </b-col>
+              <b-col cols="6">
+                <span class="d-block text-secondary mb-1">20 Feb 2022</span>
+                <span class="d-block text-light">Keep Your Business</span>
+              </b-col>
             </b-row>
             <b-row class="mb-3">
-                <b-col cols="2">
-                    <img src="../assets/images/recent_post.png" alt="" />
-                </b-col>
-                <b-col cols="6">
-                    <span class="d-block text-secondary mb-1">20 Feb 2022</span>
-                    <span class="d-block text-light">Keep Your Business </span>
-                </b-col>
+              <b-col cols="2">
+                <img src="../assets/images/recent_post.png" alt />
+              </b-col>
+              <b-col cols="6">
+                <span class="d-block text-secondary mb-1">20 Feb 2022</span>
+                <span class="d-block text-light">Keep Your Business</span>
+              </b-col>
             </b-row>
           </b-col>
         </b-row>
@@ -95,7 +95,7 @@
       <b-col cols="10" sm="10" md="10" lg="5">
         <span class="text-light">Copyright © 2022 by Ayeman. All Rights Reserved.</span>
       </b-col>
-      <b-col cols="10" sm="10" md="10" lg="5" class="d-flex justify-content-end align-items-center">
+      <b-col cols="10" sm="10" md="10" lg="3" class="d-flex justify-content-end align-items-center">
         <span class="social_network_item d-block text-center">
           <BIconFacebook />
         </span>
@@ -128,6 +128,17 @@ export default {
 </script>
 
 <style scoped>
+.footer_main_section::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/images/footer_bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
 .footer_info_section {
   border-bottom: 1px solid #ff9f0d;
   padding: 120px 0 61px 0;
@@ -156,6 +167,7 @@ export default {
 .footer_copyrights {
   background: #ff9f0d;
   padding: 33px 0;
+  /* height: 100px; */
 }
 .footer_copyrights > div:nth-child(2) {
   gap: 20px;
@@ -178,40 +190,56 @@ input {
   color: #ffffff;
 }
 input::placeholder {
-    color: #ffffff;
-    font-family: 'Inter';
+  color: #ffffff;
+  font-family: "Inter";
 }
 
 .btn_footer_subscribe {
   background-color: #ffffff;
   color: #ff9f0d;
   border: none;
-  font-family: 'Inter';
+  font-family: "Inter";
   border-radius: 0 4px 4px 0;
 }
 
 @media screen and (max-width: 480px) {
-    .footer_info_section {
-  border-bottom: 1px solid #ff9f0d;
-  padding: 20px 0 32px 0;
-  margin: 0 20px;
-}
-.subscribe_column {
+  .footer_main_section::after {
+    /* position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../assets/images/footer_bg.png');
+    background-position: bottom right;
+    background-repeat: no-repeat; */
+    background-size: 30%;
+  }
+  .footer_info_section {
+    border-bottom: 1px solid #ff9f0d;
+    padding: 20px 0 32px 0;
+    margin: 0 20px;
+  }
+  .subscribe_column {
     margin-top: 32px;
-}
-.footer_details {
-  padding: 32px 20px 32px 20px;
-}
-.footer_copyrights {
+  }
+  .footer_details {
+    padding: 32px 20px 32px 20px;
+  }
+  .footer_details div:first-child {
+    margin-bottom: 24px;
+  }
+  .footer_copyrights {
     padding: 24px 20px;
-}
-.footer_copyrights div:first-child {
+    /* height: 152px; */
+  }
+  .footer_copyrights div:first-child {
     text-align: center !important;
-}
-.footer_copyrights div:last-child {
+  }
+  .footer_copyrights div:last-child {
     text-align: center !important;
     justify-content: center !important;
     margin-top: 24px;
-}
+  }
 }
 </style>
