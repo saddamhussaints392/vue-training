@@ -1,7 +1,16 @@
 <script>
 import Navbar from "../components/Navbar.vue";
-import { BIconFacebook, BIconTwitter } from "bootstrap-vue";
+import {
+  BIconFacebook,
+  BIconTwitter,
+  BIconPlayCircleFill,
+  BIconPlay,
+  BIconHandThumbsUp,
+  BIconChatLeftDots,
+  BIconShare
+} from "bootstrap-vue";
 import Client from "../components/Clients.vue";
+import Footer from "../components/Footer.vue";
 import MenuListItem from "../components/MenuListItem.vue";
 export default {
   components: {
@@ -9,7 +18,13 @@ export default {
     BIconFacebook,
     BIconTwitter,
     Client,
-    MenuListItem
+    MenuListItem,
+    BIconPlayCircleFill,
+    BIconPlay,
+    BIconHandThumbsUp,
+    BIconChatLeftDots,
+    BIconShare,
+    Footer
   }
 };
 </script>
@@ -404,6 +419,109 @@ export default {
               </b-row>
             </b-col>
           </b-row>
+          <b-row class="restaurant_active_process" no-gutters>
+            <b-col cols="12" sm="12" md="12" lg="5"></b-col>
+            <b-col cols="12" sm="12" md="12" lg="5" class="text-right">
+              <h2 class="restaurant_active_process_text fw-normal">Restaurant Active Process</h2>
+              <span class="restaurant_title fw-bold text-light">
+                <span class="restaurant_we">We</span> Document Every Food
+                Bean Process untile it is saved
+              </span>
+              <h6
+                class="restaurant_desccription fw-normal text-light"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna,</h6>
+              <b-row no-gutters class="d-flex align-items-center justify-content-end">
+                <b-col cols="6" sm="6" md="6" lg="3" class="text-right">
+                  <button class="m-auto font-weight-bold btn_restaurant_read_more">Read More</button>
+                </b-col>
+                <b-col cols="6" sm="6" md="6" lg="3" >
+                  <b-row no-gutters class="btn_and_icon_section d-flex align-items-center justify-content-end">
+                    <b-col cols="2" sm="2" md="2" lg="3">
+                      <div class="play_icon d-flex align-items-center justify-content-center">
+                        <BIconPlay font-scale="2" class="text-light" />
+                      </div>
+                    </b-col>
+                    <b-col cols="5" sm="5" md="5" lg="6" class="ml-2">
+                      <span class="font-weight-bold text-light">Play Video</span>
+                    </b-col>
+                  </b-row>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+          <b-row no-gutters align-h="center" class="blog_post_section">
+            <b-col cols="10">
+              <b-row no-gutters>
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h2 class="blog_post_text fw-normal">Blog Post</h2>
+                </b-col>
+              </b-row>
+              <b-row no-gutters>
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <span class="blog_post_title fw-bold text-light">
+                    <span class="blog_post_la">La</span>test News & Blog
+                  </span>
+                </b-col>
+              </b-row>
+              <b-row class="mt-5 blog_post_cards">
+                <b-col lg="4">
+                  <div class="blog_post_card">
+                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
+                    <div class="blog_post_info">
+                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
+                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span class="d-block text-light font-weight-normal">Learn More</span>
+                        <span>
+                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
+                          <BIconHandThumbsUp class="text-light"/>
+                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
+                          <BIconShare class="text-light"/>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </b-col>
+                <b-col lg="4">
+                  <div class="blog_post_card">
+                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
+                    <div class="blog_post_info">
+                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
+                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span class="d-block text-light font-weight-normal">Learn More</span>
+                        <span>
+                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
+                          <BIconHandThumbsUp class="text-light"/>
+                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
+                          <BIconShare class="text-light"/>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </b-col>
+                <b-col lg="4">
+                  <div class="blog_post_card">
+                    <img src="../assets/images/burger.png" alt="burger" style="width: 100%; height: auto;">
+                    <div class="blog_post_info">
+                      <span class="d-block font-weight-normal blog_post_date">10 February 2022</span>
+                      <span class="d-block font-weight-bold text-light my-3">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</span>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span class="d-block text-light font-weight-normal">Learn More</span>
+                        <span>
+                          <!-- <BIconHandsThumbsUp class="text-light"/> -->
+                          <BIconHandThumbsUp class="text-light"/>
+                          <BIconChatLeftDots class="mx-2 blog_post_chart_icon"/>
+                          <BIconShare class="text-light"/>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </b-col>
+              </b-row>
+              </b-col>
+          </b-row>
+          <Footer />
         </b-container>
       </b-col>
     </b-row>
@@ -457,6 +575,8 @@ export default {
 .food_category_text,
 .why_choose_text,
 .chefs_text,
+.restaurant_active_process_text,
+.blog_post_text,
 .choose_and_pick_text {
   line-height: 40px;
   color: #ff9f0d;
@@ -467,7 +587,9 @@ export default {
 .abt_we,
 .food_category_ch,
 .why_choose_ex,
+.restaurant_we,
 .chefs_me,
+.blog_post_la,
 .choose_and_pick_fr {
   color: #ff9f0d !important;
 }
@@ -476,6 +598,8 @@ export default {
 .why_choose_title,
 .choose_and_pick_title,
 .chefs_title,
+.restaurant_title,
+.blog_post_title,
 .the_art_title {
   font-weight: 700;
   font-size: 48px;
@@ -486,6 +610,7 @@ export default {
 }
 .the_art_description,
 .abt_us_description,
+.restaurant_desccription,
 .why_choose_desccription {
   line-height: 24px;
   margin: 32px 0;
@@ -500,6 +625,7 @@ export default {
 .food_category_section,
 .why_we_choose_section,
 .choose_and_pick_section,
+.blog_post_section,
 .chefs_section {
   padding-top: 120px;
 }
@@ -597,9 +723,9 @@ export default {
   padding: 6px 20px;
 }
 .chefs_details span:first-child {
-  font-family: 'Inter', sans-serif;
-font-size: 18px;
-} 
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
 .chefs__info {
   border-radius: 16px !important;
 }
@@ -608,6 +734,39 @@ font-size: 18px;
   padding: 13px 41px;
   border: 1px solid #ff9f0d;
   border-radius: 25px;
+}
+.btn_restaurant_read_more {
+  background: transparent;
+  padding: 13px 41px;
+  border: 1px solid #ff9f0d;
+  border-radius: 25px;
+}
+
+.restaurant_active_process {
+  padding: 112px 0;
+  background-image: url("../assets/images/resturant_active_process.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.play_icon {
+  background-color: #ff9f0d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.blog_post_card {
+  border: 1px solid #FFFFFF;
+}
+.blog_post_info {
+  padding: 30px 43px;
+}
+.blog_post_date {
+  color: #ff9f0d;
+  font-family: 'Inter',sans-serif;
+  font-size: 16px;
+}
+.blog_post_chart_icon {
+  fill: #ff9f0d;
 }
 @media screen and (max-width: 480px) {
   .social_networks {
@@ -647,6 +806,8 @@ font-size: 18px;
   .why_choose_title,
   .choose_and_pick_title,
   .chefs_title,
+  .restaurant_title,
+  .blog_post_title,
   .the_art_title {
     font-weight: 700;
     font-size: 40px;
@@ -655,6 +816,7 @@ font-size: 18px;
 
   .the_art_description,
   .abt_us_description,
+  .restaurant_desccription,
   .why_choose_desccription {
     line-height: 22px;
     margin: 32px 0;
@@ -664,12 +826,13 @@ font-size: 18px;
   }
 
   .about_us_row,
-.food_category_section,
-.why_we_choose_section,
-.choose_and_pick_section,
-.chefs_section {
-  padding-top: 62px;
-}
+  .food_category_section,
+  .why_we_choose_section,
+  .choose_and_pick_section,
+  .blog_post_section,
+  .chefs_section {
+    padding-top: 62px;
+  }
   .btn_see_menu,
   .btn_read_more {
     padding: 8px 28px;
@@ -678,7 +841,7 @@ font-size: 18px;
   .about_us_images {
     display: none;
   }
- 
+
   .save_amount_text {
     border-radius: 6px;
     color: #ff9f0d;
@@ -702,17 +865,21 @@ font-size: 18px;
     left: 0;
     bottom: 25px;
   }
-  
-  .food_category_cards > div:first-child, .chef_cards > div:first-child {
+
+  .food_category_cards > div:first-child,
+  .chef_cards > div:first-child {
     padding: 0 0.5rem 0.5rem 0;
   }
-  .food_category_cards > div:nth-child(2), .chef_cards > div:nth-child(2) {
+  .food_category_cards > div:nth-child(2),
+  .chef_cards > div:nth-child(2) {
     padding: 0 0 0.5rem 0.5rem;
   }
-  .food_category_cards > div:nth-child(3), .chef_cards > div:nth-child(3) {
+  .food_category_cards > div:nth-child(3),
+  .chef_cards > div:nth-child(3) {
     padding: 0.5rem 0.5rem 0 0;
   }
-  .food_category_cards > div:nth-child(4), .chef_cards > div:nth-child(4) {
+  .food_category_cards > div:nth-child(4),
+  .chef_cards > div:nth-child(4) {
     padding: 0.5rem 0 0 0.5rem;
   }
   .experience_section {
@@ -749,17 +916,43 @@ font-size: 18px;
     margin: 20px 0;
   }
   .chefs_details {
-  width: 97px;
-  bottom: 0;
-  padding: 6px 12px;
-}
+    width: 97px;
+    bottom: 0;
+    padding: 6px 12px;
+  }
   .chefs_details span:first-child {
-  font-family: 'Inter', sans-serif;
-font-size: 10px;
-} 
-.chefs_details span:last-child {
-  font-family: 'Inter', sans-serif;
-font-size: 8px;
-} 
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+  }
+  .chefs_details span:last-child {
+    font-family: "Inter", sans-serif;
+    font-size: 8px;
+  }
+  .btn_restaurant_read_more {
+  background: transparent;
+  padding: 8px 28px;
+  border: 1px solid #ff9f0d;
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.restaurant_active_process div:nth-child(2) {
+  text-align: center !important;
+}
+.play_icon {
+  background-color: #ff9f0d;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.play_icon > svg > g > path{
+  font-size: 150% !important;
+}
+.btn_and_icon_section {
+  justify-content: start !important;
+}
+.blog_post_cards > div {
+  margin-top: 32px !important;
+}
 }
 </style>
