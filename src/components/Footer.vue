@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="p-0 footer_main_section position-relative">
+  <b-container fluid class="p-0 footer_main_section position-relative bg-dark">
     <b-row align-h="center" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="10">
         <b-row class="d-flex align-items-center footer_info_section" no-gutters>
@@ -181,7 +181,7 @@ export default {
   vertical-align: bottom;
 }
 
-input {
+.sub_section > input {
   background-color: #ff9f0d;
   padding: 16px 24px;
   border: none;
@@ -189,7 +189,7 @@ input {
   border-radius: 4px 0 0 4px;
   color: #ffffff;
 }
-input::placeholder {
+.sub_section > input::placeholder {
   color: #ffffff;
   font-family: "Inter";
 }
@@ -204,15 +204,6 @@ input::placeholder {
 
 @media screen and (max-width: 480px) {
   .footer_main_section::after {
-    /* position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: url('../assets/images/footer_bg.png');
-    background-position: bottom right;
-    background-repeat: no-repeat; */
     background-size: 30%;
   }
   .footer_info_section {
@@ -240,6 +231,29 @@ input::placeholder {
     text-align: center !important;
     justify-content: center !important;
     margin-top: 24px;
+  }
+  .sub_section > input {
+    background-color: #ff9f0d;
+    padding: 14px 20px !important;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .sub_section > input::placeholder {
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 14px;
+  }
+  .btn_footer_subscribe {
+    background-color: #ffffff;
+    color: #ff9f0d;
+    border: none;
+    font-family: "Inter";
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    padding: 14px 20px !important;
   }
 }
 </style>

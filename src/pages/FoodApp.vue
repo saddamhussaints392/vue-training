@@ -13,6 +13,7 @@ import Client from "../components/Clients.vue";
 import Footer from "../components/Footer.vue";
 import BlogPostItem from "../components/BlogPostItem.vue";
 import MenuListItem from "../components/MenuListItem.vue";
+import Carousel from "../components/Carousel.vue";
 export default {
   components: {
     Navbar,
@@ -26,7 +27,8 @@ export default {
     BIconChatLeftDots,
     BIconShare,
     Footer,
-    BlogPostItem
+    BlogPostItem,
+    Carousel
   }
 };
 </script>
@@ -388,6 +390,7 @@ export default {
               </b-row>
             </b-col>
           </b-row>
+          <Carousel />
           <b-row class="restaurant_active_process" no-gutters>
             <b-col cols="12" sm="12" md="12" lg="5"></b-col>
             <b-col cols="12" sm="12" md="12" lg="5" class="text-right">
@@ -448,7 +451,6 @@ export default {
     </b-row>
   </b-container>
 </template>
-
 <style scoped>
 .home_main_section {
   background: linear-gradient(
@@ -741,6 +743,9 @@ export default {
   .chefs_section {
     padding-top: 62px;
   }
+  .blog_post_section {
+    padding-bottom: 20px;
+  }
   .btn_see_menu,
   .btn_read_more {
     padding: 8px 28px;
@@ -828,6 +833,12 @@ export default {
     bottom: 0;
     padding: 6px 12px;
   }
+  .btn_chef_see_more {
+  background: transparent;
+padding: 8px 28px;
+  border: 1px solid #ff9f0d;
+  border-radius: 25px;
+}
   .chefs_details span:first-child {
     font-family: "Inter", sans-serif;
     font-size: 10px;
