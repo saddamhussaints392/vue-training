@@ -7,59 +7,73 @@
     </b-row>
     <b-row no-gutters>
       <b-col cols="12">
-        <FoodAppBanner />
+        <FoodAppBanner mainPage="Sign up page" middlePage="Home" subPage="sign up"/>
       </b-col>
     </b-row>
     <b-row align-h="center" class="signup_section" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="3">
-        <div class="signup_main">
-          <span class="d-block signup_text">Sign Up</span>
-          <div class="position-relative name_field mt-4">
-            <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
-            <b-icon-person font-scale="1.5" class="position-absolute person_icon"></b-icon-person>
+        
+        <form action @submit.prevent="signUp">
+         
+          <div class="signup_main">
+            <span class="text-center d-block text-success mb-2 font-weight-bold" v-if="signUpSuccessfull">{{signUpSuccessfull}}</span>
+            <span class="d-block signup_text">Sign Up</span>
+            <div class="position-relative name_field mt-4">
+              <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
+              <b-icon-person font-scale="1.5" class="position-absolute person_icon"></b-icon-person>
+            </div>
+            <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span>
+            <div class="position-relative email_field mt-3">
+              <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
+              <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
+            </div>
+            <span class="pl-2 text-danger" v-if="emailError">{{emailError}}</span>
+            <div class="position-relative password_field mt-3">
+              <b-form-input
+                class="rounded-0"
+                placeholder="Password"
+                type="password"
+                v-model="password"
+              ></b-form-input>
+              <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
+            </div>
+            <span class="pl-2 text-danger" v-if="passwordError">{{passwordError}}</span>
+            <div class="mt-3 d-flex align-items-center">
+              <input
+                class="d-block"
+                type="checkbox"
+                name="checkbox-1"
+                id="checkbox-1"
+                value="accepted"
+                unselectable="not_accepted"
+              />
+              <span class="ml-2 remember_me_text d-block">Remember me ?</span>
+            </div>
+            <div class="mt-4">
+              <button class="btn_signup w-100" type="submit">Sign Up</button>
+            </div>
+            <span class="d-block w-100 mt-3 forget_password_text">Forget password ?</span>
+            <div class="d-flex align-items-center mt-4">
+              <hr class="flex-grow-1" />
+              <span class="or_text">OR</span>
+              <hr class="flex-grow-1" />
+            </div>
+            <div
+              class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
+            >
+              <img src="../assets/images/Google.png" alt class="d-block pl-3" />
+              <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
+              <span></span>
+            </div>
+            <div
+              class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
+            >
+              <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
+              <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
+              <span></span>
+            </div>
           </div>
-          <div class="position-relative email_field mt-3">
-            <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
-            <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
-          </div>
-          <div class="position-relative password_field mt-3">
-            <b-form-input class="rounded-0" placeholder="Password" v-model="password"></b-form-input>
-            <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
-          </div>
-          <div class="mt-3">
-            <b-form-checkbox
-              id="checkbox-1"
-              v-model="status"
-              name="checkbox-1"
-              value="accepted"
-              class="rounded-0"
-              unchecked-value="not_accepted"
-            >Remember me ?</b-form-checkbox>
-          </div>
-          <div class="mt-4">
-            <button class="btn_signup w-100" @click="signUp">Sign Up</button>
-          </div>
-          <span class="d-block w-100 mt-3 forget_password_text">Forget password ?</span>
-          <div class="d-flex align-items-center mt-4">
-            <hr class="flex-grow-1" />
-            <span class="or_text">OR</span>
-            <hr class="flex-grow-1" />
-          </div>
-          <div
-            class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
-          >
-            <img src="../assets/images/Google.png" alt class="d-block pl-3" />
-            <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
-            <span></span>
-          </div>
-          <div
-            class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
-          >
-            <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
-            <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
-            <span></span>
-          </div>
-        </div>
+        </form>
       </b-col>
     </b-row>
     <b-row no-gutters>
@@ -87,27 +101,61 @@ export default {
       name: "",
       password: "",
       status: "",
-      email: ""
+      email: "",
+      nameError: "",
+      emailError: "",
+      passwordError: "",
+      signUpSuccessfull: ""
     };
   },
   methods: {
     signUp() {
+      const nameRegex = /^.{3,25}$/;
+      const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$@^%&? "])[a-zA-Z0-9!#$@^%&?]{6,}$/;
       console.log(this.name, this.password, this.email, this.status);
-      createUserWithEmailAndPassword(
-        getAuth(),
-        this.email,
-        this.password,
-        this.name,
-        this.status
-      )
-        .then(data => {
-          console.log("registered successfully");
-          // navigate the user after signUp successfull
-          // example  route.push("/home")
-        })
-        .catch(error => {
-          console.log(error);
-        });
+
+      if (this.name === "") {
+        this.nameError = "Name is required!";
+      } else if (!nameRegex.test(this.name)) {
+        this.nameError = "Name should have atleast 3 characters";
+      } else {
+        this.nameError = "";
+      }
+
+      if (this.email === "") {
+        this.emailError = "Email is required!";
+      } else if (!emailRegex.test(this.email)) {
+        this.emailError = "Enter valid email id";
+      } else {
+        this.emailError = "";
+      }
+      if (this.password === "") {
+        this.passwordError = "Password is required";
+      } else if (!passwordRegex.test(this.password)) {
+        this.passwordError = "Password should contain lower, upper, digit and one special character";
+      } else {
+        this.passwordError = "";
+      }
+      if (this.nameError === "" && this.emailError ===""  && this.passwordError === "") {
+        createUserWithEmailAndPassword(
+          getAuth(),
+          this.email,
+          this.password,
+          this.name,
+          this.status
+        )
+          .then(data => {
+            console.log("registered successfully");
+            this.signUpSuccessfull = "registered successfully"
+            // navigate the user after signUp successfull
+            // example  route.push("/home")
+            localStorage.setItem("user", data.accessToken);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
     },
     signUpWithGoogle() {
       const provider = new GoogleAuthProvider();
@@ -122,34 +170,7 @@ export default {
           console.log(error);
         });
     },
-    signUpWithApple() {
-      const provider = new OAuthProvider("apple.com");
-      signInWithPopup(getAuth(), provider)
-        .then(result => {
-          // The signed-in user info.
-          const user = result.user;
-          console.log(user);
-          console.log("registered successfully using Apple Account");
-          // Apple credential
-          const credential = OAuthProvider.credentialFromResult(result);
-          const accessToken = credential.accessToken;
-          const idToken = credential.idToken;
-
-          // IdP data available using getAdditionalUserInfo(result)
-          // ...
-        })
-        .catch(error => {
-          // Handle Errors here.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // The email of the user's account used.
-          const email = error.customData.email;
-          // The credential that was used.
-          const credential = OAuthProvider.credentialFromError(error);
-
-          // ...
-        });
-    }
+  
   }
 };
 </script>
@@ -193,13 +214,24 @@ input {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
 }
-.forget_password_text {
+.forget_password_text,
+.remember_me_text {
   font-family: "Helvetica";
   font-weight: 400;
   font-size: 14px;
   color: #828282;
   text-align: end !important;
 }
+.remember_me_text {
+  color: #333333;
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  accent-color: #ff9f0d;
+  color: white;
+}
+
 .or_text {
   border: 1px solid #e0e0e0;
   padding: 5px;
