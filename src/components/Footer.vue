@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="p-0 footer_main_section position-relative bg-dark">
-    <b-row align-h="center" no-gutters>
+  <b-container fluid class="p-0 footer_main_section position-relative">
+    <b-row align-h="center" no-gutters class="footer_first_section">
       <b-col cols="12" sm="12" md="12" lg="10">
         <b-row class="d-flex align-items-center footer_info_section" no-gutters>
           <b-col cols="12" sm="12" md="12" lg="6" class="footer_info">
@@ -138,6 +138,10 @@ export default {
   background-image: url("../assets/images/footer_bg.png");
   background-position: bottom right;
   background-repeat: no-repeat;
+  
+}
+.footer_first_section {
+  background: #0D0D0D;
 }
 .footer_info_section {
   border-bottom: 1px solid #ff9f0d;

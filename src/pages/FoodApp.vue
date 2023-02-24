@@ -29,7 +29,8 @@ export default {
     Footer,
     BlogPostItem,
     Carousel
-  }
+  },
+
 };
 </script>
 
@@ -38,11 +39,6 @@ export default {
     <b-row no-gutters>
       <b-col cols="12" class="p-0">
         <b-container fluid class="home_main_section pt-4">
-          <b-row align-h="center" class="align-items-center mt-4" no-gutters>
-            <b-col cols="11" sm="11" md="11" lg="9">
-              <Navbar />
-            </b-col>
-          </b-row>
           <b-row align-h="center" class="align-items-center mt-4" no-gutters>
             <b-col cols="12" sm="12" md="12" lg="5" class>
               <b-row no-gutters>
@@ -445,7 +441,7 @@ export default {
               </b-row>
             </b-col>
           </b-row>
-          <Footer />
+          <!-- <Footer /> -->
         </b-container>
       </b-col>
     </b-row>

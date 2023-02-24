@@ -1,57 +1,68 @@
 <template>
-  <nav>
-    <div class="d-flex justify-content-center">
-      <img src="../assets/images/Foodtuck.png" alt />
-    </div>
-    <div class="navbar_section d-flex align-items-center justify-content-between">
-      <input type="checkbox" name id="check" />
-      <label for="check" class="checkbtn">
-        <b-icon icon="justify-left" variant="light" class="icon_justify_left" font-scale="1.5"></b-icon>
-      </label>
-      <ul
-        class="navbar_items d-flex align-items-center justify-content-between fw-normal text-light"
-      >
-        <li class="x_icon_li">
-          <label for="check" class="uncheckbtn">
-            <b-icon icon="x-lg" variant="light" class="icon_justify_left"></b-icon>
-          </label>
-        </li>
-        <li>
-          <a href="#" class="text-light">Home</a>
-        </li>
-        <li>
-          <a href="#" class="text-light">Menu</a>
-        </li>
-        <li>
-          <a href="#" class="text-light">Blog</a>
-        </li>
-        <li>
-          <a href="#" class="text-light">Pages</a>
-        </li>
-        <li>
-          <a href="#" class="d-flex align-items-end gap-3 text-light">
-            <span class="d-block">About</span>
-            <b-icon icon="chevron-down" class="d-block ml-2" font-scale="1.1"></b-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="text-light">Shop</a>
-        </li>
-        <li>
-          <a href="#" class="text-light">Contact</a>
-        </li>
-      </ul>
+  <b-container fluid class="p-0">
+    <b-row no-gutters align-h="center" :style="{background: navBarColor}">
+      <b-col cols="10">
+        <nav>
+          <div class="d-flex justify-content-center">
+            <img src="../assets/images/Foodtuck.png" alt />
+          </div>
+          <div class="navbar_section d-flex align-items-center justify-content-between">
+            <input type="checkbox" name id="check" />
+            <label for="check" class="checkbtn">
+              <b-icon
+                icon="justify-left"
+                variant="light"
+                class="icon_justify_left"
+                font-scale="1.5"
+              ></b-icon>
+            </label>
+            <ul
+              class="navbar_items d-flex align-items-center justify-content-between fw-normal text-light"
+            >
+              <li class="x_icon_li">
+                <label for="check" class="uncheckbtn">
+                  <b-icon icon="x-lg" variant="light" class="icon_justify_left"></b-icon>
+                </label>
+              </li>
+              <li>
+                <a href="#" class="text-light">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Menu</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Pages</a>
+              </li>
+              <li>
+                <a href="#" class="d-flex align-items-end gap-3 text-light">
+                  <span class="d-block">About</span>
+                  <b-icon icon="chevron-down" class="d-block ml-2" font-scale="1.1"></b-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Shop</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Contact</a>
+              </li>
+            </ul>
 
-      <div class="d-flex align-items-center icons_sections">
-        <div class="navbar_input mr-3 position-relative">
-          <input type="text" class="text-light" placeholder="Search..." />
-          <b-icon icon="search" font-scale="1.5" variant="light"></b-icon>
-        </div>
-        <b-icon icon="search" variant="light" font-scale="1.5" class="icon_search mr-4"></b-icon>
-        <b-icon icon="bag" variant="light" font-scale="1.5" class="icon_bag"></b-icon>
-      </div>
-    </div>
-  </nav>
+            <div class="d-flex align-items-center icons_sections">
+              <div class="navbar_input mr-3 position-relative">
+                <input type="text" class="text-light" placeholder="Search..." />
+                <b-icon icon="search" font-scale="1.5" variant="light"></b-icon>
+              </div>
+              <b-icon icon="search" variant="light" font-scale="1.5" class="icon_search mr-4"></b-icon>
+              <b-icon icon="bag" variant="light" font-scale="1.5" class="icon_bag"></b-icon>
+            </div>
+          </div>
+        </nav>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 <script>
 import {
@@ -70,14 +81,22 @@ export default {
     BIconChevronDown,
     BIconXLg,
     BIconJustifyLeft
+  },
+  computed: {
+    navBarColor() {
+      console.log(this.$route.path);
+      if (this.$route.path === '/food-app') {
+        return "transparent";
+      }
+      return "#0D0D0D";
+    }
   }
 };
 </script>
 <style scoped>
 nav {
-  height: 90px;
-  /* padding: 45px 20rem 20px 20rem; */
-  background-color: transparent;
+  padding-top: 30px;
+  padding-bottom: 20px;
   font-family: "Inter", sans-serif;
 }
 .x_icon_li,
@@ -133,7 +152,6 @@ input::placeholder {
     background: rgba(13, 13, 13, 0.95) !important;
     width: 100%;
     height: 100vh;
-
   }
   .navbar_items > li:first-child {
     padding: 20px 24px;

@@ -1,22 +1,26 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row no-gutters align-h="center" class="bg-dark">
+    <!-- <b-row no-gutters align-h="center" class="bg-dark">
       <b-col cols="10">
         <Navbar />
       </b-col>
     </b-row>
     <b-row no-gutters>
       <b-col cols="12">
-        <FoodAppBanner mainPage="Sign up page" middlePage="Home" subPage="sign up"/>
+        <FoodAppBanner mainPage="Sign up page" middlePage="Home" subPage="sign up" />
       </b-col>
-    </b-row>
+    </b-row> -->
     <b-row align-h="center" class="signup_section" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="3">
-        
         <form action @submit.prevent="signUp">
-         
           <div class="signup_main">
-            <span class="text-center d-block text-success mb-2 font-weight-bold" v-if="signUpSuccessfull">{{signUpSuccessfull}}</span>
+            <div v-if="isSignUpSuccessfull">
+              <span
+                class="text-center d-block text-success mb-2 font-weight-bold"
+              >Your account is registered successfully!!</span>
+              <button class="btn_signup w-100" @click="$router.push('/signin')">Sign In</button>
+            </div>
+            <div v-else>
             <span class="d-block signup_text">Sign Up</span>
             <div class="position-relative name_field mt-4">
               <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
@@ -44,7 +48,7 @@
                 type="checkbox"
                 name="checkbox-1"
                 id="checkbox-1"
-                value="accepted"
+                v-model="rememberMe"
                 unselectable="not_accepted"
               />
               <span class="ml-2 remember_me_text d-block">Remember me ?</span>
@@ -72,15 +76,16 @@
               <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
               <span></span>
             </div>
+            </div>
           </div>
         </form>
       </b-col>
     </b-row>
-    <b-row no-gutters>
+    <!-- <b-row no-gutters>
       <b-col cols="12">
         <Footer />
       </b-col>
-    </b-row>
+    </b-row> -->
   </b-container>
 </template>
 <script>
@@ -99,21 +104,30 @@ export default {
   data() {
     return {
       name: "",
-      password: "",
-      status: "",
       email: "",
+      password: "",
+      rememberMe: false,
       nameError: "",
       emailError: "",
       passwordError: "",
-      signUpSuccessfull: ""
+      isSignUpSuccessfull: false
     };
+  },
+  mounted() {
+    const rememberMe = this.getCookie("rememberMe");
+    if (rememberMe) {
+      this.name = rememberMe.name;
+      this.email = rememberMe.email;
+      this.password = rememberMe.password;
+      this.rememberMe = true;
+    }
   },
   methods: {
     signUp() {
       const nameRegex = /^.{3,25}$/;
       const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$@^%&? "])[a-zA-Z0-9!#$@^%&?]{6,}$/;
-      console.log(this.name, this.password, this.email, this.status);
+      console.log(this.name, this.email, this.password, this.rememberMe);
 
       if (this.name === "") {
         this.nameError = "Name is required!";
@@ -133,29 +147,55 @@ export default {
       if (this.password === "") {
         this.passwordError = "Password is required";
       } else if (!passwordRegex.test(this.password)) {
-        this.passwordError = "Password should contain lower, upper, digit and one special character";
+        this.passwordError =
+          "Password should contain lower, upper, digit and one special character";
       } else {
         this.passwordError = "";
       }
-      if (this.nameError === "" && this.emailError ===""  && this.passwordError === "") {
+      // Remember me Functionality 
+      if (this.rememberMe) {
+        const rememberMeData = {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+        };
+        this.setCookie("rememberMe", rememberMeData, 30);
+      } else {
+        this.deleteCookie("rememberMe");
+      }
+
+      if (
+        this.nameError === "" &&
+        this.emailError === "" &&
+        this.passwordError === ""
+      ) {
         createUserWithEmailAndPassword(
           getAuth(),
           this.email,
           this.password,
-          this.name,
-          this.status
         )
           .then(data => {
             console.log("registered successfully");
-            this.signUpSuccessfull = "registered successfully"
+            this.isSignUpSuccessfull = true;
             // navigate the user after signUp successfull
             // example  route.push("/home")
-            localStorage.setItem("user", data.accessToken);
           })
           .catch(error => {
             console.log(error);
           });
       }
+    },
+    setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+      document.cookie = `${name}=${JSON.stringify(value)};expires=${expires.toUTCString()};path=/`;
+    },
+    getCookie(name) {
+      const cookie = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+      return cookie ? JSON.parse(cookie[2]) : null;
+    },
+    deleteCookie(name) {
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/`;
     },
     signUpWithGoogle() {
       const provider = new GoogleAuthProvider();
@@ -169,8 +209,7 @@ export default {
         .catch(error => {
           console.log(error);
         });
-    },
-  
+    }
   }
 };
 </script>
