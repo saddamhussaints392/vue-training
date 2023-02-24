@@ -1,15 +1,5 @@
 <template>
   <b-container fluid class="p-0">
-    <!-- <b-row no-gutters align-h="center" class="bg-dark">
-      <b-col cols="10">
-        <Navbar />
-      </b-col>
-    </b-row>
-    <b-row no-gutters>
-      <b-col cols="12">
-        <FoodAppBanner mainPage="Sign up page" middlePage="Home" subPage="sign up" />
-      </b-col>
-    </b-row> -->
     <b-row align-h="center" class="signup_section" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="3">
         <form action @submit.prevent="signUp">
@@ -42,17 +32,6 @@
               <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
             </div>
             <span class="pl-2 text-danger" v-if="passwordError">{{passwordError}}</span>
-            <div class="mt-3 d-flex align-items-center">
-              <input
-                class="d-block"
-                type="checkbox"
-                name="checkbox-1"
-                id="checkbox-1"
-                v-model="rememberMe"
-                unselectable="not_accepted"
-              />
-              <span class="ml-2 remember_me_text d-block">Remember me ?</span>
-            </div>
             <div class="mt-4">
               <button class="btn_signup w-100" type="submit">Sign Up</button>
             </div>
@@ -81,11 +60,6 @@
         </form>
       </b-col>
     </b-row>
-    <!-- <b-row no-gutters>
-      <b-col cols="12">
-        <Footer />
-      </b-col>
-    </b-row> -->
   </b-container>
 </template>
 <script>
@@ -106,21 +80,11 @@ export default {
       name: "",
       email: "",
       password: "",
-      rememberMe: false,
       nameError: "",
       emailError: "",
       passwordError: "",
       isSignUpSuccessfull: false
     };
-  },
-  mounted() {
-    const rememberMe = this.getCookie("rememberMe");
-    if (rememberMe) {
-      this.name = rememberMe.name;
-      this.email = rememberMe.email;
-      this.password = rememberMe.password;
-      this.rememberMe = true;
-    }
   },
   methods: {
     signUp() {
@@ -152,17 +116,6 @@ export default {
       } else {
         this.passwordError = "";
       }
-      // Remember me Functionality 
-      if (this.rememberMe) {
-        const rememberMeData = {
-          name: this.name,
-          email: this.email,
-          password: this.password,
-        };
-        this.setCookie("rememberMe", rememberMeData, 30);
-      } else {
-        this.deleteCookie("rememberMe");
-      }
 
       if (
         this.nameError === "" &&
@@ -185,18 +138,7 @@ export default {
           });
       }
     },
-    setCookie(name, value, days) {
-      const expires = new Date();
-      expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-      document.cookie = `${name}=${JSON.stringify(value)};expires=${expires.toUTCString()};path=/`;
-    },
-    getCookie(name) {
-      const cookie = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
-      return cookie ? JSON.parse(cookie[2]) : null;
-    },
-    deleteCookie(name) {
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/`;
-    },
+   
     signUpWithGoogle() {
       const provider = new GoogleAuthProvider();
       signInWithPopup(getAuth(), provider)

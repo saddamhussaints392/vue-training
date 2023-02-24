@@ -1,11 +1,5 @@
 <template>
   <b-container fluid class="p-0">
-    <!-- <b-row no-gutters align-h="center" class="bg-dark">
-      <b-col cols="10">
-        <Navbar />
-      </b-col>
-    </b-row>
-    -->
     <b-row align-h="center" class="signup_section" no-gutters>
       <b-col cols="12" sm="12" md="12" lg="3">
         <form action @submit.prevent="signIn">
@@ -88,6 +82,14 @@ export default {
       signUpSuccessfull: ""
     };
   },
+  mounted() {
+    const rememberMe = this.getCookie("rememberMe");
+    if (rememberMe) {
+      this.email = rememberMe.email;
+      this.password = rememberMe.password;
+      this.rememberMe = true;
+    }
+  },
   methods: {
     signIn() {
       const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -109,19 +111,44 @@ export default {
       } else {
         this.passwordError = "";
       }
+
+      // Remember me Functionality 
+      if (this.rememberMe) {
+        const rememberMeData = {
+          email: this.email,
+          password: this.password,
+        };
+        this.setCookie("rememberMe", rememberMeData, 30);
+      } else {
+        this.deleteCookie("rememberMe");
+      }
+
       if (this.emailError === "" && this.passwordError === "") {
         signInWithEmailAndPassword(getAuth(), this.email, this.password)
           .then(data => {
             console.log("login successfully");
             this.signUpSuccessfull = true;
             // navigate the user after signUp successfull
-            // example  route.push("/home")
+           // example
+            this.$router.push("/menu");
             localStorage.setItem("user", data.accessToken);
           })
           .catch(error => {
             console.log(error.message);
           });
       }
+    },
+    setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+      document.cookie = `${name}=${JSON.stringify(value)};expires=${expires.toUTCString()};path=/`;
+    },
+    getCookie(name) {
+      const cookie = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+      return cookie ? JSON.parse(cookie[2]) : null;
+    },
+    deleteCookie(name) {
+      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/`;
     },
     signUpWithGoogle() {
       const provider = new GoogleAuthProvider();

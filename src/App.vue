@@ -6,7 +6,7 @@
     <Navbar />
     <b-row no-gutters v-if="isBannerAvailable">
       <b-col cols="12">
-        <FoodAppBanner mainPage="Sign in page" middlePage="Home" subPage="sign in" />
+        <FoodAppBanner :mainPage="$route.name.pageName" middlePage="Home" :subPage="$route.name.routeName" />
       </b-col>
     </b-row>
     <b-row no-gutters>
@@ -31,6 +31,7 @@ export default {
     FoodAppBanner
   },
   computed: {
+   
     isBannerAvailable() {
       if (this.$route.path === "/food-app") {
         return false;
