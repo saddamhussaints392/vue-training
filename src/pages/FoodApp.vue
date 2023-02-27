@@ -548,6 +548,9 @@ export default {
 .chefs_section {
   padding-top: 120px;
 }
+.why_we_choose_section {
+  padding-bottom: 120px;
+}
 .about_section {
   background: #0d0d0d;
 }
@@ -738,6 +741,9 @@ export default {
   .blog_post_section,
   .chefs_section {
     padding-top: 62px;
+  }
+  .why_we_choose_section {
+    padding-bottom: 62px;
   }
   .blog_post_section {
     padding-bottom: 20px;

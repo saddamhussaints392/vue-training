@@ -49,14 +49,14 @@
               class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
             >
               <img src="../assets/images/Google.png" alt class="d-block pl-3" />
-              <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
+              <span class="d-block" @click="signUpWithGoogle">Sign in with Google</span>
               <span></span>
             </div>
             <div
               class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
             >
               <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
-              <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
+              <span class="d-block" @click="signUpWithApple">Sign in with Apple</span>
               <span></span>
             </div>
           </div>
@@ -69,7 +69,8 @@
 import FoodAppBanner from "../components/FoodAppBanner.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider,
+  signInWithPopup, } from "firebase/auth";
 export default {
   components: { Navbar, FoodAppBanner, Footer },
   data() {

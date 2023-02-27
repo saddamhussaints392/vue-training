@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="banner_main_section">
     <b-row no-gutters>
-      <b-col cols="12" class="text-center">
+      <b-col cols="12" sm="12" md="12" lg="12" class="text-center">
         <span class="banner_title text-light d-block">{{mainPage}}</span>
         <div class="d-flex align-items-center justify-content-center banner_page_names">
           <span class="text-light main_page_title">{{middlePage}}</span>

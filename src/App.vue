@@ -1,9 +1,6 @@
-
-
-
 <template>
   <b-container fluid class="p-0">
-    <Navbar />
+    <Navbar v-if="$route.name.pageName !== 'default page' && $route.name.pageName !== 'sticky-notes page'" />
     <b-row no-gutters v-if="isBannerAvailable">
       <b-col cols="12">
         <FoodAppBanner :mainPage="$route.name.pageName" middlePage="Home" :subPage="$route.name.routeName" />
@@ -12,7 +9,7 @@
     <b-row no-gutters>
       <router-view></router-view>
     </b-row>
-    <b-row no-gutters>
+    <b-row no-gutters v-if="$route.name.pageName !== 'default page' && $route.name.pageName !== 'sticky-notes page'">
       <b-col cols="12">
         <Footer />
       </b-col>

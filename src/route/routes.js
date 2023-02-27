@@ -7,15 +7,26 @@ import Menu from "../pages/Menu.vue";
 const routes = [
     {
         path: "/",
+        name: {
+            pageName: "default page",
+            routeName: "/"
+        },
         component: Home
     },
     {
         path: "/sticky-notes",
+        name: {
+            pageName: "sticy-notes page",
+            routeName: "sticky notes"
+        },
         component: StickyNotes
     },
     {
         path: "/food-app",
-        name: "Lading page",
+        name: {
+            pageName: "Landing page",
+            routeName: "landing notes"
+        },
         component: FoodApp
     },
     {

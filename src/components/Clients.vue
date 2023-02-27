@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="clients_section p-0">
-    <b-row no-gutters>
+  <!-- <b-container fluid class="clients_section p-0"> -->
+    <b-row no-gutters class="clients_section">
       <b-col sm="6" mg="6" lg="3" cols="6" class="text-center">
         <img src="../assets/images/professional_chefs.png" alt />
         <span class="d-block text-light font-weight-bold mt-3">Professional Chefs</span>
@@ -22,7 +22,7 @@
         <h1 class="text-light font-weight-bold mt-3">220</h1>
       </b-col>
     </b-row>
-  </b-container>
+  <!-- </b-container> -->
 </template>
 <script>
 export default {
@@ -39,7 +39,7 @@ export default {
     url("../assets/images/clients_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
-  margin-top: 120px;
+  /* margin-top: 120px; */
   
 }
 .clients_section > div {
@@ -50,8 +50,6 @@ export default {
     .clients_section > div {
         padding: 37px !important;
     }
-    .clients_section {
-      margin-top: 62px;
-    }
+    
 }
 </style>

@@ -41,4 +41,47 @@ export default {};
 .menu_price {
   color: #ff9f0d;
 }
+
+@media screen and (max-width: 480px) {
+  .menu_item_section {
+  border-bottom: 1px dashed #e0e0e0;
+  padding: 22px 0 10px 0;
+}
+.menu_title,
+.menu_price {
+  font-family: "Helvetica";
+  font-size: 18px;
+  color: #333333;
+}
+.menu_subtitle,
+.menu_calories {
+  font-family: "Helvetica";
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.menu_price {
+  color: #ff9f0d;
+}
+}
+@media screen and (max-width: 768px) {
+  .menu_item_section {
+  border-bottom: 1px dashed #e0e0e0;
+  padding: 22px 0 10px 0;
+}
+.menu_title,
+.menu_price {
+  font-family: "Helvetica";
+  font-size: 18px;
+  color: #333333;
+}
+.menu_subtitle,
+.menu_calories {
+  font-family: "Helvetica";
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.menu_price {
+  color: #ff9f0d;
+}
+}
 </style>
