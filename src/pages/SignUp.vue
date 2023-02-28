@@ -8,7 +8,7 @@
               <span
                 class="text-center d-block text-success mb-2 font-weight-bold"
               >Your account is registered successfully!!</span>
-              <button class="btn_signup w-100" @click="$router.push('/signin')">Sign In</button>
+              <button class="btn_signup w-100" @click="$router.push('/sign-in')">Sign In</button>
             </div>
             <div v-else>
             <span class="d-block signup_text">Sign Up</span>

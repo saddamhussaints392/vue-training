@@ -4,6 +4,7 @@ import Home from "../pages/Home.vue";
 import SignUp from "../pages/SignUp.vue";
 import SignIn from "../pages/SignIn.vue";
 import Menu from "../pages/Menu.vue";
+import ShoppingCart from "../pages/ShoppingCart.vue";
 const routes = [
     {
         path: "/",
@@ -30,7 +31,7 @@ const routes = [
         component: FoodApp
     },
     {
-        path: "/signup",
+        path: "/sign-up",
         name: {
             pageName: "Sign up page",
             routeName: "sign up"
@@ -38,7 +39,7 @@ const routes = [
         component: SignUp
     },
     {
-        path: "/signin",
+        path: "/sign-in",
         name: {
             pageName: "Sign in page",
             routeName: "sign in"
@@ -51,7 +52,21 @@ const routes = [
             pageName: "Our Menu",
             routeName: "Menu"
         },
-        component: Menu
+        component: Menu,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/shopping-cart",
+        name: {
+            pageName: "Shopping Cart",
+            routeName: "Shopping Cart"
+        },
+        component: ShoppingCart,
+        meta: {
+            requiresAuth: true
+        }
     },
     
 ]

@@ -4,10 +4,10 @@
       <b-col cols="12" sm="12" md="12" lg="3">
         <form action @submit.prevent="signIn">
           <div class="signup_main">
-            <span
+            <!-- <span
               class="text-center d-block text-success mb-2 font-weight-bold"
               v-if="signUpSuccessfull"
-            >{{signUpSuccessfull}}</span>
+            >{{signUpSuccessfull}}</span> -->
             <span class="d-block signup_text">Sign In</span>
             <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span>
             <div class="position-relative email_field mt-3">
@@ -80,7 +80,7 @@ export default {
       rememberMe: false,
       emailError: "",
       passwordError: "",
-      signUpSuccessfull: ""
+      // signUpSuccessfull: ""
     };
   },
   mounted() {
@@ -128,11 +128,11 @@ export default {
         signInWithEmailAndPassword(getAuth(), this.email, this.password)
           .then(data => {
             console.log("login successfully");
-            this.signUpSuccessfull = true;
+            // this.signUpSuccessfull = true;
             // navigate the user after signUp successfull
            // example
-            this.$router.push("/menu");
-            localStorage.setItem("user", data.accessToken);
+           localStorage.setItem("user", data.user.accessToken);
+           this.$router.push("/shopping-cart");
           })
           .catch(error => {
             console.log(error.message);

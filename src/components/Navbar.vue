@@ -9,54 +9,55 @@
           <div class="navbar_section d-flex align-items-center justify-content-between">
             <input type="checkbox" name id="check" />
             <label for="check" class="checkbtn">
-              <b-icon
+              <b-icon-justify-left
                 icon="justify-left"
                 variant="light"
                 class="icon_justify_left"
                 font-scale="1.5"
-              ></b-icon>
+              ></b-icon-justify-left>
             </label>
             <ul
               class="navbar_items d-flex align-items-center justify-content-between fw-normal text-light"
             >
               <li class="x_icon_li">
                 <label for="check" class="uncheckbtn">
-                  <b-icon icon="x-lg" variant="light" class="icon_justify_left"></b-icon>
+                  <b-icon-x-lg variant="light" class="icon_justify_left"></b-icon-x-lg>
                 </label>
               </li>
               <li>
-                <a href="#" class="text-light">Home</a>
+                <router-link to="/home" class="active">Home</router-link>
               </li>
               <li>
-                <a href="#" class="text-light">Menu</a>
+                <router-link to="/menu">Menu</router-link>
               </li>
               <li>
-                <a href="#" class="text-light">Blog</a>
+                <router-link to="/blog">Blog</router-link>
               </li>
               <li>
-                <a href="#" class="text-light">Pages</a>
+                <router-link to="/pages">Pages</router-link>
               </li>
               <li>
-                <a href="#" class="d-flex align-items-end gap-3 text-light">
+                <router-link to="#" class="d-flex align-items-end gap-3 text-light">
                   <span class="d-block">About</span>
-                  <b-icon icon="chevron-down" class="d-block ml-2" font-scale="1.1"></b-icon>
-                </a>
+                  <b-icon-chevron-down class="d-block ml-2" font-scale="1.1"></b-icon-chevron-down>
+                </router-link>
               </li>
               <li>
-                <a href="#" class="text-light">Shop</a>
+                <router-link to="#">Shop</router-link>
               </li>
               <li>
-                <a href="#" class="text-light">Contact</a>
+                <router-link to="#">Contact</router-link>
               </li>
             </ul>
 
             <div class="d-flex align-items-center icons_sections">
-              <div class="navbar_input mr-3 position-relative">
+              <div class="navbar_input position-relative">
                 <input type="text" class="text-light" placeholder="Search..." />
-                <b-icon icon="search" font-scale="1.5" variant="light"></b-icon>
+                <b-icon-search font-scale="1.5" variant="light"></b-icon-search>
               </div>
-              <b-icon icon="search" variant="light" font-scale="1.5" class="icon_search mr-4"></b-icon>
-              <b-icon icon="bag" variant="light" font-scale="1.5" class="icon_bag"></b-icon>
+              <b-icon-search variant="light" font-scale="1.5" class="icon_search"></b-icon-search>
+              <b-icon-person variant="light" font-scale="2"></b-icon-person>
+              <b-icon-bag variant="light" font-scale="1.5" class="icon_bag" @click="$router.push('/shopping-cart')"></b-icon-bag>
             </div>
           </div>
         </nav>
@@ -65,27 +66,11 @@
   </b-container>
 </template>
 <script>
-import {
-  BIcon,
-  BIconSearch,
-  BIconBag,
-  BIconChevronDown,
-  BIconXLg,
-  BIconJustifyLeft
-} from "bootstrap-vue";
 export default {
-  components: {
-    BIcon,
-    BIconSearch,
-    BIconBag,
-    BIconChevronDown,
-    BIconXLg,
-    BIconJustifyLeft
-  },
+  components: {},
   computed: {
     navBarColor() {
-      console.log(this.$route.path);
-      if (this.$route.path === '/food-app') {
+      if (this.$route.path === "/food-app") {
         return "transparent";
       }
       return "#0D0D0D";
@@ -116,6 +101,14 @@ nav {
 .navbar_items > li > a {
   text-decoration: none;
 }
+nav ul li a {
+  color: white;
+}
+nav ul li a.active,nav ul li a:hover {
+color: #ff9f0d !important;
+}
+
+
 .navbar_input > input {
   padding: 16px 26px;
   outline: none;
@@ -135,6 +128,13 @@ input::placeholder {
 
 #check {
   display: none;
+}
+.icons_sections {
+  gap: 20px;
+}
+
+.icons_sections > svg {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {
