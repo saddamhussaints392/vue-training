@@ -129,10 +129,8 @@ export default {
           .then(data => {
             console.log("login successfully");
             // this.signUpSuccessfull = true;
-            // navigate the user after signUp successfull
-           // example
+            this.$router.push("/shopping-cart");
            localStorage.setItem("user", data.user.accessToken);
-           this.$router.push("/shopping-cart");
           })
           .catch(error => {
             console.log(error.message);
