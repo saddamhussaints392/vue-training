@@ -3,11 +3,11 @@ import { defineStore } from "pinia";
 export const useAuthStore = defineStore({
     id: "mystore",
     state: () => ({
-        // isLoggedIn: false,
+        isLoggedIn: false,
     }),
     getters: {
         getIsLoggedIn: (state) => {
-            // return state.isLoggedIn;
+            return state.isLoggedIn;
         }
     }
 })

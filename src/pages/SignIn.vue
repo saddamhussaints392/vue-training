@@ -130,7 +130,7 @@ export default {
             console.log("login successfully");
             // this.signUpSuccessfull = true;
             this.$router.push("/shopping-cart");
-           localStorage.setItem("user", data.user.accessToken);
+           localStorage.setItem("user", JSON.stringify(data.user.accessToken));
           })
           .catch(error => {
             console.log(error.message);
