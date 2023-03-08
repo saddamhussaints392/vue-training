@@ -23,10 +23,9 @@ initializeApp(firebaseConfig);
 const pinia = createPinia()
 configureCompat({
     MODE: 2,
-  })
+})
 createApp(App)
 .use(BootstrapVue)
 .use(IconsPlugin)
-.use(pinia)
-.use(router).mount('#app')
+.use(router).use(pinia).mount('#app')
 

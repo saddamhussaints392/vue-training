@@ -1,15 +1,15 @@
 <template>
-  <b-container fluid class="p-0">
+  <b-container fluid class="p-0" >
     <Navbar />
-    <b-row no-gutters v-if="isBannerAvailable">
+    <b-row no-gutters v-if="isBannerAvailable" class="banner">
       <b-col cols="12">
-        <FoodAppBanner mainPage="$route.name.pageName" middlePage="Home" subPage="$route.name.routeName" />
+        <FoodAppBanner :mainPage="$route.meta.name" middlePage="Home" :subPage="$route.meta.name" />
       </b-col>
     </b-row>
     <b-row no-gutters>
       <router-view></router-view>
     </b-row>
-    <b-row >
+    <b-row>
       <b-col cols="12">
         <Footer />
       </b-col>
@@ -42,5 +42,8 @@ export default {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+}
+.banner {
+  padding-top: 125px;
 }
 </style>

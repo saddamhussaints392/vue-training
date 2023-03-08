@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="p-0">
+  <b-container fluid class="p-0" style="position: absolute; z-index: 900;">
     <b-row no-gutters align-h="center" :style="{background: navBarColor}">
       <b-col cols="10">
         <nav>
@@ -56,7 +56,7 @@
                 <b-icon-search font-scale="1.5" variant="light"></b-icon-search>
               </div>
               <b-icon-search variant="light" font-scale="1.5" class="icon_search"></b-icon-search>
-              <b-icon-person variant="light" font-scale="2"></b-icon-person>
+              <b-icon-person v-if="getToken()" variant="light" font-scale="2"></b-icon-person>
               <b-icon-bag variant="light" font-scale="1.5" class="icon_bag" @click="$router.push('/shopping-cart')"></b-icon-bag>
             </div>
           </div>
@@ -66,14 +66,25 @@
   </b-container>
 </template>
 <script>
+import { useAuthStore } from '../store/authStore';
+import { getToken } from '../utils';
 export default {
   components: {},
+  setup(){
+    const authStore = useAuthStore();
+    return {authStore}
+  },
   computed: {
     navBarColor() {
       if (this.$route.path === "/food-app") {
         return "transparent";
       }
       return "#0D0D0D";
+    }
+  },
+  methods: {
+    getToken(){
+      return Boolean(getToken());
     }
   }
 };

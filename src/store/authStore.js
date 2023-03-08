@@ -4,6 +4,7 @@ import router from "../route";
 import { emailRegex } from "../regex/emailRegex";
 import { passwordRegex } from "../regex/passwordRegex";
 import { nameRegex } from "../regex/nameRegex";
+import { getToken } from "../utils";
 export const useAuthStore = defineStore({
     id: "mystore",
     state: () => {
@@ -11,13 +12,33 @@ export const useAuthStore = defineStore({
             nameError: "",
             emailError: "",
             passwordError: "",
-            isSignUpSuccessfull: false
+            isSignUpSuccessfull: false,
+            isUserLoggedIn: localStorage.getItem('user')
         }
     },
     getters: {
 
     },
     actions: {
+        SignInWithGoogle(page) {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(getAuth(), provider)
+                .then(data => {
+                    console.log(data.user.accessToken);
+                    console.log("registered successfully using Google Account");
+                    // navigate the user after signUp successfull
+                    if (page === 'signin') {
+                        localStorage.setItem("user", data.user.accessToken);
+                        router.push("/shopping-cart")
+                    } else {
+                        this.isSignUpSuccessfull = true;
+                    }
+
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        },
         SignIn(email, password, rememberMe) {
             console.log(password, email);
             if (email === "") {
@@ -52,33 +73,15 @@ export const useAuthStore = defineStore({
                     .then(data => {
                         console.log("login successfully");
                         // this.signUpSuccessfull = true;
-                        localStorage.setItem("user", JSON.stringify(data.user.accessToken));
-                        router.push('/shopping-cart')
+                        localStorage.setItem("user", data.user.accessToken);
+                       router.push('/shopping-cart')
                     })
                     .catch(error => {
                         console.log(error.message);
                     });
             }
         },
-        SignInWithGoogle(page) {
-            const provider = new GoogleAuthProvider();
-            signInWithPopup(getAuth(), provider)
-                .then(data => {
-                    console.log(data.user.accessToken);
-                    console.log("registered successfully using Google Account");
-                    // navigate the user after signUp successfull
-                    if (page === 'signin') {
-                        localStorage.setItem("user", JSON.stringify(data.user.accessToken));
-                        router.push("/shopping-cart")
-                    } else {
-                        this.isSignUpSuccessfull = true;
-                    }
-
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        },
+       
         setCookie(name, value, days) {
             const expires = new Date();
             expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);

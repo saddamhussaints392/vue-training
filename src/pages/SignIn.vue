@@ -4,12 +4,7 @@
       <b-col cols="12" sm="12" md="12" lg="3">
         <form action @submit.prevent="signIn">
           <div class="signup_main">
-            <!-- <span
-              class="text-center d-block text-success mb-2 font-weight-bold"
-              v-if="signUpSuccessfull"
-            >{{signUpSuccessfull}}</span>-->
             <span class="d-block signup_text">Sign In</span>
-            <!-- <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span> -->
             <div class="position-relative email_field mt-3">
               <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
               <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
@@ -71,12 +66,11 @@
   <script>
 import FoodAppBanner from "../components/FoodAppBanner.vue";
 import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
 import { useAuthStore } from "../store/authStore";
 import { mapState } from "pinia";
 
 export default {
-  components: { Navbar, FoodAppBanner, Footer },
+  components: {  FoodAppBanner, Footer },
   setup() {
     const authStore = useAuthStore();
     return { authStore };

@@ -8,66 +8,46 @@ import ShoppingCart from "../pages/ShoppingCart.vue";
 const routes = [
     {
         path: "/",
-        name: {
-            pageName: "default page",
-            routeName: "/"
-        },
         component: Home
     },
     {
         path: "/sticky-notes",
-        name: {
-            pageName: "sticy-notes page",
-            routeName: "sticky notes"
-        },
         component: StickyNotes
     },
     {
         path: "/food-app",
-        name: {
-            pageName: "Landing page",
-            routeName: "landing notes"
-        },
         component: FoodApp
     },
     {
         path: "/sign-up",
-        name: {
-            pageName: "Sign up page",
-            routeName: "sign up"
-        },
-        component: SignUp
+        component: SignUp,
+        meta: {
+            name: "Sign Up"
+        }
     },
     {
         path: "/sign-in",
-        name: {
-            pageName: "Sign in page",
-            routeName: "sign in"
-        },
-        component: SignIn
+        component: SignIn,
+        meta: {
+            name: "Sign In"
+        }
     },
     {
         path: "/menu",
-        name: {
-            pageName: "Our Menu",
-            routeName: "Menu"
-        },
         component: Menu,
         meta: {
+            name: "Menu",
             requiresAuth: true
         }
     },
     {
         path: "/shopping-cart",
-        name: {
-            pageName: "Shopping Cart",
-            routeName: "Shopping Cart"
-        },
         component: ShoppingCart,
         meta: {
+            name: "Shopping Cart",
             requiresAuth: true
         }
-    },
-    
+    }
+
 ]
 export default routes;

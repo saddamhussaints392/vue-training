@@ -68,17 +68,10 @@
 <script>
 import FoodAppBanner from "../components/FoodAppBanner.vue";
 import Footer from "../components/Footer.vue";
-import Navbar from "../components/Navbar.vue";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  OAuthProvider
-} from "firebase/auth";
+
 import { useAuthStore } from "../store/authStore";
 export default {
-  components: { Navbar, FoodAppBanner, Footer },
+  components: {  FoodAppBanner, Footer },
   setup() {
     const authStore = useAuthStore();
     return { authStore };

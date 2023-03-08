@@ -1,5 +1,4 @@
 <script>
-import Navbar from "../components/Navbar.vue";
 import {
   BIconFacebook,
   BIconTwitter,
@@ -16,7 +15,6 @@ import MenuListItem from "../components/MenuListItem.vue";
 import Carousel from "../components/Carousel.vue";
 export default {
   components: {
-    Navbar,
     BIconFacebook,
     BIconTwitter,
     Client,
@@ -38,7 +36,7 @@ export default {
   <b-container fluid class="home_main p-0">
     <b-row no-gutters>
       <b-col cols="12" class="p-0">
-        <b-container fluid class="home_main_section pt-4">
+        <b-container fluid class="home_main_section">
           <b-row align-h="center" class="align-items-center mt-4" no-gutters>
             <b-col cols="12" sm="12" md="12" lg="5" class>
               <b-row no-gutters>
@@ -457,6 +455,7 @@ export default {
     url("../assets/images/home_page_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
+  padding-top: 125px;
 }
 .social_networks {
   height: 150px;
