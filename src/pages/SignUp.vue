@@ -4,57 +4,60 @@
       <b-col cols="12" sm="12" md="12" lg="3">
         <form action @submit.prevent="signUp">
           <div class="signup_main">
-            <div v-if="isSignUpSuccessfull">
+            <div v-if="authStore.isSignUpSuccessfull">
               <span
                 class="text-center d-block text-success mb-2 font-weight-bold"
               >Your account is registered successfully!!</span>
               <button class="btn_signup w-100" @click="$router.push('/sign-in')">Sign In</button>
             </div>
             <div v-else>
-            <span class="d-block signup_text">Sign Up</span>
-            <div class="position-relative name_field mt-4">
-              <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
-              <b-icon-person font-scale="1.5" class="position-absolute person_icon"></b-icon-person>
-            </div>
-            <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span>
-            <div class="position-relative email_field mt-3">
-              <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
-              <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
-            </div>
-            <span class="pl-2 text-danger" v-if="emailError">{{emailError}}</span>
-            <div class="position-relative password_field mt-3">
-              <b-form-input
-                class="rounded-0"
-                placeholder="Password"
-                type="password"
-                v-model="password"
-              ></b-form-input>
-              <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
-            </div>
-            <span class="pl-2 text-danger" v-if="passwordError">{{passwordError}}</span>
-            <div class="mt-4">
-              <button class="btn_signup w-100" type="submit">Sign Up</button>
-            </div>
-            <span class="d-block w-100 mt-3 forget_password_text">Forget password ?</span>
-            <div class="d-flex align-items-center mt-4">
-              <hr class="flex-grow-1" />
-              <span class="or_text">OR</span>
-              <hr class="flex-grow-1" />
-            </div>
-            <div
-              class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
-            >
-              <img src="../assets/images/Google.png" alt class="d-block pl-3" />
-              <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
-              <span></span>
-            </div>
-            <div
-              class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
-            >
-              <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
-              <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
-              <span></span>
-            </div>
+              <span class="d-block signup_text">Sign Up</span>
+              <div class="position-relative name_field mt-4">
+                <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
+                <b-icon-person font-scale="1.5" class="position-absolute person_icon"></b-icon-person>
+              </div>
+              <span class="pl-2 text-danger" v-if="authStore.nameError">{{authStore.nameError}}</span>
+              <div class="position-relative email_field mt-3">
+                <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
+                <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
+              </div>
+              <span class="pl-2 text-danger" v-if="authStore.emailError">{{authStore.emailError}}</span>
+              <div class="position-relative password_field mt-3">
+                <b-form-input
+                  class="rounded-0"
+                  placeholder="Password"
+                  type="password"
+                  v-model="password"
+                ></b-form-input>
+                <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
+              </div>
+              <span
+                class="pl-2 text-danger"
+                v-if="authStore.passwordError"
+              >{{authStore.passwordError}}</span>
+              <div class="mt-4">
+                <button class="btn_signup w-100" type="submit">Sign Up</button>
+              </div>
+              <span class="d-block w-100 mt-3 forget_password_text">Forget password ?</span>
+              <div class="d-flex align-items-center mt-4">
+                <hr class="flex-grow-1" />
+                <span class="or_text">OR</span>
+                <hr class="flex-grow-1" />
+              </div>
+              <div
+                class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
+              >
+                <img src="../assets/images/Google.png" alt class="d-block pl-3" />
+                <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
+                <span></span>
+              </div>
+              <div
+                class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
+              >
+                <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
+                <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
+                <span></span>
+              </div>
             </div>
           </div>
         </form>
@@ -73,84 +76,27 @@ import {
   signInWithPopup,
   OAuthProvider
 } from "firebase/auth";
+import { useAuthStore } from "../store/authStore";
 export default {
   components: { Navbar, FoodAppBanner, Footer },
+  setup() {
+    const authStore = useAuthStore();
+    return { authStore };
+  },
   data() {
     return {
       name: "",
       email: "",
-      password: "",
-      nameError: "",
-      emailError: "",
-      passwordError: "",
-      isSignUpSuccessfull: false
+      password: ""
     };
   },
   methods: {
     signUp() {
-      const nameRegex = /^.{3,25}$/;
-      const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$@^%&? "])[a-zA-Z0-9!#$@^%&?]{6,}$/;
-      console.log(this.name, this.email, this.password, this.rememberMe);
-
-      if (this.name === "") {
-        this.nameError = "Name is required!";
-      } else if (!nameRegex.test(this.name)) {
-        this.nameError = "Name should have atleast 3 characters";
-      } else {
-        this.nameError = "";
-      }
-
-      if (this.email === "") {
-        this.emailError = "Email is required!";
-      } else if (!emailRegex.test(this.email)) {
-        this.emailError = "Enter valid email id";
-      } else {
-        this.emailError = "";
-      }
-      if (this.password === "") {
-        this.passwordError = "Password is required";
-      } else if (!passwordRegex.test(this.password)) {
-        this.passwordError =
-          "Password should contain lower, upper, digit and one special character";
-      } else {
-        this.passwordError = "";
-      }
-
-      if (
-        this.nameError === "" &&
-        this.emailError === "" &&
-        this.passwordError === ""
-      ) {
-        createUserWithEmailAndPassword(
-          getAuth(),
-          this.email,
-          this.password,
-        )
-          .then(data => {
-            console.log("registered successfully");
-            this.isSignUpSuccessfull = true;
-            // navigate the user after signUp successfull
-            // example  route.push("/home")
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      }
+      this.authStore.SignUp(this.name, this.email, this.password);
     },
-   
+
     signUpWithGoogle() {
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(getAuth(), provider)
-        .then(data => {
-          console.log(data.user);
-          console.log("registered successfully using Google Account");
-          // navigate the user after signUp successfull
-          // example  route.push("/home")
-        })
-        .catch(error => {
-          console.log(error);
-        });
+      this.authStore.SignInWithGoogle("signup");
     }
   }
 };

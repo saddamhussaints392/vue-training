@@ -7,14 +7,14 @@
             <!-- <span
               class="text-center d-block text-success mb-2 font-weight-bold"
               v-if="signUpSuccessfull"
-            >{{signUpSuccessfull}}</span> -->
+            >{{signUpSuccessfull}}</span>-->
             <span class="d-block signup_text">Sign In</span>
-            <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span>
+            <!-- <span class="pl-2 text-danger" v-if="nameError">{{nameError}}</span> -->
             <div class="position-relative email_field mt-3">
               <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
               <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
             </div>
-            <span class="pl-2 text-danger" v-if="emailError">{{emailError}}</span>
+            <span class="pl-2 text-danger" v-if="authStore.emailError">{{authStore.emailError}}</span>
             <div class="position-relative password_field mt-3">
               <b-form-input
                 class="rounded-0"
@@ -24,7 +24,10 @@
               ></b-form-input>
               <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
             </div>
-            <span class="pl-2 text-danger" v-if="passwordError">{{passwordError}}</span>
+            <span
+              class="pl-2 text-danger"
+              v-if="authStore.passwordError"
+            >{{authStore.passwordError}}</span>
             <div class="mt-3 d-flex align-items-center">
               <input
                 class="d-block"
@@ -49,7 +52,7 @@
               class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
             >
               <img src="../assets/images/Google.png" alt class="d-block pl-3" />
-              <span class="d-block" @click="signUpWithGoogle">Sign in with Google</span>
+              <span class="d-block" @click="signInWithGoogle">Sign in with Google</span>
               <span></span>
             </div>
             <div
@@ -69,22 +72,24 @@
 import FoodAppBanner from "../components/FoodAppBanner.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider,
-  signInWithPopup, } from "firebase/auth";
+import { useAuthStore } from "../store/authStore";
+import { mapState } from "pinia";
+
 export default {
   components: { Navbar, FoodAppBanner, Footer },
+  setup() {
+    const authStore = useAuthStore();
+    return { authStore };
+  },
   data() {
     return {
       email: "",
       password: "",
-      rememberMe: false,
-      emailError: "",
-      passwordError: "",
-      // signUpSuccessfull: ""
+      rememberMe: false
     };
   },
   mounted() {
-    const rememberMe = this.getCookie("rememberMe");
+    const rememberMe = this.authStore.getCookie("rememberMe");
     if (rememberMe) {
       this.email = rememberMe.email;
       this.password = rememberMe.password;
@@ -93,74 +98,11 @@ export default {
   },
   methods: {
     signIn() {
-      const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      const passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$@^%&? "])[a-zA-Z0-9!#$@^%&?]{6,}$/;
-      console.log(this.password, this.email);
+      this.authStore.SignIn(this.email, this.password, this.rememberMe);
+    },
 
-      if (this.email === "") {
-        this.emailError = "Email is required!";
-      } else if (!emailRegex.test(this.email)) {
-        this.emailError = "Enter valid email id";
-      } else {
-        this.emailError = "";
-      }
-      if (this.password === "") {
-        this.passwordError = "Password is required";
-      } else if (!passwordRegex.test(this.password)) {
-        this.passwordError =
-          "Password should contain lower, upper, digit and one special character";
-      } else {
-        this.passwordError = "";
-      }
-
-      // Remember me Functionality 
-      if (this.rememberMe) {
-        const rememberMeData = {
-          email: this.email,
-          password: this.password,
-        };
-        this.setCookie("rememberMe", rememberMeData, 30);
-      } else {
-        this.deleteCookie("rememberMe");
-      }
-
-      if (this.emailError === "" && this.passwordError === "") {
-        signInWithEmailAndPassword(getAuth(), this.email, this.password)
-          .then(data => {
-            console.log("login successfully");
-            // this.signUpSuccessfull = true;
-            this.$router.push("/shopping-cart");
-           localStorage.setItem("user", JSON.stringify(data.user.accessToken));
-          })
-          .catch(error => {
-            console.log(error.message);
-          });
-      }
-    },
-    setCookie(name, value, days) {
-      const expires = new Date();
-      expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-      document.cookie = `${name}=${JSON.stringify(value)};expires=${expires.toUTCString()};path=/`;
-    },
-    getCookie(name) {
-      const cookie = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
-      return cookie ? JSON.parse(cookie[2]) : null;
-    },
-    deleteCookie(name) {
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/`;
-    },
-    signUpWithGoogle() {
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(getAuth(), provider)
-        .then(data => {
-          console.log(data.user);
-          console.log("registered successfully using Google Account");
-          // navigate the user after signUp successfull
-          // example  route.push("/home")
-        })
-        .catch(error => {
-          console.log(error);
-        });
+    signInWithGoogle() {
+      this.authStore.SignInWithGoogle("signin");
     }
   }
 };

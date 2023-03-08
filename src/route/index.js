@@ -5,13 +5,12 @@ const router = createRouter({
     routes,
     history: createWebHistory(),
 })
-// const store = useAuthStore()
-const isLoggedIn = localStorage.getItem("user")
+const isAuth = JSON.parse(localStorage.getItem('user'))
 
-console.log(typeof(isLoggedIn));
+
 router.beforeEach((to, from, next) => {
     const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
-    if (requiresAuth && isLoggedIn === null || isLoggedIn === "") {
+    if (!requiresAuth && !isAuth === "") {
         next('/sign-in')
     } else {
         next()
