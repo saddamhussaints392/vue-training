@@ -44,6 +44,6 @@ body {
   overflow-x: hidden;
 }
 .banner {
-  padding-top: 125px;
+  padding-top: 122px;
 }
 </style>

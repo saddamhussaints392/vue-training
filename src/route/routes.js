@@ -5,6 +5,7 @@ import SignUp from "../pages/SignUp.vue";
 import SignIn from "../pages/SignIn.vue";
 import Menu from "../pages/Menu.vue";
 import ShoppingCart from "../pages/ShoppingCart.vue";
+import OurShop from "../pages/OurShop.vue"
 const routes = [
     {
         path: "/",
@@ -45,6 +46,14 @@ const routes = [
         component: ShoppingCart,
         meta: {
             name: "Shopping Cart",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/our-shop",
+        component: OurShop,
+        meta: {
+            name: "Our Shop",
             requiresAuth: true
         }
     }
