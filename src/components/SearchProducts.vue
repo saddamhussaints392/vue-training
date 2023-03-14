@@ -1,0 +1,410 @@
+<template>
+  <b-card class="products_section">
+    <div class="mobile_view_sorting">
+      <div>
+        <button class="btn_close_modal ml-auto" @click="hideModal">Close</button>
+      </div>
+      <div class="d-flex align-items-center justify-content-between my-3">
+        <div>
+          <span class="mr-2 sort_by_text">Sort By :</span>
+          <select name id class="sort_select">
+            <option value="Newest">Newest</option>
+            <option value="Oldest">Oldest</option>
+            <option value="Newest">Newest</option>
+            <option value="Newest">Newest</option>
+          </select>
+        </div>
+        <div>
+          <span class="mr-2 sort_by_text">Show :</span>
+          <select name id class="sort_select">
+            <option value="Newest">Default</option>
+            <option value="Oldest">Oldest</option>
+            <option value="Newest">Newest</option>
+            <option value="Newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="product_search d-flex align-items-center">
+      <input type="text" placeholder="Search Product" class="d-block" />
+      <div class="d-flex align-items-center justify-content-center text-light">
+        <b-icon-search font-scale="1.5"></b-icon-search>
+      </div>
+    </div>
+    <div class="categories_section">
+      <span class="d-block font-weight-bold category">Category</span>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Sandwiches</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Burger</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Chicken Chup</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Drink</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Pizza</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Thi</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Non Veg</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Uncategorized</b-form-checkbox>
+    </div>
+    <div class="category_img_section">
+      <img src="../assets/images/category_section_image.png" alt style="width:100%; height: auto;" />
+      <div class="item_titles">
+        <span class="d-block font-weight-bold perfect_taste">Perfect Taste</span>
+        <span class="d-block font-weight-bold classic_restaurant">Classic Restaurant</span>
+        <span class="d-block font-weight-bold restaurant_item_price mt-2">45.00$</span>
+      </div>
+      <div class="d-flex align-items-center shop_now_section">
+        <span class="d-block mr-2">Shop Now</span>
+        <b-icon-arrow-right-circle class="d-block"></b-icon-arrow-right-circle>
+      </div>
+    </div>
+    <div class="filter_by_price_section">
+      <span class="d-block filter_by_price font-weight-bold">Filter By Price</span>
+      <!-- <input v-model="currentValue" type="range" :min="min" :max="max" class="slider" /> -->
+      <div class="middle my-3">
+        <div class="multi-range-slider">
+          <input
+            type="range"
+            ref="input_left"
+            id="input-left"
+            step="80"
+            min="10"
+            max="8000"
+            value="25"
+            @input="setLeftValue"
+          />
+          <input
+            type="range"
+            ref="input_right"
+            id="input-right"
+            min="0"
+            step="80"
+            max="8000"
+            value="75"
+            @input="setRightValue"
+          />
+          <div class="slider">
+            <div class="track" ref="track"></div>
+            <div class="range" ref="range"></div>
+            <div class="thumb left" ref="thumb_left"></div>
+            <div class="thumb right" ref="thumb_right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="d-block filter_range">
+          From $
+          <span>{{ lowestPrice }}</span> to $
+          <span>{{highestPrice}}</span>
+        </span>
+        <span class="d-block filter_text">Filter</span>
+      </div>
+    </div>
+    <div class="latest_products_section">
+      <span class="d-block font-weight-bold latest_products">Latest Products</span>
+      <div class="d-flex latest_products_item" v-for="(items,i) in 4" :key="i">
+        <img
+          src="../assets/images/latest_product_img.png"
+          alt
+          class="d-block"
+          style="height: auto;"
+        />
+        <div class="ml-2">
+          <span class="product_item_name d-block">Pizza</span>
+          <b-form-rating
+            no-border
+            class="p-0 d-block"
+            style="height: 0px !important;"
+            color="#FF9F0D"
+            inline
+            value="4"
+          ></b-form-rating>
+          <span class="product_item_price d-block">$35.00</span>
+        </div>
+      </div>
+    </div>
+    <div class="product_tags_section">
+      <span class="d-block product_tags font-weight-bold">Product Tags</span>
+      <div class="tags">
+        <span class="d-block tag">Services</span>
+        <span class="d-block tag">Our Menu</span>
+        <span class="d-block tag">Pizza</span>
+        <span class="d-block tag">Cupcake</span>
+        <span class="d-block tag">Burger</span>
+        <span class="d-block tag">Cookies</span>
+        <span class="d-block tag">Our Shop</span>
+        <span class="d-block tag">Tandoori Chicken</span>
+      </div>
+    </div>
+  </b-card>
+</template>
+<script>
+export default {
+  name: "SearchProducts",
+  props: {
+    hideModal: { type: Function }
+  },
+  data() {
+    return {
+      lowestPrice: 0,
+      highestPrice: 8000
+    };
+  },
+  methods: {
+    setLeftValue() {
+      var min = parseInt(this.$refs["input_left"].min);
+      var max = parseInt(this.$refs["input_left"].max);
+      this.$refs["input_left"].value = Math.min(
+        parseInt(this.$refs["input_left"].value),
+        parseInt(this.$refs["input_right"].value) - 1
+      );
+      var percent =
+        ((this.$refs["input_left"].value - min) / (max - min)) * 100;
+      this.$refs["thumb_left"].style.left = percent + "%";
+      this.$refs["range"].style.left = percent + "%";
+      console.log(percent * 80);
+      this.lowestPrice = parseInt(percent * 80);
+    },
+    setRightValue() {
+      var min = parseInt(this.$refs["input_right"].min);
+      var max = parseInt(this.$refs["input_right"].max);
+      this.$refs["input_right"].value = Math.max(
+        parseInt(this.$refs["input_right"].value),
+        parseInt(this.$refs["input_left"].value) - 1
+      );
+      var percent =
+        ((this.$refs["input_right"].value - min) / (max - min)) * 100;
+      this.$refs["thumb_right"].style.right = 100 - percent + "%";
+      this.$refs["range"].style.right = 100 - percent + "%";
+      console.log(percent * 80);
+      this.highestPrice = parseInt(percent * 80);
+    }
+  }
+};
+</script>
+<style scoped>
+.mobile_view_sorting {
+  display: none;
+}
+.product_search input {
+  outline: none;
+  border: none;
+  background: rgba(255, 159, 13, 0.1);
+  padding: 11px 0px 11px 20px;
+}
+.product_search div {
+  cursor: pointer;
+  background: #ff9f0d;
+  width: 46px;
+  height: 46px;
+}
+.categories_section,
+.filter_by_price_section,
+.latest_products_section,
+.latest_products_item,
+.product_tags_section {
+  margin-top: 24px;
+}
+.category,
+.filter_by_price,
+.latest_products {
+  font-family: "Helvetica";
+  font-size: 20px;
+  color: #333333;
+}
+.category_item {
+  margin-top: 24px;
+  font-family: "Helvetica";
+  font-size: 18px;
+}
+.category_img_section {
+  margin-top: 24px;
+  position: relative;
+}
+.item_titles {
+  position: absolute;
+  top: 29px;
+  left: 23px;
+}
+.perfect_taste,
+.restaurant_item_price {
+  font-family: "Inter";
+  font-size: 16px;
+  color: white;
+}
+.classic_restaurant {
+  font-family: "Helvetica";
+  font-size: 20px;
+  color: white;
+}
+.shop_now_section {
+  cursor: pointer;
+  position: absolute;
+  bottom: 31px;
+  left: 23px;
+  color: white;
+}
+.middle {
+  position: relative;
+  width: 100%;
+}
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 10px;
+  margin: 0 15px;
+}
+.slider > .track {
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgb(240, 240, 240);
+}
+.slider > .range {
+  position: absolute;
+  z-index: 2;
+  left: 0%;
+  right: 0%;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: #ff9f0d;
+}
+.slider > .thumb {
+  position: absolute;
+  z-index: 3;
+  height: 15px;
+  width: 15px;
+  background: #ff9f0d;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.slider > .thumb.left {
+  left: 0%;
+  transform: translate(-12px, -2px);
+}
+.slider > .thumb.right {
+  right: 0%;
+  transform: translate(12px, -2px);
+}
+input[type="range"] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  width: 100%;
+  height: 10px;
+  opacity: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  height: 15px;
+  width: 15px;
+  border-radius: 0;
+  border: none;
+  background: red;
+  -webkit-appearance: none;
+}
+.filter_range,
+.filter_text {
+  font-family: "Inter";
+  font-size: 16px;
+  color: #1e1e1e;
+}
+.filter_text {
+  color: #0d0d0d;
+}
+.latest_products_item > img {
+  width: 72px;
+}
+.product_item_name {
+  font-family: "Helvetica";
+  font-size: 16px;
+  color: #4f4f4f;
+}
+.product_item_price {
+  font-family: "Helvetica";
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.product_tags_section > .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_tags {
+  font-family: "Helvetica";
+  font-size: 20px;
+  color: #333333;
+}
+.tags > .tag {
+  cursor: pointer;
+  font-family: "Inter";
+  font-size: 16px;
+  color: #4f4f4f;
+  border-bottom: 1px solid #4f4f4f;
+  margin-right: 10px;
+}
+.tags > .tag:hover {
+  cursor: pointer;
+  font-family: "Inter";
+  font-size: 16px;
+  color: #ff9f0d;
+  border-bottom: 1px solid #ff9f0d;
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+
+  .mobile_view_sorting {
+    display: block !important;
+  }
+  .btn_close_modal {
+    background: none !important;
+    font-family: "Inter";
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+  }
+  .sort_by_text {
+    font-family: "Inter";
+    font-size: 12px;
+    color: #333333;
+  }
+  .product_search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: rgba(255, 159, 13, 0.1);
+    padding: 11px 0px 11px 20px;
+  }
+  .category_img_section {
+    margin-top: 24px;
+    position: relative;
+    padding: 25px;
+  }
+  .item_titles {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  .shop_now_section {
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: white;
+  }
+
+  select {
+    outline: none;
+    padding: 8px 12px;
+    width: 95px;
+    height: 46px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: "Inter";
+    font-size: 12px;
+    color: #bdbdbd;
+  }
+}
+</style>
