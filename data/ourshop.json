@@ -1,0 +1,12 @@
+{
+    "ourShop": [
+        {
+            "id": 0,
+            "productName": "Fresh Lime",
+            "productDescription":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.",
+            "productPrice": 38.00,
+            "productDiscount": 45.00,
+            "productRating": 5
+        }
+    ]
+}

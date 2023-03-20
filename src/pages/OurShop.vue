@@ -42,29 +42,7 @@
             <b-row no-gutters align-h="center">
               <b-col cols="12">
                 <div style class="items_grid_section">
-                  <div v-for="(item, i) in 6" :key="i" class="position-relative grid_images_section">
-                    <img
-                      src="../assets/images/ourshop_img.png"
-                      alt
-                      style="width:100%; height: auto;"
-                    />
-                    <span class="font-weight-bold d-block item_name">Fresh Lime</span>
-                    <span class="item_price mr-2">$38.00</span>
-                    <s class="item_discount text-secondary">$45.00</s>
-                    <div class="icons_row  align-items-center justify-content-between">
-                      <div class="icons_section d-flex align-items-center justify-content-center">
-                        <b-icon-heart></b-icon-heart>
-                      </div>
-                      <div
-                        class="icons_section d-flex align-items-center justify-content-center mx-3"
-                      >
-                        <b-icon-bag></b-icon-bag>
-                      </div>
-                      <div class="icons_section d-flex align-items-center justify-content-center">
-                        <b-icon-heart></b-icon-heart>
-                      </div>
-                    </div>
-                  </div>
+                  <FoodProductItem  v-for="(item, i) in 24" :key="i" />
                 </div>
               </b-col>
             </b-row>
@@ -79,24 +57,25 @@
                   next-text="»"
                   last-number="false"
                   :total-rows="rows"
+                  :per-page="perPage"
+                  aria-controls="my-table"
                 ></b-pagination>
               </b-col>
             </b-row>
           </b-col>
-
-          <b-col
-            cols="12"
-            sm="12"
-            md="12"
-            lg="2"
-            xl="2"
-            class="product_search_section ml-4"
-           
-          >
-            <SearchProducts  v-if="showProducts"/>
-            <b-modal v-else ref="my-modal" hide-header-close hide-header hide-footer body-class="p-0">
-            <SearchProducts :hideModal="hideModal"/>
-           </b-modal>
+          <b-col cols="12" sm="12" md="12" lg="2" xl="2" class="product_search_section ml-4">
+            <SearchProducts v-if="showProducts" />
+            <b-modal
+              v-else
+              ref="my-modal"
+              centered
+              hide-header-close
+              hide-header
+              hide-footer
+              body-class="p-0"
+            >
+              <SearchProducts :hideModal="hideModal" />
+            </b-modal>
           </b-col>
         </b-row>
       </b-col>
@@ -104,14 +83,16 @@
   </b-container>
 </template>
 <script>
+import FoodProductItem from "../components/FoodProductItem.vue";
 import SearchProducts from "../components/SearchProducts.vue";
 export default {
   name: "OurShop",
-  components: { SearchProducts },
+  components: { SearchProducts, FoodProductItem },
   data() {
     return {
-      rows: 60,
+      rows: 24,
       currentPage: 1,
+       perPage: 3,
       showProducts: true
     };
   },
@@ -126,26 +107,28 @@ export default {
       });
     },
     updateScreenWidth() {
-      if(window.innerWidth < 768){
+      if (window.innerWidth < 768) {
         this.showProducts = false;
-      }
-      else {
+      } else {
         this.showProducts = true;
       }
     },
     showModal() {
-        this.$refs['my-modal'].show()
-      },
-      hideModal() {
-        this.$refs['my-modal'].hide()
-      },
-  },
-  
+      this.$refs["my-modal"].show();
+    },
+    hideModal() {
+      this.$refs["my-modal"].hide();
+    }
+  }
 };
 </script>
 <style scoped>
-.modal {
-  margin-top: 200px !important;
+.modal-dialog {
+  position: fixed;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: 0;
 }
 .our_shop_section {
   padding: 120px 0;
@@ -171,52 +154,11 @@ select {
   grid-template-columns: auto auto auto;
   gap: 24px;
 }
-.item_name {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #333333;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.item_price {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #ff9f0d;
-}
-.item_discount {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #828282;
-}
-.icons_section:hover {
-  cursor: pointer;
-  width: 41px;
-  height: 34px;
-  background: #ff9f0d;
-  border-radius: 2px;
-  color: white;
-}
-.icons_section {
-  cursor: pointer;
-  width: 41px;
-  height: 34px;
-  background: white;
-  border-radius: 2px;
-  color: #ff9f0d;
-}
-.icons_row {
-  display: none;
-  position: absolute;
-  top: 40%;
-  right: 25%;
-}
-.grid_images_section:hover > .icons_row {
-  display: flex;
-}
-.icons_row > div:nth-child(2) {
-  padding: 0 12px;
-}
+
+
+
+
+
 .categories_section {
   margin-top: 24px;
 }
@@ -274,29 +216,12 @@ select {
     grid-template-columns: auto auto;
     gap: 19px;
   }
-  .item_name {
-    font-size: 14px;
-  }
-  .item_price,
-  .item_discount {
-    font-size: 12px;
-  }
-  .icons_section {
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    background: white;
-    border-radius: 2px;
-    color: #ff9f0d;
-  }
-  .icons_row {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-  }
+  
+
+
+
   .pagination_section {
     margin-top: 20px;
   }
-
 }
 </style>

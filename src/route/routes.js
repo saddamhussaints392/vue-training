@@ -5,7 +5,9 @@ import SignUp from "../pages/SignUp.vue";
 import SignIn from "../pages/SignIn.vue";
 import Menu from "../pages/Menu.vue";
 import ShoppingCart from "../pages/ShoppingCart.vue";
-import OurShop from "../pages/OurShop.vue"
+import OurShop from "../pages/OurShop.vue";
+import ShopDetails from "../pages/ShopDetails.vue";
+import CarouselPage from "../pages/CarouselPage.vue"
 const routes = [
     {
         path: "/",
@@ -54,6 +56,22 @@ const routes = [
         component: OurShop,
         meta: {
             name: "Our Shop",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/shop-details",
+        component: ShopDetails,
+        meta: {
+            name: "Shop Details",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/carousel-page",
+        component: CarouselPage,
+        meta: {
+            name: "CarouselPage",
             requiresAuth: true
         }
     }
