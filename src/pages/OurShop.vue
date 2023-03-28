@@ -41,9 +41,24 @@
           <b-col cols="12" sm="12" md="12" lg="8" xl="8">
             <b-row no-gutters align-h="center">
               <b-col cols="12">
-                <div style class="items_grid_section">
-                  <FoodProductItem  v-for="(item, i) in 24" :key="i" />
+                <div
+                  style
+                  class="items_grid_section"
+                  id="my-table"
+                >
+                  <FoodProductItem
+                    v-for="(item, i) in paginationItems"
+                    :key="i"
+                    :thumbnail="item.thumbnails[0]"
+                    :title="item.title"
+                    :originalPrice="item.originalPrice"
+                    :discountPrice="item.discountPrice"
+                  />
                 </div>
+                <!-- <b-table id="my-table"
+                  :per-page="perPage"
+                  :current-page="currentPage"
+                  :items="products"></b-table> -->
               </b-col>
             </b-row>
             <b-row no-gutters class="pagination_section">
@@ -85,22 +100,50 @@
 <script>
 import FoodProductItem from "../components/FoodProductItem.vue";
 import SearchProducts from "../components/SearchProducts.vue";
+import { Product } from "../models/Product.js";
+import items from "../data/products.json";
 export default {
   name: "OurShop",
   components: { SearchProducts, FoodProductItem },
   data() {
     return {
-      rows: 24,
       currentPage: 1,
-       perPage: 3,
-      showProducts: true
+      perPage: 15,
+      showProducts: true,
+      products: []
     };
+  },
+  computed: {
+    rows() {
+      return this.products.length;
+    },
+    paginationItems() {
+      const startIndex = (this.currentPage - 1) * this.perPage;
+      const endIndex = startIndex + this.perPage;
+      return this.products.slice(startIndex, endIndex)
+    }
   },
   mounted() {
     this.updateScreenWidth();
     this.onScreenResize();
+    this.getData();
+    // this.products
+
+    // let d = new Product(items.products.thumbnails, items.products.title, items.products.originalPrice, items.products.discountPrice);
   },
   methods: {
+    getData() {
+      for (let i = 0; i < items.products.length; i++) {
+        let d = new Product(
+          items.products[i].thumbnails,
+          items.products[i].title,
+          items.products[i].originalPrice,
+          items.products[i].discountPrice
+        );
+        console.log(d);
+        this.products.push(d);
+      }
+    },
     onScreenResize() {
       window.addEventListener("resize", () => {
         this.updateScreenWidth();
@@ -151,13 +194,9 @@ select {
 }
 .items_grid_section {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 312px 312px 312px;
   gap: 24px;
 }
-
-
-
-
 
 .categories_section {
   margin-top: 24px;
@@ -216,9 +255,6 @@ select {
     grid-template-columns: auto auto;
     gap: 19px;
   }
-  
-
-
 
   .pagination_section {
     margin-top: 20px;

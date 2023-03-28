@@ -7,7 +7,7 @@ import Menu from "../pages/Menu.vue";
 import ShoppingCart from "../pages/ShoppingCart.vue";
 import OurShop from "../pages/OurShop.vue";
 import ShopDetails from "../pages/ShopDetails.vue";
-import CarouselPage from "../pages/CarouselPage.vue"
+import BlogList from "../pages/BlogList.vue";
 const routes = [
     {
         path: "/",
@@ -68,10 +68,10 @@ const routes = [
         }
     },
     {
-        path: "/carousel-page",
-        component: CarouselPage,
+        path: "/blog-list",
+        component: BlogList,
         meta: {
-            name: "CarouselPage",
+            name: "Blog List",
             requiresAuth: true
         }
     }

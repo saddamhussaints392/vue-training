@@ -1,36 +1,4 @@
-<script>
-import {
-  BIconFacebook,
-  BIconTwitter,
-  BIconPlayCircleFill,
-  BIconPlay,
-  BIconHandThumbsUp,
-  BIconChatLeftDots,
-  BIconShare
-} from "bootstrap-vue";
-import Client from "../components/Clients.vue";
-import Footer from "../components/Footer.vue";
-import BlogPostItem from "../components/BlogPostItem.vue";
-import MenuListItem from "../components/MenuListItem.vue";
-import Carousel from "../components/Carousel.vue";
-export default {
-  components: {
-    BIconFacebook,
-    BIconTwitter,
-    Client,
-    MenuListItem,
-    BIconPlayCircleFill,
-    BIconPlay,
-    BIconHandThumbsUp,
-    BIconChatLeftDots,
-    BIconShare,
-    Footer,
-    BlogPostItem,
-    Carousel
-  },
 
-};
-</script>
 
 <template>
   <b-container fluid class="home_main p-0">
@@ -131,15 +99,22 @@ export default {
                 </span>
               </b-col>
               <b-row class="mt-5 food_category_cards">
-                <b-col v-for="(category, i) in 4" :key="i" cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative">
+                <b-col
+                  v-for="(category, i) in foodCategoryImgs"
+                  :key="i"
+                  cols="6"
+                  sm="6"
+                  md="6"
+                  lg="3"
+                >
+                  <div class="position-relative text-light">
                     <img
-                      src="../assets/images/food_category_pic1.png"
+                      :src="imageSrc(category.img)"
                       alt="food_category_image"
                       style="width: 100%; height: auto;"
                     />
-                    <label class="save_amount_text bg-light">Save 30%</label>
-                    <label class="food_type font-weight-bold">Fast Food Dish</label>
+                    <label class="save_amount_text bg-light">{{category.category}}</label>
+                    <label class="food_type font-weight-bold">{{category.discount}}</label>
                   </div>
                 </b-col>
               </b-row>
@@ -283,28 +258,49 @@ export default {
               </b-row>
               <b-row class="main_menu" no-gutters>
                 <b-col sm="4" md="4" lg="1" cols="4" offset-sm="0" offset-md="0" offset-lg="1">
-                  <span class="text-light font-weight-bold active">Breakfast</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'breakfast'}]"
+                    @click="isAtiveMeal('breakfast')"
+                  >Breakfast</span>
                 </b-col>
                 <b-col sm="4" md="4" lg="1" cols="4">
-                  <span class="text-light">Lunch</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'lunch'}]"
+                    @click="isAtiveMeal('lunch')"
+                  >Lunch</span>
                 </b-col>
                 <b-col sm="4" md="4" lg="1" cols="4">
-                  <span class="text-light">Dinner</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'dinner'}]"
+                    @click="isAtiveMeal('dinner')"
+                  >Dinner</span>
                 </b-col>
                 <b-col sm="3" md="3" lg="1" cols="3">
-                  <span class="text-light">Dessert</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'dessert'}]"
+                    @click="isAtiveMeal('dessert')"
+                  >Dessert</span>
                 </b-col>
                 <b-col sm="3" md="3" lg="1" cols="3">
-                  <span class="text-light">Drink</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'drink'}]"
+                    @click="isAtiveMeal('drink')"
+                  >Drink</span>
                 </b-col>
                 <b-col sm="3" md="3" lg="1" cols="3">
-                  <span class="text-light">Snack</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'snack'}]"
+                    @click="isAtiveMeal('snack')"
+                  >Snack</span>
                 </b-col>
                 <b-col sm="3" md="3" lg="1" cols="3">
-                  <span class="text-light">Soups</span>
+                  <span
+                    :class="['text-light', {active: activeMeal === 'soups'}]"
+                    @click="isAtiveMeal('soups')"
+                  >Soups</span>
                 </b-col>
               </b-row>
-              <b-row no-gutters>
+              <b-row no-gutters v-if="activeMeal === 'breakfast'">
                 <b-col sm="12" md="12" lg="4" cols="12">
                   <img
                     src="../assets/images/menu_list_image.png"
@@ -321,6 +317,36 @@ export default {
                   <b-row v-for="item in 4" :key="item" class="menu_list">
                     <MenuListItem />
                   </b-row>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'lunch'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Lunch</h1>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'dinner'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Dinner</h1>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'dessert'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Dessert</h1>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'drink'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Drink</h1>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'snack'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Snack</h1>
+                </b-col>
+              </b-row>
+              <b-row no-gutters v-if="activeMeal === 'soups'">
+                <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
+                  <h1 class="text-primary">Soups</h1>
                 </b-col>
               </b-row>
             </b-col>
@@ -340,39 +366,12 @@ export default {
                 </b-col>
               </b-row>
               <b-row class="mt-5 chef_cards">
-                <b-col cols="6" sm="6" md="6" lg="3">
+                <b-col cols="6" sm="6" md="6" lg="3" v-for="(chef, i) in chefDetails" :key="i">
                   <div class="position-relative chefs__info">
-                    <img src="../assets/images/chef-1.png" alt style="width: 100%; height: auto;" />
+                    <img :src="imageSrc(chef.img)" alt style="width: 100%; height: auto;" />
                     <div class="chefs_details bg-light position-absolute">
-                      <span class="font-weight-bold d-block">D.Estwood</span>
-                      <span class="font-weight-normal">Chief Chef</span>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative chefs__info">
-                    <img src="../assets/images/chef-2.png" alt style="width: 100%; height: auto;" />
-                    <div class="chefs_details bg-light position-absolute">
-                      <span class="font-weight-bold d-block">D.Scoriesh</span>
-                      <span class="font-weight-normal">Assistant Chef</span>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative chefs__info">
-                    <img src="../assets/images/chef-3.png" alt style="width: 100%; height: auto;" />
-                    <div class="chefs_details bg-light position-absolute">
-                      <span class="font-weight-bold d-block">M. William</span>
-                      <span class="font-weight-normal">Advertising Chef</span>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col cols="6" sm="6" md="6" lg="3">
-                  <div class="position-relative chefs__info">
-                    <img src="../assets/images/chef-4.png" alt style="width: 100%; height: auto;" />
-                    <div class="chefs_details bg-light position-absolute">
-                      <span class="font-weight-bold d-block">W.Readfroad</span>
-                      <span class="font-weight-normal">Chef</span>
+                      <span class="font-weight-bold d-block">{{chef.name}}</span>
+                      <span class="font-weight-normal">{{chef.designation}}</span>
                     </div>
                   </div>
                 </b-col>
@@ -403,7 +402,9 @@ export default {
                 <b-col cols="6" sm="6" md="6" lg="3">
                   <b-row
                     no-gutters
+                    v-b-modal.modal-center
                     class="btn_and_icon_section d-flex align-items-center justify-content-end"
+                    style="cursor:pointer;"
                   >
                     <b-col cols="2" sm="2" md="2" lg="3">
                       <div class="play_icon d-flex align-items-center justify-content-center">
@@ -414,6 +415,13 @@ export default {
                       <span class="font-weight-bold text-light">Play Video</span>
                     </b-col>
                   </b-row>
+                  <b-modal id="modal-center" centered title="Restaurant Active Process" hide-footer>
+                    <iframe
+                      width="100%"
+                      height="250"
+                      src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen
+                    ></iframe>
+                  </b-modal>
                 </b-col>
               </b-row>
             </b-col>
@@ -439,12 +447,104 @@ export default {
               </b-row>
             </b-col>
           </b-row>
-          <!-- <Footer /> -->
         </b-container>
       </b-col>
     </b-row>
   </b-container>
 </template>
+<script>
+import {
+  BIconFacebook,
+  BIconTwitter,
+  BIconPlayCircleFill,
+  BIconPlay,
+  BIconHandThumbsUp,
+  BIconChatLeftDots,
+  BIconShare
+} from "bootstrap-vue";
+import Client from "../components/Clients.vue";
+import Footer from "../components/Footer.vue";
+import BlogPostItem from "../components/BlogPostItem.vue";
+import MenuListItem from "../components/MenuListItem.vue";
+import Carousel from "../components/Carousel.vue";
+export default {
+  components: {
+    BIconFacebook,
+    BIconTwitter,
+    Client,
+    MenuListItem,
+    BIconPlayCircleFill,
+    BIconPlay,
+    BIconHandThumbsUp,
+    BIconChatLeftDots,
+    BIconShare,
+    Footer,
+    BlogPostItem,
+    Carousel
+  },
+  setup() {
+    const imageSrc = selectedItem => {
+      return new URL(`../assets/images/${selectedItem}`, import.meta.url).href;
+    };
+    return { imageSrc };
+  },
+
+  data() {
+    return {
+      foodCategoryImgs: [
+        {
+          category: "Fast Food Dish",
+          img: "food_category_pic1.png",
+          discount: "Save 30%"
+        },
+        {
+          category: "Burgers",
+          img: "food_category_pic2.png",
+          discount: "Save 40%"
+        },
+        {
+          category: "Fast Food Dish",
+          img: "food_category_pic3.png",
+          discount: "Save 50%"
+        },
+        {
+          category: "Donuts",
+          img: "food_category_pic4.png",
+          discount: "Save 60%"
+        }
+      ],
+      activeMeal: "breakfast",
+      chefDetails: [
+        {
+          name: "D.Estwood",
+          designation: "Chief Chef",
+          img: "chef-1.png"
+        },
+        {
+          name: "D.Scoriesh",
+          designation: "Assistant Chef",
+          img: "chef-2.png"
+        },
+        {
+          name: "M. William",
+          designation: "Advertising Chef",
+          img: "chef-3.png"
+        },
+        {
+          name: "W.Readfroad",
+          designation: "Chef",
+          img: "chef-4.png"
+        }
+      ]
+    };
+  },
+  methods: {
+    isAtiveMeal(el) {
+      this.activeMeal = el;
+    }
+  }
+};
+</script>
 <style scoped>
 .home_main_section {
   background: linear-gradient(
@@ -630,6 +730,7 @@ export default {
 }
 .main_menu > div > .active {
   color: #ff9f0d !important;
+  font-weight: 700;
 }
 
 .menu_texts {
@@ -835,11 +936,11 @@ export default {
     padding: 6px 12px;
   }
   .btn_chef_see_more {
-  background: transparent;
-padding: 8px 28px;
-  border: 1px solid #ff9f0d;
-  border-radius: 25px;
-}
+    background: transparent;
+    padding: 8px 28px;
+    border: 1px solid #ff9f0d;
+    border-radius: 25px;
+  }
   .chefs_details span:first-child {
     font-family: "Inter", sans-serif;
     font-size: 10px;

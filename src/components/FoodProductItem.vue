@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <div id="my-table" class="position-relative grid_images_section">
-      <img src="../assets/images/ourshop_img.png" alt="items"  />
-      <span class="font-weight-bold d-block item_name">Fresh Lime</span>
-      <span class="item_price mr-2">$38.00</span>
-      <s class="item_discount text-secondary">$45.00</s>
+    <div id="my-table">
+      <div class="position-relative grid_images_section">
+      <img :src="thumbnail" alt="items"  />
+      <span class="font-weight-bold d-block item_name">{{ title }}</span>
+      <span class="item_price mr-2">${{originalPrice}}</span>
+      <span class="item_discount text-secondary" v-if="discountPrice">${{ discountPrice }}</span>
       <div class="icons_row align-items-center justify-content-between">
         <div class="icons_section d-flex align-items-center justify-content-center">
           <b-icon-bezier2></b-icon-bezier2>
@@ -17,11 +17,17 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </template>
 <script>
 export default {
-  name: "FoodProductItem"
+  props:["thumbnail", "title", "originalPrice", "discountPrice"],
+  name: "FoodProductItem",
+  setup(){
+    // getProducts(){
+    //   return product = new 
+    // }
+  }
 };
 </script>
 <style scoped>
@@ -31,6 +37,7 @@ export default {
 .grid_images_section > img {
   width: 312px;
   height: 267px;
+  object-fit: cover;
 }
 .item_name {
   font-family: "Inter", sans-serif;
@@ -53,8 +60,8 @@ export default {
 .icons_row {
   display: none;
   position: absolute;
-  top: 40%;
-  right: 25%;
+  top: 120px;
+  right: 75px;
 }
 
 .icons_row > div:nth-child(2) {

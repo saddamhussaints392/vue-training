@@ -141,23 +141,15 @@
         <b-row no-gutters class="description_review_section d-block" align-h="center">
           <div class="d-flex">
             <button
-              @click="()=>{
-              pageName = 'description';
-              isDescriptionBtnActive = true;
-              isReviewsBtnActive = false
-              }"
-              :class="[isDescriptionBtnActive ? 'btn_active' : 'btn_inactive']"
+             @click="activate(1)"
+              :class="[isBtnActive === 1 ? 'btn_active' : 'btn_inactive']"
             >Description</button>
             <button
-              @click="()=>{
-              pageName = 'reviews';
-              isDescriptionBtnActive = false;
-              isReviewsBtnActive = true
-              }"
-              :class="[isReviewsBtnActive ? 'btn_active' : 'btn_inactive']"
+              @click="activate(2)"
+              :class="[isBtnActive === 2 ? 'btn_active' : 'btn_inactive']"
             >Reviews(24)</button>
           </div>
-          <div v-if="pageName === 'description'">
+          <div v-if="isBtnActive === 1">
             <div class="description_text">
               <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.</p>
               <p>Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.</p>
@@ -173,7 +165,7 @@
               <li class="key_points">Mauris eget diam magna, in blandit turpis.</li>
             </div>
           </div>
-          <div v-if="pageName === 'reviews'" class="reviews_sections">
+          <div v-if="isBtnActive === 2" class="reviews_sections">
             <Review />
             <Review />
           </div>
@@ -198,8 +190,8 @@
               </div>
             </div>
           </div>
-          <div style="width: 100%;overflow:hidden;">
-            <div class="carousel_section d-flex" @mousemove="dragging" ref="carousel">
+          <div class="carousel_main">
+            <div class="carousel_section d-flex" ref="carousel">
               <div v-for="(item, i) in arr" :key="i">
                 <FoodProductItem />
                 <span>{{ i }}</span>
@@ -221,30 +213,58 @@ export default {
   data() {
     return {
       pageName: "description",
-      isDescriptionBtnActive: true,
-      isReviewsBtnActive: false,
+      isBtnActive: 1,
       arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       isDraggingStart: false,
-      moverCarousel: 0
+      moverCarousel: 0,
+      windowWidth: false
     };
   },
-  methods: {
-    
+  mounted() {
+    this.updateScreenWidth();
+    this.onScreenResize();
+  },
+  methods: {activate: function(el) {
+      this.isBtnActive = el;
+    },
+    onScreenResize() {
+      window.addEventListener("resize", () => {
+        this.updateScreenWidth();
+      });
+    },
+    updateScreenWidth() {
+      if (window.innerWidth < 450) {
+        this.windowWidth = true;
+      } else {
+        this.windowWidth = false;
+      }
+    },
     cauroselDecrement() {
-      if (this.moverCarousel < 0) {
-        this.moverCarousel += 318;
-        this.$refs.carousel.style.transform = `translateX(${this.moverCarousel}px)`;
+      if (this.windowWidth) {
+        if (this.moverCarousel < 0) {
+          this.moverCarousel += 178;
+          this.$refs.carousel.style.transform = `translateX(${this.moverCarousel}px)`;
+        }
+      } else {
+        if (this.moverCarousel < 0) {
+          this.moverCarousel += 318;
+          this.$refs.carousel.style.transform = `translateX(${this.moverCarousel}px)`;
+        }
       }
     },
     cauroselIncrement() {
-      if (this.moverCarousel < this.arr.length - 1) {
-        if(this.moverCarousel - 318 * 5 > this.arr.length * -318){
+      if (this.windowWidth) {
+        if (this.moverCarousel - 178 * 2 > this.arr.length * -178) {
+          this.moverCarousel -= 178;
+          this.$refs.carousel.style.transform = `translateX(${this.moverCarousel}px)`;
+        }
+      } else {
+        if (this.moverCarousel - 318 * 5 > this.arr.length * -318) {
           this.moverCarousel -= 318;
           this.$refs.carousel.style.transform = `translateX(${this.moverCarousel}px)`;
         }
       }
-      console.log(this.moverCarousel - 318 * 5 > this.arr.length  * -318);
-    },
+    }
   }
 };
 </script>
@@ -395,11 +415,13 @@ export default {
 .reviews_sections {
   margin-top: 32px;
 }
+.carousel_main {
+  width: 100%;
+  overflow: hidden;
+}
 
 .carousel_section {
   margin-top: 32px;
-  white-space: nowrap;
-  /* overflow-x: scroll; */
   gap: 6px;
   transition: 1s;
 }
@@ -487,9 +509,12 @@ export default {
     height: 46px;
     padding: 0 20px !important;
   }
+  .carousel_main {
+    width: 100%;
+    overflow: visible !important;
+  }
   .carousel_section {
     margin-top: 32px;
-    white-space: nowrap;
     overflow-x: scroll;
     gap: 20px;
   }

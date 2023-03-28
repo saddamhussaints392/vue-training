@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="banner_main_section">
-    <b-row no-gutters>
+  <b-container fluid class="p-0">
+    <b-row no-gutters class="banner_main_section">
       <b-col cols="12" sm="12" md="12" lg="12" class="text-center">
         <span class="banner_title text-light d-block">{{mainPage}}</span>
         <div class="d-flex align-items-center justify-content-center banner_page_names">
