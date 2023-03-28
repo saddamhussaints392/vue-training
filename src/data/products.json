@@ -10,9 +10,10 @@
                 "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/1:1/w_2560%2Cc_limit/the-ultimate-hamburger.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
-            "originalPrice": 250,
-            "discountPrice": 100
-        },{
+            "discountPrice": 140,
+            "originalPrice": 250
+        },
+        {
             "id": 2,
             "title": "Egg Rice",
             "thumbnails": [
@@ -22,10 +23,10 @@
                 "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
                 "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
             ],
-            "originalPrice": 350,
-            "discountPrice": 300
-        }
-        ,{
+            "discountPrice": 300,
+            "originalPrice": 350
+        },
+        {
             "id": 3,
             "title": "Schewan Chicken",
             "thumbnails": [
@@ -35,10 +36,10 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
-            "originalPrice": 180,
-            "discountPrice": 30
-        }
-        ,{
+            "discountPrice": 150,
+            "originalPrice": 180
+        },
+        {
             "id": 4,
             "title": "Tandoor Chicken",
             "thumbnails": [
@@ -48,47 +49,47 @@
                 "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
-            "originalPrice": 550,
-            "discountPrice": 290
+            "discountPrice": 290,
+            "originalPrice": 550
         },
         {
             "id": 5,
-            "title": "Pizza",
+            "title": "Margherita Pizza",
             "thumbnails": [
-                "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-                "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/double-cheese.3c8885f8bc6f18facedc7626368f5105.1.jpg",
-                "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/2/2018/03/09212138/1131-1.jpg",
-                "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
+                "https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/margherita-pizza-recipe-1.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4SZbSWbsYi9wFl52qidh_RdaEGlJZqCZ_l65eK5z92GMVSvFgIaLvKxAQWhUH16auEuw&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEjzvqXEHak-32YbsSg3qNT_ZwtcK-jhoqR6OzYnXbITvyOHOuvIRoG16lA_FOC285wAk&usqp=CAU",
+                "https://veenaazmanov.com/wp-content/uploads/2020/04/Classic-Pizza-Margherita1.jpg",
+                "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200"
             ],
-            "originalPrice": 180,
-            "discountPrice": 20
+            "discountPrice": 155,
+            "originalPrice": 180
         },
         {
             "id": 6,
-            "title": "Sandwich",
+            "title": "Grilled Cheese Sandwich",
             "thumbnails": [
-                "https://www.allrecipes.com/thmb/2wuWlMQEU5Q82Nd40jCwkvGXYXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229038-baked-hawaiian-sandwiches-ddmfs-3X4-0307-0c62251ecf394ca7b097edfad9b15019.jpg",
-                "https://www.foodandwine.com/thmb/3RuXtDHS8-DKyzRgglp-0faPojQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Philadelphia-Roast-Pork-and-Broccoli-Rabe-Sandwiches-FT-RECIPE0822-2000-92fa2cca8fd74041b4e70fef75a76dbb.jpg",
-                "https://recipes.timesofindia.com/thumb/84786018.cms?width=1200&height=900",
-                "https://www.thespruceeats.com/thmb/AfeDxJjKLRmpCLF7EtY5vnqlC9k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grinder-sandwich-5271038-hero-04-3e9616d36781417eb429235769997f19.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/pinwheel-sandwiches1-1671200037.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*"
+                "https://www.bhg.com/thmb/H6G2G-KzMaxmin4WJRYHZU4-oaQ=/1244x0/filters:no_upscale():strip_icc()/grilled-cheese-sandwiches-RU197054-0026ddec06634f3eb9b1a3649a114e3d.jpg",
+                "https://iowagirleats.com/wp-content/uploads/2020/11/Holiday-Grilled-Cheese-Sandwich-iowagirleats-01_srgb.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiNDZx1XwKdD9X74SNONMFKZFIHYS0Ua-l-82p_Iix9EpIbAngf3Y4ucPTUrHOM5GsPRI&usqp=CAU",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese.jpg",
+                "https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg"
             ],
-            "originalPrice": 80,
-            "discountPrice": 10
+            "discountPrice": 70,
+            "originalPrice": 80
         },
         {
             "id": 7,
-            "title": "Drinks",
+            "title": "Beer",
             "thumbnails": [
-                "https://images.immediate.co.uk/production/volatile/sites/30/2021/11/diabolo-mockail-440-x400-c795884.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/drinks-to-avoid-1621959532.jpg?crop=0.670xw:1.00xh;0.151xw,0&resize=1200:*",
-                "https://www.thespruceeats.com/thmb/iHmC1x1UNWoq4GP4i_81-xajw5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/popular-screwdriver-variations-759820-hero-01-6f67f02622a54bbb8aeabd7eb65bb3a0.jpg",
-                "https://www.fifteenspatulas.com/wp-content/uploads/2015/07/Refreshing-Summer-Drinks-Fifteen-Spatulas-1-500x500.jpg",
-                "https://images.thequint.com/thequint%2F2022-10%2F5fd80efc-2e10-40ca-964a-53933df92c93%2Fset_of_three_kinds_of_gin_tonic_picture_id668030702.jpg"
+                "https://travel2next.com/wp-content/uploads/thai-alcoholic-drinks-1.jpg",
+                "https://www.tastingtable.com/img/gallery/the-10-best-drinks-to-mix-with-beer/l-intro-1662067134.jpg",
+                "https://www.eatthis.com/wp-content/uploads/sites/4/2022/01/beer-glasses.jpg?quality=82&strip=1",
+                "https://images.news18.com/ibnlive/uploads/2021/09/untitled-design-64-16317966614x3.jpg",
+                "https://m.economictimes.com/thumb/height-450,width-600,imgsize-47934,msid-60871858/revealed-why-beer-makes-you-feel-good.jpg"
             ],
-            "originalPrice": 50,
-            "discountPrice": 10
+            "discountPrice": 110,
+            "originalPrice": 165
         },
         {
             "id": 8,
@@ -98,10 +99,9 @@
                 "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
                 "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
-
             ],
-            "originalPrice": 250,
-            "discountPrice": 70
+            "discountPrice": 230,
+            "originalPrice": 250
         },
         {
             "id": 9,
@@ -110,9 +110,8 @@
                 "https://recipes.timesofindia.com/thumb/53096885.cms?width=1200&height=900",
                 "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3GRqbllmQzC3iVKgr1epVPMD-Ti9GZSafA&usqp=CAU"
-
             ],
-            "originalPrice": 60
+            "discountPrice": 60
         },
         {
             "id": 10,
@@ -124,9 +123,10 @@
                 "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/1:1/w_2560%2Cc_limit/the-ultimate-hamburger.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
-            "originalPrice": 250,
-            "discountPrice": 100
-        },{
+            "discountPrice": 200,
+            "originalPrice": 250
+        },
+        {
             "id": 11,
             "title": "Egg Rice",
             "thumbnails": [
@@ -136,10 +136,10 @@
                 "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
                 "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
             ],
-            "originalPrice": 350,
-            "discountPrice": 300
-        }
-        ,{
+            "discountPrice": 300,
+            "originalPrice": 350
+        },
+        {
             "id": 12,
             "title": "Schewan Chicken",
             "thumbnails": [
@@ -149,10 +149,10 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
-            "originalPrice": 180,
-            "discountPrice": 30
-        }
-        ,{
+            "discountPrice": 160,
+            "originalPrice": 180
+        },
+        {
             "id": 13,
             "title": "Tandoor Chicken",
             "thumbnails": [
@@ -162,47 +162,48 @@
                 "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
-            "originalPrice": 550,
-            "discountPrice": 290
+            "discountPrice": 290,
+            "originalPrice": 550
         },
         {
             "id": 14,
-            "title": "Pizza",
+            "title": "Onion Pizza",
             "thumbnails": [
-                "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-                "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/double-cheese.3c8885f8bc6f18facedc7626368f5105.1.jpg",
-                "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/2/2018/03/09212138/1131-1.jpg",
-                "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
+                "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/classic-onion-capsicum-pan-personal.dad788ecbd3fcc57366462827e31ee05.1.jpg",
+                "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/classic-paneer-capsicum-&-onion-pan-personal.ae2c5f3e3e5881af1f31e65cb9526289.1.jpg",
+                "https://5.imimg.com/data5/CL/OB/UW/SELLER-11281715/creamy-new-york-pizza-500x500.jpg",
+                "https://static.toiimg.com/thumb/59632728.cms?imgsize=756767&width=800&height=800",
+                "http://pizzaparadise.in/wp-content/uploads/2019/10/paneer-onion-pizza-mania.png"
             ],
-            "originalPrice": 180,
-            "discountPrice": 20
+            "discountPrice": 155,
+            "originalPrice": 180
         },
         {
             "id": 15,
-            "title": "Sandwich",
+            "title": "Caprese Sandwich",
             "thumbnails": [
-                "https://www.allrecipes.com/thmb/2wuWlMQEU5Q82Nd40jCwkvGXYXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229038-baked-hawaiian-sandwiches-ddmfs-3X4-0307-0c62251ecf394ca7b097edfad9b15019.jpg",
-                "https://www.foodandwine.com/thmb/3RuXtDHS8-DKyzRgglp-0faPojQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Philadelphia-Roast-Pork-and-Broccoli-Rabe-Sandwiches-FT-RECIPE0822-2000-92fa2cca8fd74041b4e70fef75a76dbb.jpg",
-                "https://recipes.timesofindia.com/thumb/84786018.cms?width=1200&height=900",
-                "https://www.thespruceeats.com/thmb/AfeDxJjKLRmpCLF7EtY5vnqlC9k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grinder-sandwich-5271038-hero-04-3e9616d36781417eb429235769997f19.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/pinwheel-sandwiches1-1671200037.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*"
+                "https://40aprons.com/wp-content/uploads/2020/05/caprese-sandwich-15.jpg",
+                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F02%2F16%2Fcaprese-sandwich.jpg&q=60",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF9rmKZvaZiISBu3slabIjmZ3LCfrP3SYU7BTrkzKQX9L5RBaEGpFzoJ9w7Q5_eSxCKCE&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrlZGTtmHDMEyFJY6KGQWU5ubXIS2-PDAUV3D4He9vKP3P7zvXSgsBLtkNUf-QFan_33c&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs6v75eUGru7KgEA7a6GmBwZTYGiw5pb5bydJaV3mHrJaEuuuEWDYYuwplPBEGsmywxGw&usqp=CAU"
             ],
-            "originalPrice": 80,
-            "discountPrice": 10
+            "discountPrice": 75,
+            "originalPrice": 80
         },
         {
             "id": 16,
-            "title": "Drinks",
+            "title": "Mojito",
             "thumbnails": [
-                "https://images.immediate.co.uk/production/volatile/sites/30/2021/11/diabolo-mockail-440-x400-c795884.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/drinks-to-avoid-1621959532.jpg?crop=0.670xw:1.00xh;0.151xw,0&resize=1200:*",
-                "https://www.thespruceeats.com/thmb/iHmC1x1UNWoq4GP4i_81-xajw5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/popular-screwdriver-variations-759820-hero-01-6f67f02622a54bbb8aeabd7eb65bb3a0.jpg",
-                "https://www.fifteenspatulas.com/wp-content/uploads/2015/07/Refreshing-Summer-Drinks-Fifteen-Spatulas-1-500x500.jpg",
-                "https://images.thequint.com/thequint%2F2022-10%2F5fd80efc-2e10-40ca-964a-53933df92c93%2Fset_of_three_kinds_of_gin_tonic_picture_id668030702.jpg"
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTGenk-dO9Byc__KippLGYRYVaC_NnsvAuDQ&usqp=CAU",
+                "https://www.foodandwine.com/thmb/e8AvEfBBfwjg3xmt6E__rRvSZlA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Mojito-FT-RECIPE1022-2000-85cdb1eb59454847b713713e32e365c0.jpg",
+                "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mojito-cocktails-150961e.jpg?quality=90&webp=true&resize=430,390",
+                "https://thecollegehousewife.com/wp-content/uploads/2022/03/Mojito-Mocktail-11-scaled.jpg",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/07/mojito.jpg"
+                
             ],
-            "originalPrice": 50,
-            "discountPrice": 10
+            "discountPrice": 36,
+            "originalPrice": 50
         },
         {
             "id": 17,
@@ -212,21 +213,21 @@
                 "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
                 "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
-
             ],
-            "originalPrice": 250,
-            "discountPrice": 70
+            "discountPrice": 225,
+            "originalPrice": 250
         },
         {
             "id": 18,
             "title": "Chocklate Cake",
             "thumbnails": [
-                "https://recipes.timesofindia.com/thumb/53096885.cms?width=1200&height=900",
-                "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3GRqbllmQzC3iVKgr1epVPMD-Ti9GZSafA&usqp=CAU"
-
+                "https://bakerbynature.com/wp-content/uploads/2022/04/Golden-Vanilla-Cake-with-Vanilla-Frosting0-19-500x500.jpg",
+                "https://www.allrecipes.com/thmb/EhDgTO2m_MZ-gLM5jhYLcVQ6Gcg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/277000-easy-vanilla-cake-ddmfs-1X2-0101-8ac1f0aed3294888921a87d9bce9c43c.jpg",
+                "https://www.thespruceeats.com/thmb/Q7TOmrz-DVNXKNNUil4n17rB4XA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fluffy-homemade-vanilla-cake-995187-hero-01-cb314e573db94d49a49b2c348099e7b2.jpg",
+                "https://sallysbakingaddiction.com/wp-content/uploads/2019/01/vanilla-cake-5.jpg",
+                "https://atsloanestable.com/wp-content/uploads/2022/01/small-vanilla-cake3.jpg"
             ],
-            "originalPrice": 60
+            "discountPrice": 60
         },
         {
             "id": 19,
@@ -238,9 +239,10 @@
                 "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/1:1/w_2560%2Cc_limit/the-ultimate-hamburger.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
-            "originalPrice": 250,
-            "discountPrice": 100
-        },{
+            "discountPrice": 185,
+            "originalPrice": 250
+        },
+        {
             "id": 20,
             "title": "Egg Rice",
             "thumbnails": [
@@ -250,10 +252,10 @@
                 "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
                 "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
             ],
-            "originalPrice": 350,
-            "discountPrice": 300
-        }
-        ,{
+            "discountPrice": 300,
+            "originalPrice": 350
+        },
+        {
             "id": 21,
             "title": "Schewan Chicken",
             "thumbnails": [
@@ -263,10 +265,10 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
-            "originalPrice": 180,
-            "discountPrice": 30
-        }
-        ,{
+            "discountPrice": 150,
+            "originalPrice": 180
+        },
+        {
             "id": 22,
             "title": "Tandoor Chicken",
             "thumbnails": [
@@ -276,25 +278,25 @@
                 "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
-            "originalPrice": 550,
-            "discountPrice": 290
+            "discountPrice": 290,
+            "originalPrice": 550
         },
         {
             "id": 23,
-            "title": "Pizza",
+            "title": "Chicken Pizza",
             "thumbnails": [
-                "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-                "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/double-cheese.3c8885f8bc6f18facedc7626368f5105.1.jpg",
-                "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/2/2018/03/09212138/1131-1.jpg",
-                "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
+                "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*",
+                "https://www.spicypunch.com/wp-content/uploads/2020/08/chicken-pizza.jpg",
+                "https://masalaandchai.com/wp-content/uploads/2021/10/Tandoori-Chicken-Pizza.jpg",
+                "https://www.licious.in/blog/wp-content/uploads/2020/12/BBQ-Chicken-Pizza.jpg",
+                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F12%2F14%2Fchicken-pizza-ck-x.jpg&q=60"
             ],
-            "originalPrice": 180,
-            "discountPrice": 20
+            "discountPrice": 155,
+            "originalPrice": 180
         },
         {
             "id": 24,
-            "title": "Sandwich",
+            "title": "Pepper Sandwich",
             "thumbnails": [
                 "https://www.allrecipes.com/thmb/2wuWlMQEU5Q82Nd40jCwkvGXYXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229038-baked-hawaiian-sandwiches-ddmfs-3X4-0307-0c62251ecf394ca7b097edfad9b15019.jpg",
                 "https://www.foodandwine.com/thmb/3RuXtDHS8-DKyzRgglp-0faPojQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Philadelphia-Roast-Pork-and-Broccoli-Rabe-Sandwiches-FT-RECIPE0822-2000-92fa2cca8fd74041b4e70fef75a76dbb.jpg",
@@ -302,21 +304,21 @@
                 "https://www.thespruceeats.com/thmb/AfeDxJjKLRmpCLF7EtY5vnqlC9k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grinder-sandwich-5271038-hero-04-3e9616d36781417eb429235769997f19.jpg",
                 "https://hips.hearstapps.com/hmg-prod/images/pinwheel-sandwiches1-1671200037.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*"
             ],
-            "originalPrice": 80,
-            "discountPrice": 10
+            "discountPrice": 75,
+            "originalPrice": 80
         },
         {
             "id": 25,
-            "title": "Drinks",
+            "title": "Red Mojito",
             "thumbnails": [
-                "https://images.immediate.co.uk/production/volatile/sites/30/2021/11/diabolo-mockail-440-x400-c795884.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/drinks-to-avoid-1621959532.jpg?crop=0.670xw:1.00xh;0.151xw,0&resize=1200:*",
-                "https://www.thespruceeats.com/thmb/iHmC1x1UNWoq4GP4i_81-xajw5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/popular-screwdriver-variations-759820-hero-01-6f67f02622a54bbb8aeabd7eb65bb3a0.jpg",
-                "https://www.fifteenspatulas.com/wp-content/uploads/2015/07/Refreshing-Summer-Drinks-Fifteen-Spatulas-1-500x500.jpg",
-                "https://images.thequint.com/thequint%2F2022-10%2F5fd80efc-2e10-40ca-964a-53933df92c93%2Fset_of_three_kinds_of_gin_tonic_picture_id668030702.jpg"
+                "https://cookinglsl.com/wp-content/uploads/2015/06/cherry-mojito-edited-1.jpg",
+                "https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-dark-rum-strawberry-mango-mojito-video.jpg",
+                "https://images.immediate.co.uk/production/volatile/sites/2/2022/10/221020CHRISTMASCHRISTMASMOJITO03354-f1489dd.jpg?quality=90&resize=556,505",
+                "https://homecookingmemories.com/wp-content/uploads/2019/11/Cranberry-Mojito-Recipe-17.jpg",
+                "https://www.mantitlement.com/wp-content/uploads/2018/05/red-white-and-blue-mojito-close.jpg"
             ],
-            "originalPrice": 50,
-            "discountPrice": 10
+            "discountPrice": 35,
+            "originalPrice": 50
         },
         {
             "id": 26,
@@ -326,21 +328,21 @@
                 "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
                 "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
-
             ],
-            "originalPrice": 250,
-            "discountPrice": 70
+            "discountPrice": 140,
+            "originalPrice": 250
         },
         {
             "id": 27,
-            "title": "Chocklate Cake",
+            "title": "red velvet cake",
             "thumbnails": [
-                "https://recipes.timesofindia.com/thumb/53096885.cms?width=1200&height=900",
-                "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3GRqbllmQzC3iVKgr1epVPMD-Ti9GZSafA&usqp=CAU"
-
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Red_Velvet_Cake_Waldorf_Astoria.jpg/640px-Red_Velvet_Cake_Waldorf_Astoria.jpg",
+                "http://cdn.shopify.com/s/files/1/0521/3929/4884/products/RedVelvetCake2_grande.jpg?v=1632143753",
+                "https://www.southernliving.com/thmb/qh1uhJXFJgUlcxG79Gs9KYJ2NI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2446401_south2058_0-52f6361e9dc04c4baf93a34bd55dc3b6.jpg",
+                "https://www.keep-calm-and-eat-ice-cream.com/wp-content/uploads/2021/10/Chocolate-red-velvet-cake-hero-24.jpg",
+                "https://www.chocolatemoosey.com/wp-content/uploads/2020/02/Small-6-Inch-Red-Velvet-Cake-For-Two-photo-0402.jpg"
             ],
-            "originalPrice": 60
+            "discountPrice": 60
         },
         {
             "id": 28,
@@ -352,9 +354,10 @@
                 "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/1:1/w_2560%2Cc_limit/the-ultimate-hamburger.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
-            "originalPrice": 250,
-            "discountPrice": 100
-        },{
+            "discountPrice": 150,
+            "originalPrice": 250
+        },
+        {
             "id": 29,
             "title": "Egg Rice",
             "thumbnails": [
@@ -364,10 +367,10 @@
                 "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
                 "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
             ],
-            "originalPrice": 350,
-            "discountPrice": 300
-        }
-        ,{
+            "discountPrice": 300,
+            "originalPrice": 350
+        },
+        {
             "id": 30,
             "title": "Schewan Chicken",
             "thumbnails": [
@@ -377,10 +380,10 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
-            "originalPrice": 180,
-            "discountPrice": 30
-        }
-        ,{
+            "discountPrice": 150,
+            "originalPrice": 180
+        },
+        {
             "id": 31,
             "title": "Tandoor Chicken",
             "thumbnails": [
@@ -390,12 +393,12 @@
                 "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
-            "originalPrice": 550,
-            "discountPrice": 290
+            "discountPrice": 290,
+            "originalPrice": 550
         },
         {
             "id": 32,
-            "title": "Pizza",
+            "title": "Tomato Pizza",
             "thumbnails": [
                 "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
                 "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
@@ -403,25 +406,25 @@
                 "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/2/2018/03/09212138/1131-1.jpg",
                 "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
             ],
-            "originalPrice": 180,
-            "discountPrice": 20
+            "discountPrice": 155,
+            "originalPrice": 180
         },
         {
             "id": 33,
-            "title": "Sandwich",
+            "title": "Club Sandwich",
             "thumbnails": [
-                "https://www.allrecipes.com/thmb/2wuWlMQEU5Q82Nd40jCwkvGXYXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229038-baked-hawaiian-sandwiches-ddmfs-3X4-0307-0c62251ecf394ca7b097edfad9b15019.jpg",
-                "https://www.foodandwine.com/thmb/3RuXtDHS8-DKyzRgglp-0faPojQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Philadelphia-Roast-Pork-and-Broccoli-Rabe-Sandwiches-FT-RECIPE0822-2000-92fa2cca8fd74041b4e70fef75a76dbb.jpg",
-                "https://recipes.timesofindia.com/thumb/84786018.cms?width=1200&height=900",
-                "https://www.thespruceeats.com/thmb/AfeDxJjKLRmpCLF7EtY5vnqlC9k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grinder-sandwich-5271038-hero-04-3e9616d36781417eb429235769997f19.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/pinwheel-sandwiches1-1671200037.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*"
+                "https://static.toiimg.com/photo/83740315.cms",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS0108ycryPYitOVIbWumS4DiT0rUtyvHujIk2OmsHhIHajSShBOUwqeI4SXoHUOu2VOg&usqp=CAU",
+                "https://hips.hearstapps.com/hmg-prod/images/delish-200511-seo-club-sandwich-h-14383-eb-1590780714.jpg?crop=0.8891228070175439xw:1xh;center,top&resize=1200:*",
+                "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-653594_11-111eb65.jpg?quality=90&webp=true&resize=440,400",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyrmb03dp39pv1ATbfXC3x5CK_QyjX7eyybk-n6VuKLXh-itJbc8kys-ZpYu1vRTwEbY&usqp=CAU"
             ],
-            "originalPrice": 80,
-            "discountPrice": 10
+            "discountPrice": 75,
+            "originalPrice": 80
         },
         {
             "id": 34,
-            "title": "Drinks",
+            "title": "Red Soda",
             "thumbnails": [
                 "https://images.immediate.co.uk/production/volatile/sites/30/2021/11/diabolo-mockail-440-x400-c795884.jpg",
                 "https://hips.hearstapps.com/hmg-prod/images/drinks-to-avoid-1621959532.jpg?crop=0.670xw:1.00xh;0.151xw,0&resize=1200:*",
@@ -429,8 +432,8 @@
                 "https://www.fifteenspatulas.com/wp-content/uploads/2015/07/Refreshing-Summer-Drinks-Fifteen-Spatulas-1-500x500.jpg",
                 "https://images.thequint.com/thequint%2F2022-10%2F5fd80efc-2e10-40ca-964a-53933df92c93%2Fset_of_three_kinds_of_gin_tonic_picture_id668030702.jpg"
             ],
-            "originalPrice": 50,
-            "discountPrice": 10
+            "discountPrice": 45,
+            "originalPrice": 50
         },
         {
             "id": 35,
@@ -440,21 +443,21 @@
                 "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
                 "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
-
             ],
-            "originalPrice": 250,
-            "discountPrice": 70
+            "discountPrice": 225,
+            "originalPrice": 250
         },
         {
             "id": 36,
-            "title": "Chocklate Cake",
+            "title": "Pista Cake",
             "thumbnails": [
-                "https://recipes.timesofindia.com/thumb/53096885.cms?width=1200&height=900",
-                "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3GRqbllmQzC3iVKgr1epVPMD-Ti9GZSafA&usqp=CAU"
-
+                "https://cdn.igp.com/f_auto,q_auto,t_prodl/products/p-rich-pistachio-cake-half-kg--109491-m.jpg",
+                "https://redplatter.ph/restaurant/wp-content/uploads/2016/08/Pistachio-Sansrival.jpg",
+                "https://www.giftjaipur.com/image/cache/catalog/2018/kesar-cake-1-500x500.jpg",
+                "https://www.giftjaipur.com/image/cache/catalog/May-2019/kesar-pista-cake-for-wife-with-gulab-jamun-topping-500x500.jpg",
+                "https://cdn3.mydukaan.io/app/image/700x700/?url=https://mydukaan.s3.amazonaws.com/3641486/f77efced-3906-4519-8f52-256d45b9d435/1614253546433.jpeg"
             ],
-            "originalPrice": 60
+            "discountPrice": 60
         }
     ]
 }

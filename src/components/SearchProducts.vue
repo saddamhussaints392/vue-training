@@ -37,8 +37,8 @@
       <b-form-checkbox value="orange" class="category_item rounded-0">Burger</b-form-checkbox>
       <b-form-checkbox value="orange" class="category_item rounded-0">Chicken Chup</b-form-checkbox>
       <b-form-checkbox value="orange" class="category_item rounded-0">Drink</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Pizza</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Thi</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Pizza's</b-form-checkbox>
+      <b-form-checkbox value="orange" class="category_item rounded-0">Cakes</b-form-checkbox>
       <b-form-checkbox value="orange" class="category_item rounded-0">Non Veg</b-form-checkbox>
       <b-form-checkbox value="orange" class="category_item rounded-0">Uncategorized</b-form-checkbox>
     </div>

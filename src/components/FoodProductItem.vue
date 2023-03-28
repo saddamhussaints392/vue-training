@@ -1,10 +1,10 @@
 <template>
-    <div id="my-table">
-      <div class="position-relative grid_images_section">
-      <img :src="thumbnail" alt="items"  />
+  <div id="my-table" @click="navigateHandler(id)">
+    <div class="position-relative grid_images_section">
+      <img :src="thumbnail" alt="items" />
       <span class="font-weight-bold d-block item_name">{{ title }}</span>
-      <span class="item_price mr-2">${{originalPrice}}</span>
-      <span class="item_discount text-secondary" v-if="discountPrice">${{ discountPrice }}</span>
+      <span class="item_price mr-2">${{ discountPrice }}</span>
+      <s class="item_discount" v-if="originalPrice">${{originalPrice}}</s>
       <div class="icons_row align-items-center justify-content-between">
         <div class="icons_section d-flex align-items-center justify-content-center">
           <b-icon-bezier2></b-icon-bezier2>
@@ -17,16 +17,17 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 <script>
 export default {
-  props:["thumbnail", "title", "originalPrice", "discountPrice"],
+  props: ["id","thumbnail", "title", "originalPrice", "discountPrice"],
   name: "FoodProductItem",
-  setup(){
-    // getProducts(){
-    //   return product = new 
-    // }
+  methods: {
+    navigateHandler(ids) {
+      console.log(ids);
+      this.$router.push('/shop-details')
+    }
   }
 };
 </script>

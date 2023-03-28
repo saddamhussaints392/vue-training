@@ -6,11 +6,9 @@
           <b-col cols="10" class="d-flex sort_show_col" style="gap: 33px;">
             <div>
               <span class="mr-2 sort_by_text">Sort By :</span>
-              <select name id class="sort_select">
-                <option value="Newest">Newest</option>
-                <option value="Oldest">Oldest</option>
-                <option value="Newest">Newest</option>
-                <option value="Newest">Newest</option>
+              <select v-model="sortBy" id class="sort_select" :on-change="filteredProducts">
+                <option value="low-high">low - high (price)</option>
+                <option value="high-low">high - low (price)</option>
               </select>
             </div>
             <div>
@@ -41,11 +39,7 @@
           <b-col cols="12" sm="12" md="12" lg="8" xl="8">
             <b-row no-gutters align-h="center">
               <b-col cols="12">
-                <div
-                  style
-                  class="items_grid_section"
-                  id="my-table"
-                >
+                <div style class="items_grid_section" id="my-table">
                   <FoodProductItem
                     v-for="(item, i) in paginationItems"
                     :key="i"
@@ -53,12 +47,13 @@
                     :title="item.title"
                     :originalPrice="item.originalPrice"
                     :discountPrice="item.discountPrice"
+                    :id="item.id"
                   />
                 </div>
                 <!-- <b-table id="my-table"
                   :per-page="perPage"
                   :current-page="currentPage"
-                  :items="products"></b-table> -->
+                :items="products"></b-table>-->
               </b-col>
             </b-row>
             <b-row no-gutters class="pagination_section">
@@ -110,31 +105,39 @@ export default {
       currentPage: 1,
       perPage: 15,
       showProducts: true,
-      products: []
+      products: [],
+      sortBy: "low-high"
     };
   },
   computed: {
     rows() {
       return this.products.length;
     },
+    filteredProducts(){
+        return this.products.sort((a, b)=>{
+        if(this.sortBy === "low-high"){
+          return a.discountPrice - b.discountPrice
+        }else if(this.sortBy === "high-low"){
+         return b.discountPrice - a.discountPrice
+        }
+       })
+    },
     paginationItems() {
       const startIndex = (this.currentPage - 1) * this.perPage;
       const endIndex = startIndex + this.perPage;
-      return this.products.slice(startIndex, endIndex)
+      return this.products.slice(startIndex, endIndex);
     }
   },
   mounted() {
     this.updateScreenWidth();
     this.onScreenResize();
     this.getData();
-    // this.products
-
-    // let d = new Product(items.products.thumbnails, items.products.title, items.products.originalPrice, items.products.discountPrice);
   },
   methods: {
     getData() {
       for (let i = 0; i < items.products.length; i++) {
         let d = new Product(
+          items.products[i].id,
           items.products[i].thumbnails,
           items.products[i].title,
           items.products[i].originalPrice,
@@ -152,8 +155,10 @@ export default {
     updateScreenWidth() {
       if (window.innerWidth < 768) {
         this.showProducts = false;
+        this.perPage = 14;
       } else {
         this.showProducts = true;
+        this.perPage = 15;
       }
     },
     showModal() {
