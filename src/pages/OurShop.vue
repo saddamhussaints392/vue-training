@@ -6,18 +6,16 @@
           <b-col cols="10" class="d-flex sort_show_col" style="gap: 33px;">
             <div>
               <span class="mr-2 sort_by_text">Sort By :</span>
-              <select v-model="sortBy" id class="sort_select" :on-change="filteredProducts">
+              <select v-model="sortBy" id class="sort_select" :on-change="productsStore.priceFilteredProducts(sortBy)">
                 <option value="low-high">low - high (price)</option>
                 <option value="high-low">high - low (price)</option>
               </select>
             </div>
             <div>
               <span class="mr-2 sort_by_text">Show :</span>
-              <select name id class="sort_select">
-                <option value="Newest">Default</option>
-                <option value="Oldest">Oldest</option>
-                <option value="Newest">Newest</option>
-                <option value="Newest">Newest</option>
+              <select v-model="showWishItems" name id class="sort_select" :on-change="productsStore.wishListFilteredProducts(showWishItems)">
+                <option value="default">Default</option>
+                <option value="whishlist">WishList</option>
               </select>
             </div>
           </b-col>
@@ -41,19 +39,16 @@
               <b-col cols="12">
                 <div style class="items_grid_section" id="my-table">
                   <FoodProductItem
-                    v-for="(item, i) in paginationItems"
+                    v-for="(item, i) in productsStore.paginationItems(currentPage, perPage)"
                     :key="i"
                     :thumbnail="item.thumbnails[0]"
                     :title="item.title"
                     :originalPrice="item.originalPrice"
                     :discountPrice="item.discountPrice"
                     :id="item.id"
+                    :wishlist="item.wishlist"
                   />
                 </div>
-                <!-- <b-table id="my-table"
-                  :per-page="perPage"
-                  :current-page="currentPage"
-                :items="products"></b-table>-->
               </b-col>
             </b-row>
             <b-row no-gutters class="pagination_section">
@@ -84,7 +79,7 @@
               hide-footer
               body-class="p-0"
             >
-              <SearchProducts :hideModal="hideModal" />
+              <SearchProducts :hideModal="hideModal"/>
             </b-modal>
           </b-col>
         </b-row>
@@ -95,58 +90,34 @@
 <script>
 import FoodProductItem from "../components/FoodProductItem.vue";
 import SearchProducts from "../components/SearchProducts.vue";
-import { Product } from "../models/Product.js";
-import items from "../data/products.json";
+import { useProductsStore } from "../store/productsStore";
 export default {
   name: "OurShop",
   components: { SearchProducts, FoodProductItem },
+  setup(){
+    const productsStore = useProductsStore();
+    return {productsStore}
+  },
   data() {
     return {
       currentPage: 1,
       perPage: 15,
       showProducts: true,
-      products: [],
-      sortBy: "low-high"
+      sortBy: "low-high",
+      showWishItems: "default"
     };
   },
   computed: {
     rows() {
-      return this.products.length;
+      return this.productsStore.products.length;
     },
-    filteredProducts(){
-        return this.products.sort((a, b)=>{
-        if(this.sortBy === "low-high"){
-          return a.discountPrice - b.discountPrice
-        }else if(this.sortBy === "high-low"){
-         return b.discountPrice - a.discountPrice
-        }
-       })
-    },
-    paginationItems() {
-      const startIndex = (this.currentPage - 1) * this.perPage;
-      const endIndex = startIndex + this.perPage;
-      return this.products.slice(startIndex, endIndex);
-    }
   },
   mounted() {
     this.updateScreenWidth();
     this.onScreenResize();
-    this.getData();
+    this.productsStore.getData();
   },
   methods: {
-    getData() {
-      for (let i = 0; i < items.products.length; i++) {
-        let d = new Product(
-          items.products[i].id,
-          items.products[i].thumbnails,
-          items.products[i].title,
-          items.products[i].originalPrice,
-          items.products[i].discountPrice
-        );
-        console.log(d);
-        this.products.push(d);
-      }
-    },
     onScreenResize() {
       window.addEventListener("resize", () => {
         this.updateScreenWidth();

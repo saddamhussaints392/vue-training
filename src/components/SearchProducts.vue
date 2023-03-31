@@ -26,21 +26,28 @@
       </div>
     </div>
     <div class="product_search d-flex align-items-center">
-      <input type="text" placeholder="Search Product" class="d-block" />
-      <div class="d-flex align-items-center justify-content-center text-light">
+      <input
+        type="text"
+        placeholder="Search Product"
+        v-model="searchProduct"
+        class="d-block"
+        @keyup.enter="productsStore.getData(searchProduct)"
+      />
+      <div
+        class="d-flex align-items-center justify-content-center text-light"
+        @click="productsStore.getData(searchProduct)"
+      >
         <b-icon-search font-scale="1.5"></b-icon-search>
       </div>
     </div>
     <div class="categories_section">
       <span class="d-block font-weight-bold category">Category</span>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Sandwiches</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Burger</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Chicken Chup</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Drink</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Pizza's</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Cakes</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Non Veg</b-form-checkbox>
-      <b-form-checkbox value="orange" class="category_item rounded-0">Uncategorized</b-form-checkbox>
+      <span>{{ productsStore.selectedCategories }}</span>
+      <b-form-checkbox class="category_item rounded-0"
+       v-for="(category, i) in categories" :key="i" 
+       :value="category" 
+       v-model="productsStore.selectedCategories" 
+       @change="productsStore.getSelectedCategory" >{{ category }}</b-form-checkbox>
     </div>
     <div class="category_img_section">
       <img src="../assets/images/category_section_image.png" alt style="width:100%; height: auto;" />
@@ -135,15 +142,34 @@
   </b-card>
 </template>
 <script>
+import { useProductsStore } from "../store/productsStore";
 export default {
   name: "SearchProducts",
   props: {
+    products: { type: Object },
     hideModal: { type: Function }
+  },
+  setup() {
+    const productsStore = useProductsStore();
+    return { productsStore };
   },
   data() {
     return {
       lowestPrice: 0,
-      highestPrice: 8000
+      highestPrice: 8000,
+      searchProduct: "",
+      categories: [
+        "Sandwiches",
+        "Burgers",
+        "Chicken Chups",
+        "Drinks",
+        "Pizzas",
+        "Biryani",
+        "Cakes",
+        "Non Veg",
+        "Veg"
+      ],
+      // selectedCategory: []
     };
   },
   methods: {
@@ -290,7 +316,6 @@ export default {
 input[type="range"] {
   position: absolute;
   pointer-events: none;
-  -webkit-appearance: none;
   z-index: 2;
   width: 100%;
   height: 10px;
@@ -353,7 +378,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin-right: 10px;
 }
 @media screen and (max-width: 480px) {
-
   .mobile_view_sorting {
     display: block !important;
   }

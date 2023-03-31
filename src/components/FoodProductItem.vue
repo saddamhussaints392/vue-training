@@ -1,8 +1,8 @@
 <template>
-  <div id="my-table" @click="navigateHandler(id)">
+  <div id="my-table">
     <div class="position-relative grid_images_section">
       <img :src="thumbnail" alt="items" />
-      <span class="font-weight-bold d-block item_name">{{ title }}</span>
+      <span class="font-weight-bold d-block item_name"  @click="navigateHandler(id)">{{ title }}</span>
       <span class="item_price mr-2">${{ discountPrice }}</span>
       <s class="item_discount" v-if="originalPrice">${{originalPrice}}</s>
       <div class="icons_row align-items-center justify-content-between">
@@ -12,17 +12,26 @@
         <div class="icons_section d-flex align-items-center justify-content-center mx-3">
           <b-icon-bag></b-icon-bag>
         </div>
-        <div class="icons_section d-flex align-items-center justify-content-center">
+        <div v-if="wishlist" @click="productsStore.removeWishList(id)" class="icons_section d-flex align-items-center justify-content-center mx-3">
+          <b-icon-heart-fill></b-icon-heart-fill>
+        </div>
+        <div v-else @click="productsStore.addWishList(id)" class="icons_section d-flex align-items-center justify-content-center mx-3">
           <b-icon-heart></b-icon-heart>
         </div>
+        
       </div>
     </div>
   </div>
 </template>
 <script>
+import { useProductsStore } from "../store/productsStore.js";
 export default {
-  props: ["id","thumbnail", "title", "originalPrice", "discountPrice"],
+  props: ["id","thumbnail", "title", "originalPrice", "discountPrice", "wishlist"],
   name: "FoodProductItem",
+  setup(){
+    const productsStore = useProductsStore();
+    return { productsStore }
+  },
   methods: {
     navigateHandler(ids) {
       console.log(ids);
@@ -47,6 +56,7 @@ export default {
   color: #333333;
   margin-top: 8px;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 .item_price {
   font-family: "Inter", sans-serif;
@@ -84,6 +94,15 @@ export default {
   border-radius: 2px;
   color: #ff9f0d;
 }
+/* .active_wishlist{
+  cursor: pointer;
+  width: 41px;
+  height: 34px;
+  background: #ff9f0d;
+  border-radius: 2px;
+  color: white;
+} */
+
 @media screen and (max-width: 480px) {
   .grid_images_section > img {
     width: 158px;

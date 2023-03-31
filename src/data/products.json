@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "title": "Chicken",
+            "title": "Mutton Burger",
             "thumbnails": [
                 "https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=",
                 "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246__480.jpg",
@@ -11,20 +11,24 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
             "discountPrice": 140,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg", "Burger"],
+            "wishlist": true
         },
         {
             "id": 2,
-            "title": "Egg Rice",
+            "title": "Veg Biryani",
             "thumbnails": [
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/egg-fried-rice-recipe.jpg",
-                "https://i.ytimg.com/vi/iv1frVobFeQ/maxresdefault.jpg",
-                "https://slurrp.club/wp-content/uploads/2020/04/DSC_0153-2-750x500.jpg",
-                "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
-                "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
+                "https://i.ytimg.com/vi/JqP4wSWsYr4/maxresdefault.jpg",
+                "https://www.whiskaffair.com/wp-content/uploads/2020/08/Veg-Biryani-2-3-500x375.jpg",
+                "https://www.ruchiskitchen.com/wp-content/uploads/2019/01/Shahi-Veg-Biryani-Recipe-01.jpg",
+                "https://recipesofhome.com/wp-content/uploads/2020/06/veg-biryani-recipe.jpg",
+                "https://instantpotindianmom.com/wp-content/uploads/2021/10/vegetable-biryani-instant-pot-1-1-500x500.jpg"
             ],
-            "discountPrice": 300,
-            "originalPrice": 350
+            "discountPrice": 250,
+            "originalPrice": 290,
+            "category": ["veg", "Biryani"],
+            "wishlist": false
         },
         {
             "id": 3,
@@ -37,7 +41,9 @@
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
             "discountPrice": 150,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": true
         },
         {
             "id": 4,
@@ -50,7 +56,9 @@
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
             "discountPrice": 290,
-            "originalPrice": 550
+            "originalPrice": 550,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": false
         },
         {
             "id": 5,
@@ -63,7 +71,8 @@
                 "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200"
             ],
             "discountPrice": 155,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Pizzas", "Veg"]
         },
         {
             "id": 6,
@@ -76,7 +85,9 @@
                 "https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg"
             ],
             "discountPrice": 70,
-            "originalPrice": 80
+            "originalPrice": 80,
+            "category": ["Sandwiches", "Veg"],
+            "wishlist": true
         },
         {
             "id": 7,
@@ -89,19 +100,24 @@
                 "https://m.economictimes.com/thumb/height-450,width-600,imgsize-47934,msid-60871858/revealed-why-beer-makes-you-feel-good.jpg"
             ],
             "discountPrice": 110,
-            "originalPrice": 165
+            "originalPrice": 165,
+            "category": ["Drinks"],
+            "wishlist": false
         },
         {
             "id": 8,
-            "title": "Chicken Chukka",
+            "title": "Chicken Manchurian",
             "thumbnails": [
-                "https://yellowchilis.com/wp-content/uploads/2020/10/chettinad-chicken-chukka-500x500.jpg",
-                "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
-                "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
-                "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
+                "https://pupswithchopsticks.com/wp-content/uploads/chicken-manchurian-tn.jpg",
+                "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/07/chicken-manchurian-1.jpg.webp",
+                "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Monika_Manchanda/Indo_chinese_Chicken_Manchurian_recipe_1_400.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhpCTkYWoOcOYjosMYd0gvwEqkVJD8MIeCLeDrqF9-F5qxMp47dHhZBp2y9WLMzRzamIM&usqp=CAU",
+                "https://www.kannammacooks.com/wp-content/uploads/chicken-manchurian-recipe-dry-restaurant-style-1.jpg"
             ],
-            "discountPrice": 230,
-            "originalPrice": 250
+            "discountPrice": 130,
+            "originalPrice": 170,
+            "category": ["Non Veg"],
+            "wishlist": true
         },
         {
             "id": 9,
@@ -111,11 +127,13 @@
                 "https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3GRqbllmQzC3iVKgr1epVPMD-Ti9GZSafA&usqp=CAU"
             ],
-            "discountPrice": 60
+            "discountPrice": 60,
+            "category": ["Cakes"],
+            "wishlist": false
         },
         {
             "id": 10,
-            "title": "Chicken",
+            "title": "Chicken Burger",
             "thumbnails": [
                 "https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=",
                 "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246__480.jpg",
@@ -123,21 +141,25 @@
                 "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/1:1/w_2560%2Cc_limit/the-ultimate-hamburger.jpg",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
-            "discountPrice": 200,
-            "originalPrice": 250
+            "discountPrice": 75,
+            "originalPrice": 90,
+            "category": ["Burgers", "Non Veg"],
+            "wishlist": false
         },
         {
             "id": 11,
-            "title": "Egg Rice",
+            "title": "White Rice",
             "thumbnails": [
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/egg-fried-rice-recipe.jpg",
-                "https://i.ytimg.com/vi/iv1frVobFeQ/maxresdefault.jpg",
-                "https://slurrp.club/wp-content/uploads/2020/04/DSC_0153-2-750x500.jpg",
-                "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
-                "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
+                "https://www.thespruceeats.com/thmb/kUoSjpktuKuTQpxkm-OFgOxl8s4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-make-basic-white-rice-2355883-10-5b0da96eba6177003622896e.jpg",
+                "https://cdn.loveandlemons.com/wp-content/uploads/2020/03/how-to-cook-rice.jpg",
+                "https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg?crop=0.565xw:1.00xh;0.218xw,0&resize=1200:*",
+                "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/06/08/0/HOW-TO-COOK_RICE-13_s4x3.jpg.rend.hgtvcom.616.462.suffix/1591637321588.jpeg",
+                "https://natashaskitchen.com/wp-content/uploads/2020/04/How-To-Cook-Rice-4.jpg"
             ],
-            "discountPrice": 300,
-            "originalPrice": 350
+            "discountPrice": 30,
+            "originalPrice": 50,
+            "category": ["Veg"],
+            "wishlist": false
         },
         {
             "id": 12,
@@ -150,7 +172,9 @@
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
             "discountPrice": 160,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": true
         },
         {
             "id": 13,
@@ -163,7 +187,9 @@
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
             "discountPrice": 290,
-            "originalPrice": 550
+            "originalPrice": 550,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": false
         },
         {
             "id": 14,
@@ -176,7 +202,9 @@
                 "http://pizzaparadise.in/wp-content/uploads/2019/10/paneer-onion-pizza-mania.png"
             ],
             "discountPrice": 155,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Pizzas", "Veg"],
+            "wishlist": false
         },
         {
             "id": 15,
@@ -189,7 +217,9 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs6v75eUGru7KgEA7a6GmBwZTYGiw5pb5bydJaV3mHrJaEuuuEWDYYuwplPBEGsmywxGw&usqp=CAU"
             ],
             "discountPrice": 75,
-            "originalPrice": 80
+            "originalPrice": 80,
+            "category": ["Sandwiches", "Veg"],
+            "wishlist": true
         },
         {
             "id": 16,
@@ -203,7 +233,9 @@
                 
             ],
             "discountPrice": 36,
-            "originalPrice": 50
+            "originalPrice": 50,
+            "category": ["Drinks"],
+            "wishlist": true
         },
         {
             "id": 17,
@@ -215,7 +247,9 @@
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
             ],
             "discountPrice": 225,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg"],
+            "wishlist": false
         },
         {
             "id": 18,
@@ -227,11 +261,13 @@
                 "https://sallysbakingaddiction.com/wp-content/uploads/2019/01/vanilla-cake-5.jpg",
                 "https://atsloanestable.com/wp-content/uploads/2022/01/small-vanilla-cake3.jpg"
             ],
-            "discountPrice": 60
+            "discountPrice": 60,
+            "category": ["Cakes"],
+            "wishlist": false
         },
         {
             "id": 19,
-            "title": "Chicken",
+            "title": "Chicken Burger",
             "thumbnails": [
                 "https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=",
                 "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246__480.jpg",
@@ -240,20 +276,24 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
             "discountPrice": 185,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg", "Burgers"],
+            "wishlist": false
         },
         {
             "id": 20,
-            "title": "Egg Rice",
+            "title": "Curd Rice",
             "thumbnails": [
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/egg-fried-rice-recipe.jpg",
-                "https://i.ytimg.com/vi/iv1frVobFeQ/maxresdefault.jpg",
-                "https://slurrp.club/wp-content/uploads/2020/04/DSC_0153-2-750x500.jpg",
-                "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
-                "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
+                "https://static.toiimg.com/thumb/75732038.cms?imgsize=1313318&width=800&height=800",
+                "https://www.vegrecipesofindia.com/wp-content/uploads/2016/07/curd-rice-2.jpg",
+                "https://www.funfoodfrolic.com/wp-content/uploads/2022/04/Curd-Rice-Blog.jpg",
+                "https://www.ohmyveg.co.uk/wp-content/uploads/2022/06/Curd-Rice-1-scaled-720x720.jpg",
+                "https://www.cookwithmanali.com/wp-content/uploads/2015/01/Curd-Rice-South-Indian.jpg"
             ],
-            "discountPrice": 300,
-            "originalPrice": 350
+            "discountPrice": 20,
+            "originalPrice": 30,
+            "category": ["Veg"],
+            "wishlist": true
         },
         {
             "id": 21,
@@ -266,7 +306,9 @@
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
             "discountPrice": 150,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": false
         },
         {
             "id": 22,
@@ -279,7 +321,9 @@
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
             "discountPrice": 290,
-            "originalPrice": 550
+            "originalPrice": 550,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": false
         },
         {
             "id": 23,
@@ -292,7 +336,9 @@
                 "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2011%2F12%2F14%2Fchicken-pizza-ck-x.jpg&q=60"
             ],
             "discountPrice": 155,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Pizzas", "Non Veg"],
+            "wishlist": false
         },
         {
             "id": 24,
@@ -305,7 +351,9 @@
                 "https://hips.hearstapps.com/hmg-prod/images/pinwheel-sandwiches1-1671200037.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*"
             ],
             "discountPrice": 75,
-            "originalPrice": 80
+            "originalPrice": 80,
+            "category": ["Sandwiches", "Veg"],
+            "wishlist": false
         },
         {
             "id": 25,
@@ -318,7 +366,9 @@
                 "https://www.mantitlement.com/wp-content/uploads/2018/05/red-white-and-blue-mojito-close.jpg"
             ],
             "discountPrice": 35,
-            "originalPrice": 50
+            "originalPrice": 50,
+            "category": ["Drinks"],
+            "wishlist": false
         },
         {
             "id": 26,
@@ -330,7 +380,9 @@
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
             ],
             "discountPrice": 140,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg", "Chicken Chups"],
+            "wishlist": false
         },
         {
             "id": 27,
@@ -342,7 +394,9 @@
                 "https://www.keep-calm-and-eat-ice-cream.com/wp-content/uploads/2021/10/Chocolate-red-velvet-cake-hero-24.jpg",
                 "https://www.chocolatemoosey.com/wp-content/uploads/2020/02/Small-6-Inch-Red-Velvet-Cake-For-Two-photo-0402.jpg"
             ],
-            "discountPrice": 60
+            "discountPrice": 60,
+            "category": ["Cakes"],
+            "wishlist": false
         },
         {
             "id": 28,
@@ -355,20 +409,24 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLXAxM2oEtgcIu4z0mWJVMnWQAgfmx2UVWtHIRVxZSpgKzgBTjZ_1_6psql9Qvw7ugSk&usqp=CAU"
             ],
             "discountPrice": 150,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg"],
+            "wishlist": false
         },
         {
             "id": 29,
-            "title": "Egg Rice",
+            "title": "Paneer Biryani",
             "thumbnails": [
-                "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/egg-fried-rice-recipe.jpg",
-                "https://i.ytimg.com/vi/iv1frVobFeQ/maxresdefault.jpg",
-                "https://slurrp.club/wp-content/uploads/2020/04/DSC_0153-2-750x500.jpg",
-                "https://www.allrecipes.com/thmb/WAaJX7ghFAiGjU3WGRmRC424exA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6751001-egg-fried-rice-Mariya-Tkachenko-4x3-1-0a5504e18cea49c2bf4419799bd50ad9.jpg",
-                "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-FF4.jpg"
+                "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Priya__Suresh/Paneer_Biryani_Recipe_1_1600.jpg",
+                "https://revi.b-cdn.net/wp-content/uploads/2017/01/paneer-biryani-vert3.jpg",
+                "https://revi.b-cdn.net/wp-content/uploads/2017/01/paneer-biryani-1.jpg",
+                "https://thebellyrulesthemind.net/wp-content/uploads/2020/02/instant-pot-paneer-biryani-480x480.png",
+                "https://ministryofcurry.com/wp-content/uploads/2019/02/Paneer-Vegetable-Biryani-3-500x500.jpg"
             ],
-            "discountPrice": 300,
-            "originalPrice": 350
+            "discountPrice": 140,
+            "originalPrice": 180,
+            "category":["Veg", "Biryani"],
+            "wishlist": false
         },
         {
             "id": 30,
@@ -381,7 +439,9 @@
                 "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
             ],
             "discountPrice": 150,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Non Veg"],
+            "wishlist": false
         },
         {
             "id": 31,
@@ -394,7 +454,9 @@
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
             "discountPrice": 290,
-            "originalPrice": 550
+            "originalPrice": 550,
+            "category": ["Non Veg"],
+            "wishlist": false
         },
         {
             "id": 32,
@@ -407,7 +469,9 @@
                 "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg?resize=1200:*"
             ],
             "discountPrice": 155,
-            "originalPrice": 180
+            "originalPrice": 180,
+            "category": ["Pizzas", "Veg"],
+            "wishlist": true
         },
         {
             "id": 33,
@@ -420,7 +484,9 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyrmb03dp39pv1ATbfXC3x5CK_QyjX7eyybk-n6VuKLXh-itJbc8kys-ZpYu1vRTwEbY&usqp=CAU"
             ],
             "discountPrice": 75,
-            "originalPrice": 80
+            "originalPrice": 80,
+            "category": ["Sandwiches", "Veg"],
+            "wishlist": false
         },
         {
             "id": 34,
@@ -433,7 +499,9 @@
                 "https://images.thequint.com/thequint%2F2022-10%2F5fd80efc-2e10-40ca-964a-53933df92c93%2Fset_of_three_kinds_of_gin_tonic_picture_id668030702.jpg"
             ],
             "discountPrice": 45,
-            "originalPrice": 50
+            "originalPrice": 50,
+            "category": ["Drinks"],
+            "wishlist": false
         },
         {
             "id": 35,
@@ -445,7 +513,9 @@
                 "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
             ],
             "discountPrice": 225,
-            "originalPrice": 250
+            "originalPrice": 250,
+            "category": ["Non Veg"],
+            "wishlist": false
         },
         {
             "id": 36,
@@ -457,7 +527,9 @@
                 "https://www.giftjaipur.com/image/cache/catalog/May-2019/kesar-pista-cake-for-wife-with-gulab-jamun-topping-500x500.jpg",
                 "https://cdn3.mydukaan.io/app/image/700x700/?url=https://mydukaan.s3.amazonaws.com/3641486/f77efced-3906-4519-8f52-256d45b9d435/1614253546433.jpeg"
             ],
-            "discountPrice": 60
+            "discountPrice": 60,
+            "category": ["Cakes"],
+            "wishlist": true
         }
     ]
 }
