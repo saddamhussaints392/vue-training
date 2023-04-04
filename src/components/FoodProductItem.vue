@@ -1,8 +1,8 @@
 <template>
   <div id="my-table">
     <div class="position-relative grid_images_section">
-      <img :src="thumbnail" alt="items" />
-      <span class="font-weight-bold d-block item_name"  @click="navigateHandler(id)">{{ title }}</span>
+      <img :src="thumbnails[0]" alt="items" />
+      <span class="font-weight-bold d-block item_name"  @click="navigateHandler">{{ title }}</span>
       <span class="item_price mr-2">${{ discountPrice }}</span>
       <s class="item_discount" v-if="originalPrice">${{originalPrice}}</s>
       <div class="icons_row align-items-center justify-content-between">
@@ -26,16 +26,16 @@
 <script>
 import { useProductsStore } from "../store/productsStore.js";
 export default {
-  props: ["id","thumbnail", "title", "originalPrice", "discountPrice", "wishlist"],
+  props: ["id","thumbnails", "title", "originalPrice", "discountPrice", "wishlist"],
   name: "FoodProductItem",
   setup(){
     const productsStore = useProductsStore();
     return { productsStore }
   },
   methods: {
-    navigateHandler(ids) {
-      console.log(ids);
-      this.$router.push('/shop-details')
+    navigateHandler() {
+      console.log(this.id, this.thumbnails, this.discountPrice);
+      this.$router.push({name: "shopDetails", params:{ id:this.id, thumbnails:this.thumbnails, discountPrice:this.discountPrice}})
     }
   }
 };

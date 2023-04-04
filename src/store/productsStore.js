@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { Product } from "../models/Product.js";
 import items from "../data/products.json";
-
+import router from "../router";
 
 export const useProductsStore = defineStore({
     id: "useProductsStore",
@@ -9,7 +9,8 @@ export const useProductsStore = defineStore({
         return {
             products: [],
             // categories:[],
-            selectedCategories: []
+            selectedCategories: [],
+            productDetails:[]
         }
     },
     actions: {
@@ -63,7 +64,7 @@ export const useProductsStore = defineStore({
             let addWishItems = []
             this.products.forEach((e, i) => {
                 if (id === e.id) {
-                    this.products[i].wishlist = true
+                    e.wishlist = true
                     addWishItems.push(this.products[i])
                 } else {
                     addWishItems.push(this.products[i])
@@ -75,7 +76,7 @@ export const useProductsStore = defineStore({
             let removeWishItems = []
             this.products.forEach((e, i) => {
                 if (id === e.id) {
-                    this.products[i].wishlist = false
+                    e.wishlist = false
                     removeWishItems.push(this.products[i])
                 } else {
                     removeWishItems.push(this.products[i])
@@ -83,8 +84,16 @@ export const useProductsStore = defineStore({
             })
             this.products = removeWishItems;
         },
-        wishListFilteredProducts(show) {
-            
+        wishListFilteredProducts(wishItems) {
+            console.log("running");
+            let wishListItems = []
+            this.products.forEach((e, i) => {
+                if (wishItems === "wishlist" && e.wishlist) {
+                    console.log(this.products[i]);
+                    wishListItems.push(this.products[i])
+                } 
+            })
+            this.products = wishListItems
         },
         paginationItems(currentPage, perPage) {
             const startIndex = (currentPage - 1) * perPage;
@@ -104,6 +113,16 @@ export const useProductsStore = defineStore({
             }
             this.products = selectedItems
 
+        },
+        navigateHandler(itemId){
+            this.products.filter((e,i)=>{
+                // console.log(e.id === itemId);
+                if(e.id === itemId){
+                    this.productDetails.push(e)
+                    console.log(this.productDetails);
+                   router.push('/shop-details')
+                }
+            })
         }
     }
 })

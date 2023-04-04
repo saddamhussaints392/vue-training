@@ -57,15 +57,18 @@ const routes = [
         meta: {
             name: "Our Shop",
             requiresAuth: true
-        }
+        },
+        props: true 
     },
     {
         path: "/shop-details",
         component: ShopDetails,
+        name: 'shopDetails',
         meta: {
             name: "Shop Details",
             requiresAuth: true
-        }
+        },
+        props: true 
     },
     {
         path: "/blog-list",

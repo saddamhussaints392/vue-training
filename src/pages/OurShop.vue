@@ -6,16 +6,16 @@
           <b-col cols="10" class="d-flex sort_show_col" style="gap: 33px;">
             <div>
               <span class="mr-2 sort_by_text">Sort By :</span>
-              <select v-model="sortBy" id class="sort_select" :on-change="productsStore.priceFilteredProducts(sortBy)">
+              <select v-model="sortBy" class="sort_select" :on-change="productsStore.priceFilteredProducts(sortBy)">
                 <option value="low-high">low - high (price)</option>
                 <option value="high-low">high - low (price)</option>
               </select>
             </div>
             <div>
               <span class="mr-2 sort_by_text">Show :</span>
-              <select v-model="showWishItems" name id class="sort_select" :on-change="productsStore.wishListFilteredProducts(showWishItems)">
+              <select v-model="showWishItems" class="sort_select" @change="productsStore.wishListFilteredProducts(showWishItems)">
                 <option value="default">Default</option>
-                <option value="whishlist">WishList</option>
+                <option value="wishlist">WishList</option>
               </select>
             </div>
           </b-col>
@@ -41,7 +41,7 @@
                   <FoodProductItem
                     v-for="(item, i) in productsStore.paginationItems(currentPage, perPage)"
                     :key="i"
-                    :thumbnail="item.thumbnails[0]"
+                    :thumbnails="item.thumbnails"
                     :title="item.title"
                     :originalPrice="item.originalPrice"
                     :discountPrice="item.discountPrice"

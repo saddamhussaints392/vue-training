@@ -2,42 +2,43 @@
   <b-container fluid class="p-0">
     <b-row no-gutters align-h="center" class="shop_details_section justify-content-center">
       <b-col cols="12" sm="12" md="12" lg="10" xl="10">
-        <b-row no-gutters align-h="center">
+        <b-row no-gutters align-h="center" >
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="d-flex align-items-start display_images_section" style="gap: 24px">
               <div>
-                <div class="left_image">
+                {{ thumbnails }}
+                <!-- <div class="left_image">
                   <img
-                    src="../assets/images/food_category_pic2.png"
+                    :src="thumbnails[1]"
                     alt
                     style="width: 100%; height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                    src="../assets/images/food_category_pic3.png"
+                  :src="thumbnails[2]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                    src="../assets/images/food_category_pic4.png"
+                  :src="thumbnails[3]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                    src="../assets/images/food_category_pic1.png"
+                  :src="thumbnails[4]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
-                </div>
+                </div> -->
               </div>
-              <div class="display_img">
-                <img src="../assets/images/display_img.png" alt style="width: 100%; height: 100%;" />
-              </div>
+              <!-- <div class="display_img">
+                <img :src="thumbnails[0]" alt style="width: 100%; height: 100%;" />
+              </div> -->
             </div>
           </b-col>
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
@@ -59,12 +60,12 @@
                 </span>
               </div>
             </div>
-            <span class="product_name d-block font-weight-bold">Yummy Chicken Chup</span>
+            <span class="product_name d-block font-weight-bold">{{ title }}</span>
             <p
               class="product_description"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
             <div class="pricing_section">
-              <span class="product_price d-block font-weight-bold">54.00$</span>
+              <span class="product_price d-block font-weight-bold">{{ discountPrice }}$</span>
               <div class="rating_section">
                 <b-form-rating
                   id="rating-inline"
@@ -206,10 +207,15 @@
 <script>
 import FoodProductItem from "../components/FoodProductItem.vue";
 import Review from "../components/Review.vue";
-
+import { useProductsStore } from "../store/productsStore";
 export default {
   name: "ShopDetails",
   components: { FoodProductItem, Review },
+  props: ["id", "thumbnails", "discountPrice"],
+  setup(){
+    const productsStore = useProductsStore();
+    return { productsStore }
+  },
   data() {
     return {
       pageName: "description",
@@ -224,6 +230,7 @@ export default {
     this.updateScreenWidth();
     this.onScreenResize();
   },
+ 
   methods: {activate: function(el) {
       this.isBtnActive = el;
     },

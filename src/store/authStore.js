@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
-import router from "../route";
+import router from "../router";
 import { emailRegex } from "../regex/emailRegex";
 import { passwordRegex } from "../regex/passwordRegex";
 import { nameRegex } from "../regex/nameRegex";
