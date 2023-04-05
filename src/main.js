@@ -7,6 +7,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/main.css'
+import './styles/main.css'
 
 import { initializeApp } from "firebase/app";
 import { createPinia } from 'pinia'

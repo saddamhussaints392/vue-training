@@ -1,0 +1,96 @@
+
+.h1,.h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+}
+.h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+}
+.h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
+}
+.h3 {
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
+}
+.h4 {
+    font-size: var(--fs-h4);
+    line-height: var(--lh-h4);
+}
+.h5 {
+    font-size: var(--fs-h5);
+    line-height: var(--lh-h5);
+}
+.h6 {
+    font-size: var(--fs-h6);
+    line-height: var(--lh-h6);
+}
+
+.large-text-bold, .medium-text-bold, .normal-text-bold, .small-text-bold {
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+.large-text-regular, .medium-text-regular, .normal-text-regular, .small-text-regular {
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+.large-text-bold, .large-text-regular {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+}
+.medium-text-bold, .medium-text-regular {
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+}
+.normal-text-bold, .normal-text-regular {
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+}
+.small-text-bold, .small-text-regular {
+    font-size: var(--fs-small);
+    line-height: var(--lh-small);
+}
+.text-primary {
+    color: var(--color-primary) !important;
+}
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+.text-light {
+    color: var(--color-white) !important;
+}
+.text-black-1 {
+    color: var(--color-black-1);
+}
+.text-black-2 {
+    color: var(--color-black-2);
+}
+.text-black-3 {
+    color: var(--color-black-3);
+}
+.text-grey-1 {
+    color: var(--color-grey-1);
+}
+.text-grey-2 {
+    color: var(--color-grey-2);
+}
+.text-grey-3 {
+    color: var(--color-grey-3);
+}
+.text-grey-4 {
+    color: var(--color-grey-4);
+}
+.text-grey-5 {
+    color: var(--color-grey-5);
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+.bg-light {
+    background-color: var(--color-white) !important;
+}

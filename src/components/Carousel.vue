@@ -5,8 +5,8 @@
         <b-row no-gutters>
           <b-col col="12" class="text-left testimonials_col">
             <h2 class="testimonials_text fw-normal">Testimonials</h2>
-            <span class="testimonials_title fw-bold text-light">
-                <span class="testimonials_wh">Wh</span>at our client are saying
+            <span class="h2 text-light">
+                <span class="text-primary">Wh</span>at our client are saying
               </span>
           </b-col>
         </b-row>
@@ -16,10 +16,10 @@
                 <b-card class="rounded-0 p-5" v-if="i === currentIndex">
                 <b-avatar src="https://placekitten.com/300/300" size="6rem" class="carousel_avatar"></b-avatar>
                 <img src="../assets/images/Quotes.png" class="d-block m-auto" alt="">
-                <span class="d-block my-4">{{i}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</span>
+                <span class="d-block my-4 medium-text-regular">{{i}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</span>
                 <b-form-rating id="rating-inline" class="border-0 star_rating" inline value="4"></b-form-rating>
-                <h4>Alamin Hasan</h4>
-                <span class="chef_category">Food Specialist</span>
+                <h4 class="h5 text-grey-1">Alamin Hasan</h4>
+                <span class="normal-text-regular text-grey-3">Food Specialist</span>
               </b-card>
             </div>
           </b-col>
@@ -72,12 +72,12 @@ export default {
 .carousel_dots.active {
     background: #ff9f0d;
 }
-.chef_category {
+/* .chef_category {
   font-family: "Helvetica";
   font-weight: 400;
   font-size: 16px;
   color: #828282;
-}
+} */
 .testimonials_wh {
     color: #ff9f0d;
 }

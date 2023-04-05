@@ -20,15 +20,15 @@
                 <b-col cols="11" sm="11" md="11" lg="11">
                   <div class="ml-4">
                     <h2 class="its_quick fw-normal">Its Quick & Amusing!</h2>
-                    <span class="the_art_title text-light fw-bold">
-                      <span class="th">Th</span>e Art of speed
+                    <span class="h1 text-light">
+                      <span class="text-primary">Th</span>e Art of speed
                       <br />food Quality
                     </span>
-                    <h6 class="the_art_description fw-normal text-light">
+                    <h6 class="the_art_description normal-text-regular text-light">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Varius sed pharetra dictum neque massa congue
                     </h6>
-                    <button class="btn_see_menu rounded-pill">See Menu</button>
+                    <button class="btn_see_menu normal-text-regular rounded-pill">See Menu</button>
                   </div>
                 </b-col>
               </b-row>
@@ -42,11 +42,11 @@
           <b-row align-h="center" class="text-align-center about_us_row px-3" no-gutters>
             <b-col cols="12" sm="12" md="12" lg="5" class>
               <h2 class="d-block abt_us_text fw-normal">about us</h2>
-              <span class="abt_us_title text-light fw-bold">
-                <span class="abt_we">We</span> Create the best
+              <span class="h2 text-light">
+                <span class="text-primary">We</span> Create the best
                 foody product
               </span>
-              <h6 class="abt_us_description fw-normal text-light">
+              <h6 class="abt_us_description normal-text-regular  text-light">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
                 <br />pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
                 <br />augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
@@ -54,11 +54,11 @@
                 <br />consequat.
               </h6>
               <ul class="abt_us_ul my-4">
-                <li>Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-                <li class="my-3">Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li class="medium-text-regular">Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+                <li class="my-3 medium-text-regular">Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
+                <li class="medium-text-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
               </ul>
-              <button class="btn_read_more text-light rounded-pill">Read More</button>
+              <button class="btn_read_more normal-text-regular text-light rounded-pill">Read More</button>
             </b-col>
             <b-col cols="12" sm="12" md="12" lg="5" class="about_us_images">
               <b-row no-gutters>
@@ -94,8 +94,8 @@
                 <h2 class="food_category_text fw-normal">Food Category</h2>
               </b-col>
               <b-col cols="12">
-                <span class="food_category_title text-light fw-bold">
-                  <span class="food_category_ch">Ch</span>oose Food Item
+                <span class="text-light h2">
+                  <span class="text-primary">Ch</span>oose Food Item
                 </span>
               </b-col>
               <b-row class="mt-5 food_category_cards">
@@ -113,8 +113,8 @@
                       alt="food_category_image"
                       style="width: 100%; height: auto;"
                     />
-                    <label class="save_amount_text bg-light">{{category.category}}</label>
-                    <label class="food_type font-weight-bold">{{category.discount}}</label>
+                    <label class="food_type large-text-bold bg-primary">{{category.category}}</label>
+                    <label class="save_amount_text text-primary bg-light medium-text-bold">{{category.discount}}</label>
                   </div>
                 </b-col>
               </b-row>
@@ -187,13 +187,13 @@
                   <h2 class="why_choose_text fw-normal">Why Choose us</h2>
                 </b-col>
                 <b-col cols="12">
-                  <span class="why_choose_title fw-bold text-light">
-                    <span class="why_choose_ex">Ex</span>tra ordinary taste
+                  <span class="h2 text-light">
+                    <span class="text-primary">Ex</span>tra ordinary taste
                     <br />And Experienced
                   </span>
                 </b-col>
                 <b-col cols="12">
-                  <h6 class="why_choose_desccription fw-normal text-light">
+                  <h6 class="why_choose_desccription normal-text-regular text-light">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
                     pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit
                     augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
@@ -205,26 +205,26 @@
               </b-row>
               <b-row class="text-center">
                 <b-col cols="4" sm="4" md="4" lg="2">
-                  <div class="hamburger_icon p-4">
+                  <div class="hamburger_icon bg-primary p-4">
                     <img
                       src="../assets/images/Hamburger.png"
                       alt
                       style="width: 100%; height: auto;"
                     />
                   </div>
-                  <span class="d-block fw-normal text-light mt-2">Fast Food</span>
+                  <span class="d-block medium-text-regular text-light mt-2">Fast Food</span>
                 </b-col>
                 <b-col cols="4" sm="4" md="4" lg="2">
-                  <div class="hamburger_icon p-4">
+                  <div class="hamburger_icon bg-primary p-4">
                     <img src="../assets/images/Cookie.png" alt style="width: 100%; height: auto;" />
                   </div>
-                  <span class="d-block fw-normal text-light mt-2">Lunch</span>
+                  <span class="d-block medium-text-regular text-light mt-2">Lunch</span>
                 </b-col>
                 <b-col cols="4" sm="4" md="4" lg="2">
-                  <div class="hamburger_icon p-4">
+                  <div class="hamburger_icon bg-primary p-4">
                     <img src="../assets/images/Wine.png" alt style="width: 100%; height: auto;" />
                   </div>
-                  <span class="d-block fw-normal text-light mt-2">Dinner</span>
+                  <span class="d-block medium-text-regular text-light mt-2">Dinner</span>
                 </b-col>
               </b-row>
 
@@ -232,11 +232,11 @@
                 class="experience_section d-flex bg-light mt-4 align-items-center justify-content-around rounded-lg p-2"
               >
                 <div>
-                  <span class="experience">30+</span>
+                  <span class="h2 text-primary">30+</span>
                 </div>
                 <div class="text-start">
-                  <span class="years_of_text d-block fw-normal">years of</span>
-                  <span class="experienced_text d-block">Experienced</span>
+                  <span class="large-text-regular text-black-1 d-block">years of</span>
+                  <span class="h5 d-block">Experienced</span>
                 </div>
               </div>
             </b-col>
@@ -251,8 +251,8 @@
               </b-row>
               <b-row no-gutters>
                 <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
-                  <span class="choose_and_pick_title fw-bold text-light">
-                    <span class="choose_and_pick_fr">Fr</span>om Our Menu
+                  <span class="h2 text-light">
+                    <span class="text-primary">Fr</span>om Our Menu
                   </span>
                 </b-col>
               </b-row>
@@ -360,8 +360,8 @@
               </b-row>
               <b-row no-gutters>
                 <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
-                  <span class="chefs_title fw-bold text-light">
-                    <span class="chefs_me">Me</span>et Our Chef
+                  <span class="h2 text-light">
+                    <span class="text-primary">Me</span>et Our Chef
                   </span>
                 </b-col>
               </b-row>
@@ -370,15 +370,15 @@
                   <div class="position-relative chefs__info">
                     <img :src="imageSrc(chef.img)" alt style="width: 100%; height: auto;" />
                     <div class="chefs_details bg-light position-absolute">
-                      <span class="font-weight-bold d-block">{{chef.name}}</span>
-                      <span class="font-weight-normal">{{chef.designation}}</span>
+                      <span class="medium-text-bold d-block">{{chef.name}}</span>
+                      <span class="small-text-regular">{{chef.designation}}</span>
                     </div>
                   </div>
                 </b-col>
               </b-row>
               <b-row class="mt-5 text-center">
                 <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
-                  <button class="m-auto btn_chef_see_more">See More</button>
+                  <button class="m-auto btn_chef_see_more normal-text-regular">See More</button>
                 </b-col>
               </b-row>
             </b-col>
@@ -388,16 +388,16 @@
             <b-col cols="12" sm="12" md="12" lg="5"></b-col>
             <b-col cols="12" sm="12" md="12" lg="5" class="text-right">
               <h2 class="restaurant_active_process_text fw-normal">Restaurant Active Process</h2>
-              <span class="restaurant_title fw-bold text-light">
-                <span class="restaurant_we">We</span> Document Every Food
+              <span class="h2 text-light">
+                <span class="text-primary">We</span> Document Every Food
                 Bean Process untile it is saved
               </span>
               <h6
-                class="restaurant_desccription fw-normal text-light"
+                class="restaurant_desccription normal-text-regular text-light"
               >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna,</h6>
               <b-row no-gutters class="d-flex align-items-center justify-content-end">
                 <b-col cols="6" sm="6" md="6" lg="3" class="text-right">
-                  <button class="m-auto font-weight-bold btn_restaurant_read_more">Read More</button>
+                  <button class="m-auto  btn_restaurant_read_more normal-text-bold">Read More</button>
                 </b-col>
                 <b-col cols="6" sm="6" md="6" lg="3">
                   <b-row
@@ -412,7 +412,7 @@
                       </div>
                     </b-col>
                     <b-col cols="5" sm="5" md="5" lg="6" class="ml-2">
-                      <span class="font-weight-bold text-light">Play Video</span>
+                      <span class="normal-text-bold text-light">Play Video</span>
                     </b-col>
                   </b-row>
                   <b-modal id="modal-center" centered title="Restaurant Active Process" hide-footer>
@@ -435,8 +435,8 @@
               </b-row>
               <b-row no-gutters>
                 <b-col sm="12" md="12" lg="12" cols="12" class="text-center">
-                  <span class="blog_post_title fw-bold text-light">
-                    <span class="blog_post_la">La</span>test News & Blog
+                  <span class="h2 text-light">
+                    <span class="text-primary">La</span>test News & Blog
                   </span>
                 </b-col>
               </b-row>
@@ -611,7 +611,7 @@ export default {
 .choose_and_pick_fr {
   color: #ff9f0d !important;
 }
-.abt_us_title,
+/* .abt_us_title,
 .food_category_title,
 .why_choose_title,
 .choose_and_pick_title,
@@ -622,7 +622,7 @@ export default {
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
-}
+} */
 .twitter_icon {
   fill: #ff9f0d;
 }
@@ -630,9 +630,7 @@ export default {
 .abt_us_description,
 .restaurant_desccription,
 .why_choose_desccription {
-  line-height: 24px;
   margin: 32px 0;
-  font-family: "Inter", sans-serif;
 }
 .btn_see_menu,
 .btn_read_more {
@@ -673,50 +671,46 @@ export default {
 }
 .save_amount_text {
   border-radius: 6px;
-  color: #ff9f0d;
+  /* color: #ff9f0d; */
   padding: 7px 19px;
-  font-weight: 700;
+  /* font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 26px; */
   position: absolute;
   top: 35%;
   left: 30%;
 }
 .food_type {
   /* font-weight: 700; */
-  font-size: 20px;
-  line-height: 28px;
-  background: #ff9f0d;
+  /* font-size: 20px;
+  line-height: 28px; */
+  /* background: #ff9f0d; */
   border-radius: 6px;
-  color: #fff5f5;
+  /* color: #fff5f5; */
   padding: 9px 31px;
   position: absolute;
   left: 0;
   bottom: 100px;
 }
 .hamburger_icon {
-  background: #ff9f0d;
+  /* background: #ff9f0d; */
   border-radius: 6px;
 }
 .why_choose_us_images {
   gap: 15px;
 }
-.experience {
-  font-size: 48px;
-  color: #ff9f0d;
-  font-weight: 700;
-}
-.years_of_text {
+
+/* .years_of_text {
   font-size: 20px;
   line-height: 28px;
   color: #1e1e1e;
-}
-.experienced_text {
+} */
+/* .experienced_text {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   color: #1e1e1e;
-}
+} */
 .experience_section {
   border-left: 10px solid #ff9f0d;
   width: 374px;
@@ -810,7 +804,7 @@ export default {
     margin: auto;
   }
 
-  .abt_us_title,
+  /* .abt_us_title,
   .food_category_title,
   .why_choose_title,
   .choose_and_pick_title,
@@ -821,17 +815,13 @@ export default {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-  }
+  } */
 
   .the_art_description,
   .abt_us_description,
   .restaurant_desccription,
   .why_choose_desccription {
-    line-height: 22px;
     margin: 32px 0;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
   }
 
   .about_us_row,
@@ -859,11 +849,11 @@ export default {
 
   .save_amount_text {
     border-radius: 6px;
-    color: #ff9f0d;
+    /* color: #ff9f0d; */
     padding: 5px 8px;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 18px;
+    /* font-weight: 700; */
+    /* font-size: 10px;
+    line-height: 18px; */
     position: absolute;
     top: 35%;
     left: 30%;
@@ -872,9 +862,9 @@ export default {
     /* font-weight: 700; */
     font-size: 12px;
     line-height: 20px;
-    background: #ff9f0d;
+    /* background: #ff9f0d; */
     border-radius: 6px;
-    color: #fff5f5;
+    /* color: #fff5f5; */
     padding: 5px 12px;
     position: absolute;
     left: 0;
@@ -905,22 +895,18 @@ export default {
     flex-direction: column-reverse;
     margin-top: 62px;
   }
-  .experience {
-    font-size: 40px;
-    color: #ff9f0d;
-    font-weight: 700;
-  }
-  .years_of_text {
+ 
+  /* .years_of_text {
     font-size: 18px;
     line-height: 26px;
     color: #1e1e1e;
-  }
-  .experienced_text {
+  } */
+  /* .experienced_text {
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
     color: #1e1e1e;
-  }
+  } */
   .why_choose_us_images {
     gap: 7px;
   }
@@ -954,8 +940,6 @@ export default {
     padding: 8px 28px;
     border: 1px solid #ff9f0d;
     border-radius: 25px;
-    font-weight: 400;
-    font-size: 14px;
   }
   .restaurant_active_process div:nth-child(2) {
     text-align: center !important;

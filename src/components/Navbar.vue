@@ -25,16 +25,16 @@
                 </label>
               </li>
               <li>
-                <router-link to="/home" class="active">Home</router-link>
+                <router-link to="/home" class="active normal-text-regular">Home</router-link>
               </li>
               <li>
-                <router-link to="/menu">Menu</router-link>
+                <router-link to="/menu" class="normal-text-regular">Menu</router-link>
               </li>
               <li>
-                <router-link to="/blog">Blog</router-link>
+                <router-link to="/blog" class="normal-text-regular">Blog</router-link>
               </li>
               <li>
-                <router-link to="/pages">Pages</router-link>
+                <router-link to="/pages" class="normal-text-regular">Pages</router-link>
               </li>
               <li>
                 <router-link to="#" class="d-flex align-items-end gap-3 text-light">
@@ -105,8 +105,8 @@ nav {
   cursor: pointer;
 }
 .navbar_items > li {
-  font-size: 16px;
-  line-height: 24px;
+  /* font-size: 16px;
+  line-height: 24px; */
   margin-right: 32px;
 }
 .navbar_items > li > a {

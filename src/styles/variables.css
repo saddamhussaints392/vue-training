@@ -1,0 +1,47 @@
+:root {
+    /* brand colors */
+    --color-primary: #FF9F0D;
+    --color-secondary: #999966;
+    /* state color */
+    --color-info: #2F80ED;
+    --color-success: #27AE60;
+    --color-warning: #E2B93B;
+    --color-error: #EB5757;
+    /* black colors */
+    --color-black-1: #1e1e1e;
+    --color-black-2: #1d1d1d;
+    --color-black-3: #282828;
+    --color-white: #ffffff;
+    /* grey colors */
+    --color-grey-1: #333333;
+    --color-grey-2: #4f4f4f;
+    --color-grey-3: #828282;
+    --color-grey-4: #bdbdbd;
+    --color-grey-5: #e0e0e0;
+
+    /* font size */
+    --fs-h1: 3.75rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2.5rem;
+    --fs-h4: 2rem;
+    --fs-h5: 1.5rem;
+    --fs-h6: 1.25rem;
+    /* line height */
+    --lh-h1: 4.25rem;
+    --lh-h2: 3.5rem;
+    --lh-h3: 3rem;
+    --lh-h4: 2.5rem;
+    --lh-h5: 2rem;
+    --lh-h6: 1.75rem;
+
+    /* text font size*/
+    --fs-large: 1.25rem;
+    --fs-medium: 1.125rem;
+    --fs-normal: 1rem;
+    --fs-small: 0.875rem;
+    /* text font size*/
+    --lh-large: 1.75rem;
+    --lh-medium: 1.625rem;
+    --lh-normal: 1.5rem;
+    --lh-small: 1.375rem;
+}
