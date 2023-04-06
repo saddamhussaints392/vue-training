@@ -44,15 +44,15 @@
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="d-flex align-items-center justify-content-between">
               <div>
-                <span class="in_stock text-light">In stock</span>
+                <span class="in_stock small-text-regular bg-primary text-light">In stock</span>
               </div>
               <div
-                class="d-flex align-items-center justify-content-center btns_pre_next"
+                class="d-flex align-items-center justify-content-center medium-text-regular text-grey-3"
                 style="gap:20px"
               >
                 <span class="d-block">
                   <b-icon-arrow-left font-scale="1.3" style="vertical-align: text-top;"></b-icon-arrow-left>
-                  <span class="ml-2">Pre</span>
+                  <span class="ml-2 ">Pre</span>
                 </span>
                 <span class="d-block">
                   <span class="mr-2">Next</span>
@@ -60,12 +60,12 @@
                 </span>
               </div>
             </div>
-            <span class="product_name d-block font-weight-bold">{{ title }}</span>
+            <span class="h2 text-grey-1 d-block ">Hello</span>
             <p
-              class="product_description"
+              class="product_description medium-text-regular text-grey-2"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
             <div class="pricing_section">
-              <span class="product_price d-block font-weight-bold">{{ discountPrice }}$</span>
+              <span class="h4 text-grey-1 d-block ">23$</span>
               <div class="rating_section">
                 <b-form-rating
                   id="rating-inline"
@@ -77,11 +77,11 @@
                 ></b-form-rating>
                 <span
                   style="border-left: 1px solid #A9A9A9; border-right: 1px solid #A9A9A9;"
-                  class="px-3"
+                  class="px-3 normal-text-regular text-grey-3"
                 >5.0 Rating</span>
-                <span class="pl-3">22 Review</span>
+                <span class="pl-3 normal-text-regular text-grey-3">22 Review</span>
               </div>
-              <span class="d-block product_taste my-3">Dictum/cursus/Risus</span>
+              <span class="d-block medium-text-regular text-grey-1 my-3">Dictum/cursus/Risus</span>
               <div class="d-flex align-items-center justify-content-between add_to_cart_section">
                 <div
                   class="d-flex align-items-center justify-content-center"
@@ -92,7 +92,7 @@
                   </div>
                   <div
                     style="border-left: 1px solid #828282;border-right: 1px solid #828282; height: 50px"
-                    class="px-3 font-weight-bold d-flex align-items-center product_quantity"
+                    class="px-3  d-flex align-items-center font-weight-bold text-grey-1 product_quantity"
                   >1</div>
                   <div class="px-3 d-flex align-items-center product_increment">
                     <b-icon-plus-lg></b-icon-plus-lg>
@@ -100,13 +100,13 @@
                 </div>
                 <button class="btn_add_to_cart">
                   <b-icon-bag class="mr-2"></b-icon-bag>
-                  <span>Add to cart</span>
+                  <span class="medium-text-regular">Add to cart</span>
                 </button>
               </div>
             </div>
             <div class="wish_socialmedia_section">
               <div
-                class="d-flex align-items-center justify-content-start wishlist_compare_section"
+                class="d-flex align-items-center justify-content-start medium-text-regular text-grey-2"
                 style="gap: 20px;"
               >
                 <div>
@@ -118,15 +118,15 @@
                   <span>Compare</span>
                 </div>
               </div>
-              <span class="category_text d-block mt-2">
+              <span class="medium-text-regular text-grey-1 d-block mt-2">
                 Category:
-                <span class="category_name">Pizza</span>
+                <span class="medium-text-regular text-grey-2">Pizza</span>
               </span>
-              <span class="tag_text d-block mt-2">
+              <span class="medium-text-regular text-grey-1 d-block mt-2">
                 Tag:
-                <span class="tag_name">Our Shop</span>
+                <span class="medium-text-regular text-grey-2">Our Shop</span>
               </span>
-              <span class="d-flex align-items-center share_text mt-3">
+              <span class="d-flex align-items-center medium-text-regular text-grey-1 mt-3">
                 Share:
                 <div class="d-flex ml-2" style="gap: 16px">
                   <b-icon-youtube class="d-block"></b-icon-youtube>
@@ -142,28 +142,28 @@
         <b-row no-gutters class="description_review_section d-block" align-h="center">
           <div class="d-flex">
             <button
-             @click="activate(1)"
+             @click="activate(1)" class="normal-text-regular"
               :class="[isBtnActive === 1 ? 'btn_active' : 'btn_inactive']"
             >Description</button>
             <button
-              @click="activate(2)"
+              @click="activate(2)" class="normal-text-regular"
               :class="[isBtnActive === 2 ? 'btn_active' : 'btn_inactive']"
             >Reviews(24)</button>
           </div>
           <div v-if="isBtnActive === 1">
-            <div class="description_text">
+            <div class="description_text normal-text-regular text-grey-3">
               <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.</p>
               <p>Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.</p>
             </div>
             <div class="benefits_main">
-              <span class="key_benefits_text d-block">Key Benefits</span>
-              <li class="key_points mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li class="key_points">Maecenas ullamcorper est et massa mattis condimentum.</li>
+              <span class="medium-text-bold text-grey-2 d-block">Key Benefits</span>
+              <li class="small-text-regular text-grey-2 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li class="small-text-regular text-grey-2">Maecenas ullamcorper est et massa mattis condimentum.</li>
               <li
-                class="key_points"
+                class="small-text-regular text-grey-2"
               >Vestibulum sed massa vel ipsum imperdiet malesuada id tempus nisl.</li>
-              <li class="key_points">Etiam nec massa et lectus faucibus ornare congue in nunc.</li>
-              <li class="key_points">Mauris eget diam magna, in blandit turpis.</li>
+              <li class="small-text-regular text-grey-2">Etiam nec massa et lectus faucibus ornare congue in nunc.</li>
+              <li class="small-text-regular text-grey-2">Mauris eget diam magna, in blandit turpis.</li>
             </div>
           </div>
           <div v-if="isBtnActive === 2" class="reviews_sections">
@@ -174,7 +174,7 @@
         <b-row no-gutters align-h="center">
           <div class="w-100 d-flex align-items-center justify-content-between">
             <div>
-              <span class="similar_product-text font-weight-bold">Similar Products</span>
+              <span class="h4 text-grey-1">Similar Products</span>
             </div>
             <div class="d-flex align-items-center justify-content-center" style="gap: 10px;">
               <div
@@ -290,42 +290,42 @@ export default {
   padding: 120px 0;
 }
 .in_stock {
-  background: #ff9f0d;
+  /* background: #ff9f0d; */
   padding: 3px 17px;
   border-radius: 6px;
-  font-family: "Inter";
+  /* font-family: "Inter"; */
 }
-.btns_pre_next {
+/* .btns_pre_next {
   font-family: "Inter";
-  font-size: 18px;
-  line-height: 26px;
-  color: #828282;
-}
-.product_name {
+  /* font-size: 18px; */
+  /* line-height: 26px; */
+  /* color: #828282; 
+} */
+/* .product_name {
   font-family: "Helvetica";
   font-size: 48px;
   color: #333333;
-}
+} */
 .product_description {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 32px;
-  color: #4f4f4f;
+  /* color: #4f4f4f; */
 }
 .pricing_section {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 34px;
 }
-.product_taste {
+/* .product_taste {
   font-family: "Inter";
   font-size: 18px;
   color: #333333;
-}
-.product_price,
+} */
+/* .product_price,
 .similar_product-text {
   font-family: "Helvetica";
   font-size: 32px;
   color: #333333;
-}
+} */
 .rating_section {
   font-family: "Inter";
   font-size: 16px;
@@ -342,66 +342,62 @@ export default {
   height: 50px;
   cursor: pointer;
 }
-.product_quantity {
+/* .product_quantity {
   font-family: "Helvetica";
   font-size: 20px;
   color: #333333;
-}
+} */
 
 .wish_socialmedia_section {
   border-bottom: 1px solid #e0e0e0;
   padding-top: 24px;
   padding-bottom: 32px;
 }
-.wishlist_compare_section {
+/* .wishlist_compare_section {
   font-family: "Inter";
   font-size: 18px;
   color: #4f4f4f;
-}
-.category_text,
+} */
+/* .category_text,
 .tag_text,
 .share_text {
   font-family: "Inter";
   font-size: 18px;
   color: #333333;
-}
-.category_name,
+} */
+/* .category_name,
 .tag_name {
   color: #4f4f4f;
-}
-.description_text {
+} */
+/* .description_text {
   font-family: "Inter";
   font-size: 16px;
   color: #828282;
-}
+} */
 .description_text p:first-child {
   margin-top: 32px;
 }
-.key_benefits_text {
+/* .key_benefits_text {
   font-family: "Helvetica";
   font-size: 18px;
   color: #4f4f4f;
-}
-.key_points {
+} */
+/* .key_points {
   font-family: "Inter";
   font-size: 14px;
   line-height: 22px;
   color: #4f4f4f;
-}
+} */
 .description_review_section {
   margin-top: 56px;
   margin-bottom: 120px;
 }
 .btn_active {
   background: #ff9f0d;
-  font-family: "Helvetica";
-  font-size: 16px;
   color: white;
 }
 .btn_inactive {
   background: transparent;
-  font-family: "Helvetica";
-  font-size: 16px;
   color: #333333;
 }
 .benefits_main {
@@ -461,17 +457,17 @@ export default {
   .description_review_section {
     margin: 42px 0;
   }
-  .btns_pre_next {
+  /* .btns_pre_next {
     font-family: "Inter";
-    font-size: 16px;
-    line-height: 26px;
-    color: #828282;
-  }
-  .product_name {
+    /* font-size: 16px; */
+    /* line-height: 26px; */
+    /* color: #828282; 
+  } */
+  /* .product_name {
     font-family: "Helvetica";
     font-size: 40px;
     color: #333333;
-  }
+  } */
   .btn_active {
     width: 100%;
     background: #ff9f0d;

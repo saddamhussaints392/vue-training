@@ -6,25 +6,25 @@
           <div class="signup_main">
             <div v-if="authStore.isSignUpSuccessfull">
               <span
-                class="text-center d-block text-success mb-2 font-weight-bold"
+                class="text-center d-block text-success mb-2 h6"
               >Your account is registered successfully!!</span>
-              <button class="btn_signup w-100" @click="$router.push('/sign-in')">Sign In</button>
+              <button class="btn_signup w-100 normal-text-regular" @click="$router.push('/sign-in')">Sign In</button>
             </div>
             <div v-else>
-              <span class="d-block signup_text">Sign Up</span>
+              <span class="d-block h6 text-grey-1">Sign Up</span>
               <div class="position-relative name_field mt-4">
-                <b-form-input class="rounded-0" placeholder="Name" v-model="name"></b-form-input>
+                <b-form-input class="rounded-0 normal-text-regular text-grey-2" placeholder="Name" v-model="name"></b-form-input>
                 <b-icon-person font-scale="1.5" class="position-absolute person_icon"></b-icon-person>
               </div>
-              <span class="pl-2 text-danger" v-if="authStore.nameError">{{authStore.nameError}}</span>
+              <span class="pl-2 text-error small-text-regular" v-if="authStore.nameError">{{authStore.nameError}}</span>
               <div class="position-relative email_field mt-3">
-                <b-form-input class="rounded-0" placeholder="Email" v-model="email"></b-form-input>
+                <b-form-input class="rounded-0 normal-text-regular text-grey-2" placeholder="Email" v-model="email"></b-form-input>
                 <b-icon-wallet font-scale="1.3" class="position-absolute person_icon"></b-icon-wallet>
               </div>
-              <span class="pl-2 text-danger" v-if="authStore.emailError">{{authStore.emailError}}</span>
+              <span class="pl-2 text-error small-text-regular" v-if="authStore.emailError">{{authStore.emailError}}</span>
               <div class="position-relative password_field mt-3">
                 <b-form-input
-                  class="rounded-0"
+                  class="rounded-0 normal-text-regular text-grey-2"
                   placeholder="Password"
                   type="password"
                   v-model="password"
@@ -32,30 +32,30 @@
                 <b-icon-bag-x font-scale="1.3" class="position-absolute person_icon"></b-icon-bag-x>
               </div>
               <span
-                class="pl-2 text-danger"
+                class="pl-2 text-error small-text-regular"
                 v-if="authStore.passwordError"
               >{{authStore.passwordError}}</span>
               <div class="mt-4">
-                <button class="btn_signup w-100" type="submit">Sign Up</button>
+                <button class="btn_signup w-100 normal-text-regular" type="submit">Sign Up</button>
               </div>
-              <span class="d-block w-100 mt-3 forget_password_text">Forget password ?</span>
+              <span class="d-block w-100 mt-3 forget_password_text small-text-regular text-grey-3">Forget password ?</span>
               <div class="d-flex align-items-center mt-4">
                 <hr class="flex-grow-1" />
-                <span class="or_text">OR</span>
+                <span class="or_text small-text-regular text-grey-2">OR</span>
                 <hr class="flex-grow-1" />
               </div>
               <div
-                class="d-flex w-100 btn_google_signup mt-3 align-items-center justify-content-between"
+                class="d-flex w-100 btn_google_signup  bg-light mt-3 align-items-center justify-content-between"
               >
                 <img src="../assets/images/Google.png" alt class="d-block pl-3" />
-                <span class="d-block" @click="signUpWithGoogle">Sign up with Google</span>
+                <span class="d-block normal-text-regular text-grey-2" @click="signUpWithGoogle">Sign up with Google</span>
                 <span></span>
               </div>
               <div
-                class="d-flex w-100 btn_apple_signup mt-3 align-items-center justify-content-between"
+                class="d-flex w-100 btn_apple_signup bg-light mt-3 align-items-center justify-content-between"
               >
                 <img src="../assets/images/Apple.png" alt class="d-block pl-3" />
-                <span class="d-block" @click="signUpWithApple">Sign up with Apple</span>
+                <span class="d-block normal-text-regular text-grey-2" @click="signUpWithApple">Sign up with Apple</span>
                 <span></span>
               </div>
             </div>
@@ -102,12 +102,12 @@ export default {
 .signup_section {
   padding: 120px 0;
 }
-.signup_text {
+/* .signup_text {
   font-family: "Helvetica";
   font-weight: 700;
   font-size: 20px;
   color: #333333;
-}
+} */
 
 .person_icon {
   top: 25%;
@@ -123,23 +123,23 @@ input {
   background: #ff9f0d;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "Helvetica";
+  /* font-family: "Helvetica";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16px; */
   cursor: pointer;
 }
 .btn_google_signup,
 .btn_apple_signup {
-  color: #4f4f4f;
-  background-color: #ffffff;
+  /* color: #4f4f4f; */
+  /* background-color: #ffffff; */
   border: 1px solid #e0e0e0;
 }
 .forget_password_text,
 .remember_me_text {
-  font-family: "Helvetica";
+  /* font-family: "Helvetica";
   font-weight: 400;
   font-size: 14px;
-  color: #828282;
+  color: #828282; */
   text-align: end !important;
 }
 .remember_me_text {
@@ -155,10 +155,10 @@ input[type="checkbox"] {
 .or_text {
   border: 1px solid #e0e0e0;
   padding: 5px;
-  font-family: "Helvetica";
+  /* font-family: "Helvetica";
   font-weight: 400;
   font-size: 14px;
-  color: #4f4f4f;
+  color: #4f4f4f; */
 }
 
 @media screen and (max-width: 480px) {

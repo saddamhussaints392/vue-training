@@ -13,7 +13,7 @@
           <b-col cols="12" sm="12" md="12" lg="8" class="menu_list_name">
             <img src="../assets/images/Coffee.png" alt />
             <div class="text-left">
-              <span class="font-weight-bold menu_type">Starter Menu</span>
+              <span class="font-weight-bold h2 text-grey-1">Starter Menu</span>
             </div>
             <MenuItem v-for="item in 4" :key="item" />
           </b-col>
@@ -22,7 +22,7 @@
           <b-col cols="12" sm="12" md="12" lg="8" class="menu_list_name">
             <img src="../assets/images/Coffee.png" alt />
             <div class="text-left">
-              <span class="font-weight-bold menu_type">Starter Menu</span>
+              <span class="font-weight-bold h2 text-grey-1">Starter Menu</span>
             </div>
             <MenuItem v-for="item in 4" :key="item" />
           </b-col>
@@ -50,7 +50,7 @@
           <b-col cols="12" sm="12" md="12" lg="8" class="menu_list_name">
             <img src="../assets/images/Coffee.png" alt />
             <div class="text-left">
-              <span class="font-weight-bold menu_type">Starter Menu</span>
+              <span class="font-weight-bold h2 text-grey-1">Starter Menu</span>
             </div>
             <MenuItem v-for="item in 4" :key="item" />
           </b-col>
@@ -59,7 +59,7 @@
           <b-col cols="12" sm="12" md="12" lg="8" class="menu_list_name">
             <img src="../assets/images/Coffee.png" alt />
             <div class="text-left">
-              <span class="font-weight-bold menu_type">Starter Menu</span>
+              <span class="font-weight-bold h2 text-grey-1">Starter Menu</span>
             </div>
             <MenuItem v-for="item in 4" :key="item" />
           </b-col>
@@ -77,12 +77,12 @@
       <b-col cols="12" sm="12" md="12" lg="10">
         <b-row no-gutters>
           <b-col class="text-center">
-            <span class="d-block partners_clients_text">Partners & Clients</span>
+            <span class="d-block medium-text-regular text-grey-1">Partners & Clients</span>
           </b-col>
         </b-row>
         <b-row no-gutters>
           <b-col class="text-center">
-            <span class="partners_clients_title">We work with the best pepole</span>
+            <span class="h2">We work with the best pepole</span>
           </b-col>
         </b-row>
         <b-row class="pt-5 px-5 d-flex align-items-center" no-gutters>
@@ -123,26 +123,26 @@ export default { components: { MenuItem, Clients } };
 .menu_items_row >div> div:nth-child(2) {
   margin-top: 120px;
 }
-.menu_type {
+/* .menu_type {
   font-family: "Helvetica";
   font-size: 48px;
   color: #333333;
-}
+} */
 .menu_image_section {
   text-align: end !important;
 }
-.partners_clients_text {
+/* .partners_clients_text {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #333333;
-}
-.partners_clients_title {
+} */
+/* .partners_clients_title {
   font-family: "Helvetica";
   font-weight: 700;
   font-size: 48px;
   color: #333333;
-}
+} */
 .clients_partners_section {
   padding-bottom: 122px;
 }
@@ -152,18 +152,18 @@ export default { components: { MenuItem, Clients } };
 }
 
 @media screen and (max-width: 480px) {
-  .menu_type {
+  /* .menu_type {
   font-family: "Helvetica";
   font-size: 40px;
   color: #333333;
-}
+} */
 
-.partners_clients_title {
+/* .partners_clients_title {
   font-family: "Helvetica";
   font-weight: 700;
   font-size: 40px;
-  color: #333333;
-}
+  color: #333333; 
+}*/
   .menu_items_row {
   padding-top: 122px;
   padding-bottom: 122px;

@@ -5,15 +5,15 @@
         <b-row no-gutters align-h="center" class="mb-4">
           <b-col cols="10" class="d-flex sort_show_col" style="gap: 33px;">
             <div>
-              <span class="mr-2 sort_by_text">Sort By :</span>
-              <select v-model="sortBy" class="sort_select" :on-change="productsStore.priceFilteredProducts(sortBy)">
+              <span class="mr-2 large-text-regular text-grey-1">Sort By :</span>
+              <select v-model="sortBy" class="medium-text-regular text-grey-4" :on-change="productsStore.priceFilteredProducts(sortBy)">
                 <option value="low-high">low - high (price)</option>
                 <option value="high-low">high - low (price)</option>
               </select>
             </div>
             <div>
-              <span class="mr-2 sort_by_text">Show :</span>
-              <select v-model="showWishItems" class="sort_select" @change="productsStore.wishListFilteredProducts(showWishItems)">
+              <span class="mr-2 large-text-regular text-grey-1">Show :</span>
+              <select v-model="showWishItems" class="medium-text-regular text-grey-4" @change="productsStore.wishListFilteredProducts(showWishItems)">
                 <option value="default">Default</option>
                 <option value="wishlist">WishList</option>
               </select>
@@ -152,11 +152,11 @@ export default {
 .our_shop_section {
   padding: 120px 0;
 }
-.sort_by_text {
+/* .sort_by_text {
   font-family: "Inter";
   font-size: 20px;
   color: #333333;
-}
+} */
 select {
   outline: none;
   padding: 10px 18px;
@@ -164,9 +164,9 @@ select {
   height: 46px;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
-  font-family: "Inter";
+  /* font-family: "Inter";
   font-size: 18px;
-  color: #bdbdbd;
+  color: #bdbdbd; */
 }
 .items_grid_section {
   display: grid;

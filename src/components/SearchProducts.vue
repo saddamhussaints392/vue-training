@@ -6,7 +6,7 @@
       </div>
       <div class="d-flex align-items-center justify-content-between my-3">
         <div>
-          <span class="mr-2 sort_by_text">Sort By :</span>
+          <span class="mr-2 medium-text-regular text-grey-4">Sort By :</span>
           <select name id class="sort_select">
             <option value="Newest">Newest</option>
             <option value="Oldest">Oldest</option>
@@ -15,7 +15,7 @@
           </select>
         </div>
         <div>
-          <span class="mr-2 sort_by_text">Show :</span>
+          <span class="mr-2 medium-text-regular text-grey-4">Show :</span>
           <select name id class="sort_select">
             <option value="Newest">Default</option>
             <option value="Oldest">Oldest</option>
@@ -30,7 +30,7 @@
         type="text"
         placeholder="Search Product"
         v-model="searchProduct"
-        class="d-block"
+        class="d-block normal-text-regular text-grey-3" 
         @keyup.enter="productsStore.getData(searchProduct)"
       />
       <div
@@ -41,9 +41,9 @@
       </div>
     </div>
     <div class="categories_section">
-      <span class="d-block font-weight-bold category">Category</span>
+      <span class="d-block h6 text-grey-1">Category</span>
       <span>{{ productsStore.selectedCategories }}</span>
-      <b-form-checkbox class="category_item rounded-0"
+      <b-form-checkbox class="category_item medium-text-regular rounded-0"
        v-for="(category, i) in categories" :key="i" 
        :value="category" 
        v-model="productsStore.selectedCategories" 
@@ -52,17 +52,17 @@
     <div class="category_img_section">
       <img src="../assets/images/category_section_image.png" alt style="width:100%; height: auto;" />
       <div class="item_titles">
-        <span class="d-block font-weight-bold perfect_taste">Perfect Taste</span>
-        <span class="d-block font-weight-bold classic_restaurant">Classic Restaurant</span>
-        <span class="d-block font-weight-bold restaurant_item_price mt-2">45.00$</span>
+        <span class="d-block font-weight-bold normal-text-bold text-light">Perfect Taste</span>
+        <span class="d-block font-weight-bold h6 text-light">Classic Restaurant</span>
+        <span class="d-block font-weight-bold normal-text-bold text-primary mt-2">45.00$</span>
       </div>
-      <div class="d-flex align-items-center shop_now_section">
-        <span class="d-block mr-2">Shop Now</span>
+      <div class="d-flex align-items-center shop_now_section text-light">
+        <span class="d-block mr-2 normal-text-regular">Shop Now</span>
         <b-icon-arrow-right-circle class="d-block"></b-icon-arrow-right-circle>
       </div>
     </div>
     <div class="filter_by_price_section">
-      <span class="d-block filter_by_price font-weight-bold">Filter By Price</span>
+      <span class="d-block text-grey-1 h6">Filter By Price</span>
       <!-- <input v-model="currentValue" type="range" :min="min" :max="max" class="slider" /> -->
       <div class="middle my-3">
         <div class="multi-range-slider">
@@ -95,16 +95,16 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-between">
-        <span class="d-block filter_range">
+        <span class="d-block normal-text-regular text-black-1">
           From $
           <span>{{ lowestPrice }}</span> to $
           <span>{{highestPrice}}</span>
         </span>
-        <span class="d-block filter_text">Filter</span>
+        <span class="d-block normal-text-regular text-black-2">Filter</span>
       </div>
     </div>
     <div class="latest_products_section">
-      <span class="d-block font-weight-bold latest_products">Latest Products</span>
+      <span class="d-block  h6 text-grey-1">Latest Products</span>
       <div class="d-flex latest_products_item" v-for="(items,i) in 4" :key="i">
         <img
           src="../assets/images/latest_product_img.png"
@@ -113,7 +113,7 @@
           style="height: auto;"
         />
         <div class="ml-2">
-          <span class="product_item_name d-block">Pizza</span>
+          <span class="normal-text-regular text-grey-2 d-block">Pizza</span>
           <b-form-rating
             no-border
             class="p-0 d-block"
@@ -122,13 +122,13 @@
             inline
             value="4"
           ></b-form-rating>
-          <span class="product_item_price d-block">$35.00</span>
+          <span class="small-text-regular text-grey-2 d-block">$35.00</span>
         </div>
       </div>
     </div>
     <div class="product_tags_section">
-      <span class="d-block product_tags font-weight-bold">Product Tags</span>
-      <div class="tags">
+      <span class="d-block h6 text-grey-1">Product Tags</span>
+      <div class="tags normal-text-regular text-grey-2">
         <span class="d-block tag">Services</span>
         <span class="d-block tag">Our Menu</span>
         <span class="d-block tag">Pizza</span>
@@ -213,6 +213,7 @@ export default {
   border: none;
   background: rgba(255, 159, 13, 0.1);
   padding: 11px 0px 11px 20px;
+  width: 202px;
 }
 .product_search div {
   cursor: pointer;
@@ -227,17 +228,17 @@ export default {
 .product_tags_section {
   margin-top: 24px;
 }
-.category,
+/* .category,
 .filter_by_price,
 .latest_products {
   font-family: "Helvetica";
   font-size: 20px;
   color: #333333;
-}
+} */
 .category_item {
   margin-top: 24px;
-  font-family: "Helvetica";
-  font-size: 18px;
+  /* font-family: "Helvetica";
+  font-size: 18px; */
 }
 .category_img_section {
   margin-top: 24px;
@@ -248,23 +249,23 @@ export default {
   top: 29px;
   left: 23px;
 }
-.perfect_taste,
+/* .perfect_taste,
 .restaurant_item_price {
   font-family: "Inter";
   font-size: 16px;
   color: white;
-}
-.classic_restaurant {
+} */
+/* .classic_restaurant {
   font-family: "Helvetica";
   font-size: 20px;
   color: white;
-}
+} */
 .shop_now_section {
   cursor: pointer;
   position: absolute;
   bottom: 31px;
   left: 23px;
-  color: white;
+  /* color: white; */
 }
 .middle {
   position: relative;
@@ -330,42 +331,42 @@ input[type="range"]::-webkit-slider-thumb {
   background: red;
   -webkit-appearance: none;
 }
-.filter_range,
+/* .filter_range,
 .filter_text {
   font-family: "Inter";
   font-size: 16px;
   color: #1e1e1e;
-}
-.filter_text {
+} */
+/* .filter_text {
   color: #0d0d0d;
-}
+} */
 .latest_products_item > img {
   width: 72px;
 }
-.product_item_name {
+/* .product_item_name {
   font-family: "Helvetica";
   font-size: 16px;
   color: #4f4f4f;
-}
-.product_item_price {
+} */
+/* .product_item_price {
   font-family: "Helvetica";
   font-size: 14px;
   color: #4f4f4f;
-}
+} */
 .product_tags_section > .tags {
   display: flex;
   flex-wrap: wrap;
 }
-.product_tags {
+/* .product_tags {
   font-family: "Helvetica";
   font-size: 20px;
   color: #333333;
-}
+} */
 .tags > .tag {
   cursor: pointer;
-  font-family: "Inter";
-  font-size: 16px;
-  color: #4f4f4f;
+  /* font-family: "Inter";
+  font-size: 16px; */
+  /* color: #4f4f4f; */
   border-bottom: 1px solid #4f4f4f;
   margin-right: 10px;
 }
@@ -389,13 +390,13 @@ input[type="range"]::-webkit-slider-thumb {
     border: 1px solid #e0e0e0;
     border-radius: 6px;
   }
-  .sort_by_text {
+  /* .sort_by_text {
     font-family: "Inter";
     font-size: 12px;
     color: #333333;
-  }
+  } */
   .product_search input {
-    width: 100%;
+    width: 295px;
     outline: none;
     border: none;
     background: rgba(255, 159, 13, 0.1);
@@ -416,7 +417,7 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
     bottom: 40px;
     left: 40px;
-    color: white;
+    /* color: white; */
   }
 
   select {

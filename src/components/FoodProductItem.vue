@@ -1,10 +1,10 @@
 <template>
   <div id="my-table">
     <div class="position-relative grid_images_section">
-      <img :src="thumbnails[0]" alt="items" />
-      <span class="font-weight-bold d-block item_name"  @click="navigateHandler">{{ title }}</span>
-      <span class="item_price mr-2">${{ discountPrice }}</span>
-      <s class="item_discount" v-if="originalPrice">${{originalPrice}}</s>
+      <img :src="thumbnails" alt="items" />
+      <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1"  @click="navigateHandler">{{ title }}</span>
+      <span class="normal-text-regular text-primary mr-2">${{ discountPrice }}</span>
+      <s class="normal-text-regular text-grey-3" v-if="originalPrice">${{originalPrice}}</s>
       <div class="icons_row align-items-center justify-content-between">
         <div class="icons_section d-flex align-items-center justify-content-center">
           <b-icon-bezier2></b-icon-bezier2>
@@ -50,24 +50,24 @@ export default {
   object-fit: cover;
 }
 .item_name {
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #333333;
+  color: #333333; */
   margin-top: 8px;
   margin-bottom: 4px;
   cursor: pointer;
 }
-.item_price {
+/* .item_price {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #ff9f0d;
-}
-.item_discount {
+} */
+/* .item_discount {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #828282;
-}
+} */
 .icons_row {
   display: none;
   position: absolute;
@@ -108,13 +108,13 @@ export default {
     width: 158px;
     height: 135px;
   }
-  .item_name {
+  /* .item_name {
     font-size: 14px;
-  }
-  .item_price,
+  } */
+  /* .item_price,
   .item_discount {
     font-size: 12px;
-  }
+  } */
   .icons_row {
     position: absolute;
     top: 30%;

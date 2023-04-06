@@ -20,7 +20,7 @@
                 <b-col cols="11" sm="11" md="11" lg="11">
                   <div class="ml-4">
                     <h2 class="its_quick fw-normal">Its Quick & Amusing!</h2>
-                    <span class="h1 text-light">
+                    <span class="h2 text-light">
                       <span class="text-primary">Th</span>e Art of speed
                       <br />food Quality
                     </span>

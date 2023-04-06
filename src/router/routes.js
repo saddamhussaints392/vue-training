@@ -3,7 +3,7 @@ import FoodApp from "../pages/FoodApp.vue";
 import Home from "../pages/Home.vue";
 import SignUp from "../pages/SignUp.vue";
 import SignIn from "../pages/SignIn.vue";
-import Menu from "../pages/Menu.vue";
+import Menu from "../pages/OurMenu.vue";
 import ShoppingCart from "../pages/ShoppingCart.vue";
 import OurShop from "../pages/OurShop.vue";
 import ShopDetails from "../pages/ShopDetails.vue";

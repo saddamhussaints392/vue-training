@@ -1,6 +1,7 @@
 
 .h1,.h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
+    font-family: "Helvetica";
 }
 .h1 {
     font-size: var(--fs-h1);
@@ -57,6 +58,18 @@
 .text-secondary {
     color: var(--color-secondary) !important;
 }
+.text-info {
+    color: var(--color-info) !important;
+}
+.text-success {
+    color: var(--color-success) !important;
+}
+.text-warning {
+    color: var(--color-warning) !important;
+}
+.text-error {
+    color: var(--color-error) !important;
+}
 .text-light {
     color: var(--color-white) !important;
 }
@@ -93,4 +106,7 @@
 }
 .bg-light {
     background-color: var(--color-white) !important;
+}
+.bg-transparent {
+    background-color: transparent !important;
 }
