@@ -85,15 +85,20 @@ export const useProductsStore = defineStore({
             this.products = removeWishItems;
         },
         wishListFilteredProducts(wishItems) {
-            console.log("running");
+            console.log(wishItems);
             let wishListItems = []
-            this.products.forEach((e, i) => {
+             items.products.forEach((e, i) => {
                 if (wishItems === "wishlist" && e.wishlist) {
-                    console.log(this.products[i]);
-                    wishListItems.push(this.products[i])
-                } 
+                    wishListItems.push(items.products[i])
+                } else if(wishItems === "default"){
+                    console.log("default");
+                    wishListItems.push(items.products[i])
+                }
             })
             this.products = wishListItems
+            console.log(this.products);
+            
+           
         },
         paginationItems(currentPage, perPage) {
             const startIndex = (currentPage - 1) * perPage;
@@ -114,15 +119,18 @@ export const useProductsStore = defineStore({
             this.products = selectedItems
 
         },
-        navigateHandler(itemId){
-            this.products.filter((e,i)=>{
-                // console.log(e.id === itemId);
-                if(e.id === itemId){
-                    this.productDetails.push(e)
-                    console.log(this.productDetails);
-                   router.push('/shop-details')
-                }
-            })
+        filterByPrice(lowPrice, highPrice){
+            console.log(price);
         }
+        // navigateHandler(itemId){
+        //     this.products.filter((e,i)=>{
+        //         // console.log(e.id === itemId);
+        //         if(e.id === itemId){
+        //             this.productDetails.push(e)
+        //             console.log(this.productDetails);
+        //            router.push('/shop-details')
+        //         }
+        //     })
+        // }
     }
 })

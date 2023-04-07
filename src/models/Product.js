@@ -12,16 +12,9 @@ export class Product {
 }
 
 export class ProductDetails extends Product {
-    constructor(description, quantity, rating, reviews){
+    constructor(description,  rating, reviews){
         this.description = description,
-        this.quantity = quantity,
         this.rating = rating,
         this.reviews = reviews
-    }
-    quantityIncrement(){
-        console.log("quantityIncrement");
-    }
-    quantityDecrement(){
-        console.log("quantityDecrement");
     }
 }

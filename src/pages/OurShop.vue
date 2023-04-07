@@ -1,3 +1,59 @@
+<script>
+import FoodProductItem from "../components/FoodProductItem.vue";
+import SearchProducts from "../components/SearchProducts.vue";
+import { useProductsStore } from "../store/productsStore";
+export default {
+  name: "OurShop",
+  components: { SearchProducts, FoodProductItem },
+  setup(){
+    const productsStore = useProductsStore();
+    return {productsStore}
+  },
+  data() {
+    return {
+      currentPage: 1,
+      perPage: 15,
+      showProducts: true,
+      sortBy: "low-high",
+      showWishItems: "default"
+    };
+  },
+  computed: {
+    rows() {
+      return this.productsStore.products.length;
+    },
+  },
+  mounted() {
+    this.updateScreenWidth();
+    this.onScreenResize();
+    this.productsStore.getData();
+  },
+  methods: {
+    onScreenResize() {
+      window.addEventListener("resize", () => {
+        this.updateScreenWidth();
+      });
+    },
+    updateScreenWidth() {
+      if (window.innerWidth < 768) {
+        this.showProducts = false;
+        this.perPage = 14;
+      } else {
+        this.showProducts = true;
+        this.perPage = 15;
+      }
+    },
+    showModal() {
+      this.$refs["my-modal"].show();
+    },
+    hideModal() {
+      this.$refs["my-modal"].hide();
+    }
+  }
+};
+</script>
+
+
 <template>
   <b-container class="p-0" fluid>
     <b-row no-gutters align-h="center" class="our_shop_section">
@@ -87,60 +143,7 @@
     </b-row>
   </b-container>
 </template>
-<script>
-import FoodProductItem from "../components/FoodProductItem.vue";
-import SearchProducts from "../components/SearchProducts.vue";
-import { useProductsStore } from "../store/productsStore";
-export default {
-  name: "OurShop",
-  components: { SearchProducts, FoodProductItem },
-  setup(){
-    const productsStore = useProductsStore();
-    return {productsStore}
-  },
-  data() {
-    return {
-      currentPage: 1,
-      perPage: 15,
-      showProducts: true,
-      sortBy: "low-high",
-      showWishItems: "default"
-    };
-  },
-  computed: {
-    rows() {
-      return this.productsStore.products.length;
-    },
-  },
-  mounted() {
-    this.updateScreenWidth();
-    this.onScreenResize();
-    this.productsStore.getData();
-  },
-  methods: {
-    onScreenResize() {
-      window.addEventListener("resize", () => {
-        this.updateScreenWidth();
-      });
-    },
-    updateScreenWidth() {
-      if (window.innerWidth < 768) {
-        this.showProducts = false;
-        this.perPage = 14;
-      } else {
-        this.showProducts = true;
-        this.perPage = 15;
-      }
-    },
-    showModal() {
-      this.$refs["my-modal"].show();
-    },
-    hideModal() {
-      this.$refs["my-modal"].hide();
-    }
-  }
-};
-</script>
+
 <style scoped>
 .modal-dialog {
   position: fixed;

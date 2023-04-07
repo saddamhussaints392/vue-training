@@ -1,7 +1,7 @@
 <template>
   <div id="my-table">
     <div class="position-relative grid_images_section">
-      <img :src="thumbnails" alt="items" />
+      <img :src="thumbnails[0]" alt="items" />
       <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1"  @click="navigateHandler">{{ title }}</span>
       <span class="normal-text-regular text-primary mr-2">${{ discountPrice }}</span>
       <s class="normal-text-regular text-grey-3" v-if="originalPrice">${{originalPrice}}</s>

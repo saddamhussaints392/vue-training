@@ -13,7 +13,7 @@
           </b-col>
           <b-col cols="12" sm="12" md="12" lg="6" class="text-right subscribe_column">
             <div class="d-flex align-items-center sub_section">
-              <input type="text" placeholder="Enter Your Email" class="bg-primary color-light"/>
+              <input type="text" placeholder="Enter Your Email" class="bg-primary text-light"/>
               <button class="btn_footer_subscribe normal-text-regular bg-light text-primary">Subscribe Now</button>
             </div>
           </b-col>
@@ -67,7 +67,7 @@
               </b-col>
               <b-col cols="6">
                 <span class="d-block text-secondary normal-text-regular mb-1">20 Feb 2022</span>
-                <span class="d-block text-light medium-text-regular">Keep Your Business</span>
+                <span class="d-block text-light normal-text-regular">Keep Your Business</span>
               </b-col>
             </b-row>
             <b-row class="mb-3">
@@ -76,7 +76,7 @@
               </b-col>
               <b-col cols="6">
                 <span class="d-block text-secondary mb-1 normal-text-regular">20 Feb 2022</span>
-                <span class="d-block text-light medium-text-regular">Keep Your Business</span>
+                <span class="d-block text-light normal-text-regular">Keep Your Business</span>
               </b-col>
             </b-row>
             <b-row class="mb-3">
@@ -85,7 +85,7 @@
               </b-col>
               <b-col cols="6">
                 <span class="d-block text-secondary mb-1 normal-text-regular">20 Feb 2022</span>
-                <span class="d-block text-light medium-text-regular">Keep Your Business</span>
+                <span class="d-block text-light normal-text-regular">Keep Your Business</span>
               </b-col>
             </b-row>
           </b-col>
@@ -129,7 +129,7 @@ export default {
 </script>
 
 <style scoped>
-.footer_main_section::after {
+.footer_main_section::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -200,8 +200,6 @@ export default {
 }
 
 .btn_footer_subscribe {
-  /* background-color: #ffffff;
-  color: #ff9f0d; */
   border: none;
   font-family: "Inter";
   border-radius: 0 4px 4px 0;

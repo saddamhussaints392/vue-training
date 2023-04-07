@@ -70,28 +70,28 @@
     
         /* font size */
         --fs-h1: 3.75rem;
-        --fs-h2: 3rem;
+        --fs-h2: 2rem; 
         --fs-h3: 2.5rem;
-        --fs-h4: 2rem;
-        --fs-h5: 1.5rem;
+        --fs-h4: 1.5rem;
+        --fs-h5: 1.125rem;
         --fs-h6: 1.25rem;
         /* line height */
-        --lh-h1: 4.25rem;
-        --lh-h2: 3.5rem;
+        --lh-h1: 3rem;
+        --lh-h2: 2.5rem;
         --lh-h3: 3rem;
-        --lh-h4: 2.5rem;
-        --lh-h5: 2rem;
+        --lh-h4: 2rem;
+        --lh-h5: 1.625rem;
         --lh-h6: 1.75rem;
     
         /* text font size*/
-        --fs-large: 1.25rem;
+        --fs-large: 0.75rem;
         --fs-medium: 1.125rem;
-        --fs-normal: 1rem;
+        --fs-normal: 0.875rem;
         --fs-small: 0.875rem;
         /* text font size*/
-        --lh-large: 1.75rem;
+        --lh-large: 1.25rem;
         --lh-medium: 1.625rem;
-        --lh-normal: 1.5rem;
+        --lh-normal: 1.375rem;
         --lh-small: 1.375rem;
     }
 }
