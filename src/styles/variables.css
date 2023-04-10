@@ -44,6 +44,17 @@
     --lh-medium: 1.625rem;
     --lh-normal: 1.5rem;
     --lh-small: 1.375rem;
+    /* spacing */
+    --spacing-8: 0.5rem;
+    --sspacing-16: 1rem;
+    --spacing-24: 1.5rem;
+    --sspacing-32: 2rem;
+    --spacing-40: 2.5rem;
+    --sspacing-56: 3.5rem;
+    --spacing-72: 4.5rem;
+    --sspacing-80: 5rem;
+    --sspacing-96: 6rem;
+    --sspacing-120: 7.5rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -67,10 +78,10 @@
         --color-grey-3: #828282;
         --color-grey-4: #bdbdbd;
         --color-grey-5: #e0e0e0;
-    
+
         /* font size */
         --fs-h1: 3.75rem;
-        --fs-h2: 2rem; 
+        --fs-h2: 2rem;
         --fs-h3: 2.5rem;
         --fs-h4: 1.5rem;
         --fs-h5: 1.125rem;
@@ -82,7 +93,7 @@
         --lh-h4: 2rem;
         --lh-h5: 1.625rem;
         --lh-h6: 1.75rem;
-    
+
         /* text font size*/
         --fs-large: 0.75rem;
         --fs-medium: 1.125rem;
@@ -93,5 +104,16 @@
         --lh-medium: 1.625rem;
         --lh-normal: 1.375rem;
         --lh-small: 1.375rem;
+        /* spacing */
+        --spacing-8: 0.5rem;
+        --sspacing-16: 1rem;
+        --spacing-24: 1.5rem;
+        --sspacing-32: 2rem;
+        --spacing-40: 2.5rem;
+        --sspacing-56: 3.5rem;
+        --spacing-72: 4.5rem;
+        --sspacing-80: 5rem;
+        --sspacing-96: 6rem;
+        --sspacing-120: 7.5rem;
     }
 }

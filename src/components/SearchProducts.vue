@@ -75,6 +75,7 @@
             max="8000"
             value="25"
             @input="setLeftValue"
+            @change="productsStore.filterByPrice(lowestPrice, highestPrice)"
           />
           <input
             type="range"
@@ -85,6 +86,7 @@
             max="8000"
             value="75"
             @input="setRightValue"
+            @change="productsStore.filterByPrice(lowestPrice, highestPrice)"
           />
           <div class="slider">
             <div class="track" ref="track"></div>
@@ -184,7 +186,6 @@ export default {
         ((this.$refs["input_left"].value - min) / (max - min)) * 100;
       this.$refs["thumb_left"].style.left = percent + "%";
       this.$refs["range"].style.left = percent + "%";
-      console.log(percent * 80);
       this.lowestPrice = parseInt(percent * 80);
     },
     setRightValue() {
@@ -198,7 +199,6 @@ export default {
         ((this.$refs["input_right"].value - min) / (max - min)) * 100;
       this.$refs["thumb_right"].style.right = 100 - percent + "%";
       this.$refs["range"].style.right = 100 - percent + "%";
-      console.log(percent * 80);
       this.highestPrice = parseInt(percent * 80);
     }
   }

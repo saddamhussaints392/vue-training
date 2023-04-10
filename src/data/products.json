@@ -47,16 +47,16 @@
         },
         {
             "id": 4,
-            "title": "Tandoor Chicken",
+            "title": "Chicken Garlic",
             "thumbnails": [
-                "https://upload.wikimedia.org/wikipedia/commons/5/53/Tandoori_chicken_laccha_piyaz1_%2836886283595%29.jpg",
-                "https://www.seema.com/wp-content/uploads/2021/08/shutterstock_1199926645-scaled.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/tandoori-chicken1-1672868376.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
-                "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
+                "https://static.toiimg.com/thumb/62711166.cms?resizemode=4&width=1200",
+                "https://assets.bonappetit.com/photos/5d7296eec4af4d0008ad1263/5:4/w_3165,h_2532,c_limit/Basically-Gojuchang-Chicken-Recipe-Wide.jpg",
+                "https://images.immediate.co.uk/production/volatile/sites/30/2022/03/One-pan-piri-piri-chicken-dinner-1489950.jpg",
+                "https://images.immediate.co.uk/production/volatile/sites/30/2022/03/One-pan-piri-piri-chicken-dinner-1489950.jpg",
                 "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
             ],
-            "discountPrice": 290,
-            "originalPrice": 550,
+            "discountPrice": 2550,
+            "originalPrice": 3200,
             "category": ["Non Veg", "Chicken Chups"],
             "wishlist": false
         },
@@ -163,31 +163,31 @@
         },
         {
             "id": 12,
-            "title": "Schewan Chicken",
+            "title": "Chilli Chicken",
             "thumbnails": [
-                "https://hips.hearstapps.com/hmg-prod/images/szechuan-chicken-horizontal-1526594491.jpg?crop=0.667xw:1.00xh;0.170xw,0&resize=1200:*",
-                "https://www.masala.tv/wp-content/uploads/2016/07/Chicken-Szechwan-Shireen-Anwar.jpg",
-                "https://tasteasianfood.com/wp-content/uploads/2021/12/Szechuan-chicken-recipe-3.jpeg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
-                "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
+                "https://i0.wp.com/southindianrecipes.in/wp-content/uploads/2021/09/Chicken-Pakora-Masala-Recipe.jpg",
+                "https://oventales.com/wp-content/uploads/2019/02/chicken-pakora001.jpg",
+                "https://www.wikihow.com/images/thumb/c/cb/Prepare-Chilli-Chicken-Step-17.jpg/aid6748552-v4-1200px-Prepare-Chilli-Chicken-Step-17.jpg",
+                "https://pipingpotcurry.com/wp-content/uploads/2019/12/Chili-chicken-Indo-Chinese-Piping-Pot-Curry.jpg",
+                "https://www.swarnabdutta.com/wp-content/uploads/2022/04/Chili-Chicken.jpeg"
             ],
-            "discountPrice": 160,
-            "originalPrice": 180,
+            "discountPrice": 6930,
+            "originalPrice": 7258,
             "category": ["Non Veg", "Chicken Chups"],
             "wishlist": true
         },
         {
             "id": 13,
-            "title": "Tandoor Chicken",
+            "title": "Chicken Lollipop",
             "thumbnails": [
-                "https://upload.wikimedia.org/wikipedia/commons/5/53/Tandoori_chicken_laccha_piyaz1_%2836886283595%29.jpg",
-                "https://www.seema.com/wp-content/uploads/2021/08/shutterstock_1199926645-scaled.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/tandoori-chicken1-1672868376.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
-                "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
-                "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
+                "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/07/chicken-lollipop.jpg",
+                "https://www.theloveofspice.com/wp-content/uploads/2020/09/chicken-lollipop.jpg",
+                "https://www.cookwithkushi.com/wp-content/uploads/2021/12/IMG_7051k.jpg",
+                "https://dominicagourmet.com/wp-content/uploads/2020/08/chicken-lollipop-4016x3012.jpg",
+                "https://famousdishes.in/wp-content/uploads/2022/10/Best-recipe-for-chicken-lollipop-1.jpg"
             ],
-            "discountPrice": 290,
-            "originalPrice": 550,
+            "discountPrice": 1800,
+            "originalPrice": 2350,
             "category": ["Non Veg", "Chicken Chups"],
             "wishlist": false
         },
@@ -297,31 +297,31 @@
         },
         {
             "id": 21,
-            "title": "Schewan Chicken",
+            "title": "Chicken Keema",
             "thumbnails": [
-                "https://hips.hearstapps.com/hmg-prod/images/szechuan-chicken-horizontal-1526594491.jpg?crop=0.667xw:1.00xh;0.170xw,0&resize=1200:*",
-                "https://www.masala.tv/wp-content/uploads/2016/07/Chicken-Szechwan-Shireen-Anwar.jpg",
-                "https://tasteasianfood.com/wp-content/uploads/2021/12/Szechuan-chicken-recipe-3.jpeg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
-                "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
+                "https://www.indianhealthyrecipes.com/wp-content/uploads/2018/08/mutton-keema-recipe-500x500.jpg",
+                "https://geekrobocook.com/wp-content/uploads/2021/04/Mutton-Keema-Pirattal-1200x900.jpg",
+                "https://cdn.shopify.com/s/files/1/0549/6035/7436/products/mutton-keema_result.webp?v=1661494200",
+                "https://cdn.shopify.com/s/files/1/0549/6035/7436/products/mutton-keema-kaleji_result.webp?v=1662119700",
+                "https://kfoods.com/images1/newrecipeicon/kashmiri-keema_13453.jpg"
             ],
-            "discountPrice": 150,
-            "originalPrice": 180,
+            "discountPrice": 7620,
+            "originalPrice": 8240,
             "category": ["Non Veg", "Chicken Chups"],
             "wishlist": false
         },
         {
             "id": 22,
-            "title": "Tandoor Chicken",
+            "title": "Green Chicken",
             "thumbnails": [
-                "https://upload.wikimedia.org/wikipedia/commons/5/53/Tandoori_chicken_laccha_piyaz1_%2836886283595%29.jpg",
-                "https://www.seema.com/wp-content/uploads/2021/08/shutterstock_1199926645-scaled.jpg",
-                "https://hips.hearstapps.com/hmg-prod/images/tandoori-chicken1-1672868376.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*",
+                "https://i.ytimg.com/vi/2TmTaDIrDRE/hqdefault.jpg",
+                "https://greatcurryrecipes.net/wp-content/uploads/2015/07/green12.jpg",
+                "https://recipe52.com/wp-content/uploads/2022/08/Hariyali-tikka-2.jpg",
                 "https://www.lutongbahayrecipe.com/wp-content/uploads/2020/10/lutong-bahay-recipe-chicken-tandoori-1200x1500.jpg",
-                "https://i.ytimg.com/vi/kGEAbqtUjyE/maxresdefault.jpg"
+                "https://aromaticessence.co/wp-content/uploads/2017/06/IMG_1149.jpg"
             ],
-            "discountPrice": 290,
-            "originalPrice": 550,
+            "discountPrice": 1300,
+            "originalPrice": 1590,
             "category": ["Non Veg", "Chicken Chups"],
             "wishlist": false
         },
@@ -430,16 +430,16 @@
         },
         {
             "id": 30,
-            "title": "Schewan Chicken",
+            "title": "Papper Chicken",
             "thumbnails": [
-                "https://hips.hearstapps.com/hmg-prod/images/szechuan-chicken-horizontal-1526594491.jpg?crop=0.667xw:1.00xh;0.170xw,0&resize=1200:*",
-                "https://www.masala.tv/wp-content/uploads/2016/07/Chicken-Szechwan-Shireen-Anwar.jpg",
-                "https://tasteasianfood.com/wp-content/uploads/2021/12/Szechuan-chicken-recipe-3.jpeg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCnaHHbNDfAeMQII548TUrPY9kjG29GsULw&usqp=CAU",
-                "https://i.ytimg.com/vi/uPY747knFYE/maxresdefault.jpg"
+                "https://pikturenama.com/wp-content/uploads/2021/04/Low-res-Andhra-Pepper-Chicken-2.jpg",
+                "https://luv4foodntravel.com/wp-content/uploads/2020/11/DSC00170-1.jpg",
+                "https://www.licious.in/blog/wp-content/uploads/2020/12/Pepper-Chicken-600x600.jpg",
+                "https://i.ytimg.com/vi/bqYkvC_SM6A/maxresdefault.jpg",
+                "https://vismaifood.com/storage/app/uploads/public/01d/e0a/424/thumb__700_0_0_0_auto.jpg"
             ],
-            "discountPrice": 150,
-            "originalPrice": 180,
+            "discountPrice": 4320,
+            "originalPrice": 5420,
             "category": ["Non Veg"],
             "wishlist": false
         },
@@ -505,15 +505,15 @@
         },
         {
             "id": 35,
-            "title": "Chicken Chukka",
+            "title": "Chicken Kabbab",
             "thumbnails": [
-                "https://yellowchilis.com/wp-content/uploads/2020/10/chettinad-chicken-chukka-500x500.jpg",
-                "https://theyummydelights.com/wp-content/uploads/2019/06/chicken-sukka.jpg",
-                "https://hattyfoods.com/wp-content/uploads/2022/02/Chicken-sukka-recipe.jpg",
-                "https://1.bp.blogspot.com/-zDe2OhqELas/YBhKs6XsB-I/AAAAAAAAZcE/BYrMOt2CdAQwtBTPmVeicML77VX-W20ZwCLcBGAsYHQ/s2048/chicken%2Bchukka%2B15.JPG"
+                "https://www.ndtv.com/cooks/images/chicken.seekh.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStAtVGboY9tvtIH_y3lOgF6uv7m7VWNe-vv8hr3V--cgkyPVUYIghvLx47GqLbrzGAG4k&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPPtY2WBzwrJwpxjCBpilkwej2PBC5DZGZ4EdM94bG86AbNrZWCM2gLBHUZVuNcgESjRk&usqp=CAU",
+                "https://i.ytimg.com/vi/gxT7BV7IFi0/maxresdefault.jpg"
             ],
-            "discountPrice": 225,
-            "originalPrice": 250,
+            "discountPrice": 805,
+            "originalPrice": 1230,
             "category": ["Non Veg"],
             "wishlist": false
         },

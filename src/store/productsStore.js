@@ -8,7 +8,6 @@ export const useProductsStore = defineStore({
     state: () => {
         return {
             products: [],
-            // categories:[],
             selectedCategories: [],
             productDetails:[]
         }
@@ -120,7 +119,8 @@ export const useProductsStore = defineStore({
 
         },
         filterByPrice(lowPrice, highPrice){
-            console.log(price);
+            console.log(lowPrice,highPrice);
+            this.products = items.products.filter((item)=>item.discountPrice >= lowPrice && item.discountPrice <= highPrice)
         }
         // navigateHandler(itemId){
         //     this.products.filter((e,i)=>{
