@@ -1,7 +1,10 @@
 import { defineStore } from "pinia";
 import { Product } from "../models/Product.js";
+import { ProductDetails } from "../models/Product.js";
 import items from "../data/products.json";
+import productItems from "../data/productsDetails.json";
 import router from "../router";
+
 
 export const useProductsStore = defineStore({
     id: "useProductsStore",
@@ -121,16 +124,28 @@ export const useProductsStore = defineStore({
         filterByPrice(lowPrice, highPrice){
             console.log(lowPrice,highPrice);
             this.products = items.products.filter((item)=>item.discountPrice >= lowPrice && item.discountPrice <= highPrice)
+        },
+        getProductDetails(itemId){
+            let productsdetails = []
+            for(let i = 0; i < productItems.productsDetails.length; i++){
+                if(productItems.productsDetails[i].id == itemId){
+                    let details = new ProductDetails(
+                        productItems.productsDetails[i].id,
+                        productItems.productsDetails[i].thumbnails,
+                        productItems.productsDetails[i].title,
+                        productItems.productsDetails[i].originalPrice,
+                        productItems.productsDetails[i].discountPrice,
+                        productItems.productsDetails[i].category,
+                        productItems.productsDetails[i].wishlist,
+                        productItems.productsDetails[i].description,
+                        productItems.productsDetails[i].rating,
+                        productItems.productsDetails[i].reviews,
+                    )
+                    productsdetails.push(details);
+                    this.productDetails = productsdetails;
+                }
+                
+            }
         }
-        // navigateHandler(itemId){
-        //     this.products.filter((e,i)=>{
-        //         // console.log(e.id === itemId);
-        //         if(e.id === itemId){
-        //             this.productDetails.push(e)
-        //             console.log(this.productDetails);
-        //            router.push('/shop-details')
-        //         }
-        //     })
-        // }
     }
 })

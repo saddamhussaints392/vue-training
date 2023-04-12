@@ -97,7 +97,7 @@ export default {
                   <FoodProductItem
                     v-for="(item, i) in productsStore.paginationItems(currentPage, perPage)"
                     :key="i"
-                    :thumbnails="item.thumbnails"
+                    :thumbnail="item.thumbnails[0]"
                     :title="item.title"
                     :originalPrice="item.originalPrice"
                     :discountPrice="item.discountPrice"

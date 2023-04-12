@@ -1,9 +1,11 @@
 <template>
   <div id="my-table">
     <div class="position-relative grid_images_section">
-      <img :src="thumbnails[0]" alt="items" />
-      <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1"  @click="navigateHandler">{{ title }}</span>
-      <span class="normal-text-regular text-primary mr-2">${{ discountPrice }}</span>
+      <img :src="thumbnail" alt="items" />
+      <router-link :to="{path: `/shop-details/${id}`, params: {id: id}}" style="text-decoration: none; color: inherit;">
+      <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1">{{ title }}</span>
+      </router-link>
+      <span class="normal-text-regular text-primary mr-2">${{ discountPrice }} </span>
       <s class="normal-text-regular text-grey-3" v-if="originalPrice">${{originalPrice}}</s>
       <div class="icons_row align-items-center justify-content-between">
         <div class="icons_section d-flex align-items-center justify-content-center">
@@ -18,7 +20,6 @@
         <div v-else @click="productsStore.addWishList(id)" class="icons_section d-flex align-items-center justify-content-center mx-3">
           <b-icon-heart></b-icon-heart>
         </div>
-        
       </div>
     </div>
   </div>
@@ -26,17 +27,18 @@
 <script>
 import { useProductsStore } from "../store/productsStore.js";
 export default {
-  props: ["id","thumbnails", "title", "originalPrice", "discountPrice", "wishlist"],
+  props: ["id","thumbnail", "title", "originalPrice", "discountPrice", "wishlist"],
   name: "FoodProductItem",
   setup(){
     const productsStore = useProductsStore();
     return { productsStore }
   },
+
   methods: {
-    navigateHandler() {
-      console.log(this.id, this.thumbnails, this.discountPrice);
-      this.$router.push({name: "shopDetails", params:{ id:this.id, thumbnails:this.thumbnails, discountPrice:this.discountPrice}})
-    }
+    // navigateHandler() {
+    //   console.log(this.id, this.thumbnails, this.discountPrice);
+    //   this.$router.push({name: "shopDetails", params:{ id:this.id, thumbnails:this.thumbnails, discountPrice:this.discountPrice}})
+    // }
   }
 };
 </script>

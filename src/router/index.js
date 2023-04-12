@@ -5,6 +5,10 @@ import routes from "./routes";
 const router = createRouter({
     routes,
     history: createWebHistory(),
+    scrollBehavior(to, from, savedPosition) {
+        // always scroll to top
+        return {left:0, top: 0 ,behavior: "smooth"}
+      },
 })
 
 

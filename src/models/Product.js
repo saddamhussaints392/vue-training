@@ -12,7 +12,8 @@ export class Product {
 }
 
 export class ProductDetails extends Product {
-    constructor(description,  rating, reviews){
+    constructor(id,thumbnails, title, originalPrice, discountPrice, category, wishlist,description,  rating, reviews){
+        super(id,thumbnails, title, originalPrice, discountPrice, category, wishlist)
         this.description = description,
         this.rating = rating,
         this.reviews = reviews

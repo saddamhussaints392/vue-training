@@ -61,7 +61,7 @@ const routes = [
         props: true 
     },
     {
-        path: "/shop-details",
+        path: "/shop-details/:id",
         component: ShopDetails,
         name: 'shopDetails',
         meta: {

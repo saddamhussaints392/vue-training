@@ -2,43 +2,42 @@
   <b-container fluid class="p-0">
     <b-row no-gutters align-h="center" class="shop_details_section justify-content-center">
       <b-col cols="12" sm="12" md="12" lg="10" xl="10">
-        <b-row no-gutters align-h="center" >
+        <b-row no-gutters align-h="center" v-for="(product, i) in productsStore.productDetails" :key="i" ref="product_main">
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="d-flex align-items-start display_images_section" style="gap: 24px">
               <div>
-                {{ thumbnails }}
-                <!-- <div class="left_image">
+                <div class="left_image">
                   <img
-                    :src="thumbnails[1]"
+                    :src="product.thumbnails[1]"
                     alt
                     style="width: 100%; height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                  :src="thumbnails[2]"
+                  :src="product.thumbnails[2]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                  :src="thumbnails[3]"
+                  :src="product.thumbnails[3]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
                 </div>
                 <div class="left_image">
                   <img
-                  :src="thumbnails[4]"
+                  :src="product.thumbnails[4]"
                     alt
                     style="width: 100%;height: 100%;"
                   />
-                </div> -->
+                </div>
               </div>
-              <!-- <div class="display_img">
-                <img :src="thumbnails[0]" alt style="width: 100%; height: 100%;" />
-              </div> -->
+              <div class="display_img">
+                <img :src="product.thumbnails[0]" alt style="width: 100%; height: 100%;" />
+              </div>
             </div>
           </b-col>
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
@@ -60,12 +59,12 @@
                 </span>
               </div>
             </div>
-            <span class="h2 text-grey-1 d-block ">Hello</span>
+            <span class="h2 text-grey-1 d-block ">{{product.title}}</span>
             <p
               class="product_description medium-text-regular text-grey-2"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
+            >{{ product.description }}</p>
             <div class="pricing_section">
-              <span class="h4 text-grey-1 d-block ">23$</span>
+              <span class="h4 text-grey-1 d-block ">{{ product.discountPrice }}.00 $</span>
               <div class="rating_section">
                 <b-form-rating
                   id="rating-inline"
@@ -78,11 +77,11 @@
                 <span
                   style="border-left: 1px solid #A9A9A9; border-right: 1px solid #A9A9A9;"
                   class="px-3 normal-text-regular text-grey-3"
-                >5.0 Rating</span>
-                <span class="pl-3 normal-text-regular text-grey-3">22 Review</span>
+                >{{ product.rating }} Rating</span>
+                <span class="pl-3 normal-text-regular text-grey-3">{{ product.reviews }} Review</span>
               </div>
               <span class="d-block medium-text-regular text-grey-1 my-3">Dictum/cursus/Risus</span>
-              <div class="d-flex align-items-center justify-content-between add_to_cart_section">
+              <div class="d-flex align-items-center justify-content-start add_to_cart_section">
                 <div
                   class="d-flex align-items-center justify-content-center"
                   style="border: 1px solid #828282;"
@@ -120,7 +119,7 @@
               </div>
               <span class="medium-text-regular text-grey-1 d-block mt-2">
                 Category:
-                <span class="medium-text-regular text-grey-2">Pizza</span>
+                <span class="medium-text-regular text-grey-2">{{ product.category[0] }}</span>
               </span>
               <span class="medium-text-regular text-grey-1 d-block mt-2">
                 Tag:
@@ -211,7 +210,7 @@ import { useProductsStore } from "../store/productsStore";
 export default {
   name: "ShopDetails",
   components: { FoodProductItem, Review },
-  props: ["id", "thumbnails", "discountPrice"],
+  props: ["id"],
   setup(){
     const productsStore = useProductsStore();
     return { productsStore }
@@ -226,11 +225,13 @@ export default {
       windowWidth: false
     };
   },
+
   mounted() {
     this.updateScreenWidth();
     this.onScreenResize();
+    this.productsStore.getProductDetails(this.id)
   },
- 
+
   methods: {activate: function(el) {
       this.isBtnActive = el;
     },
@@ -430,6 +431,9 @@ export default {
 }
 .carousel_section::-webkit-scrollbar {
   display: none;
+}
+.add_to_cart_section {
+  gap: 16px;
 }
 
 @media screen and (max-width: 480px) {
