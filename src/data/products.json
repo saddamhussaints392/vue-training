@@ -13,7 +13,8 @@
             "discountPrice": 140,
             "originalPrice": 250,
             "category": ["Non Veg", "Burger"],
-            "wishlist": true
+            "wishlist": true,
+            "tag":"burger"
         },
         {
             "id": 2,
@@ -28,7 +29,8 @@
             "discountPrice": 250,
             "originalPrice": 290,
             "category": ["veg", "Biryani"],
-            "wishlist": false
+            "wishlist": false,
+            "tag":"biryani"
         },
         {
             "id": 3,
@@ -43,7 +45,8 @@
             "discountPrice": 150,
             "originalPrice": 180,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": true
+            "wishlist": true,
+            "tag":"chicken"
         },
         {
             "id": 4,
@@ -58,7 +61,8 @@
             "discountPrice": 2550,
             "originalPrice": 3200,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": false
+            "wishlist": false,
+            "tag":"chicken"
         },
         {
             "id": 5,
@@ -72,7 +76,9 @@
             ],
             "discountPrice": 155,
             "originalPrice": 180,
-            "category": ["Pizzas", "Veg"]
+            "category": ["Pizzas", "Veg"],
+            "wishlist": true,
+            "tag":"pizza"
         },
         {
             "id": 6,
@@ -87,7 +93,8 @@
             "discountPrice": 70,
             "originalPrice": 80,
             "category": ["Sandwiches", "Veg"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "sandwich"
         },
         {
             "id": 7,
@@ -102,7 +109,8 @@
             "discountPrice": 110,
             "originalPrice": 165,
             "category": ["Drinks"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "drinks"
         },
         {
             "id": 8,
@@ -117,7 +125,8 @@
             "discountPrice": 130,
             "originalPrice": 170,
             "category": ["Non Veg"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "chicken"
         },
         {
             "id": 9,
@@ -129,7 +138,8 @@
             ],
             "discountPrice": 60,
             "category": ["Cakes"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "cake"
         },
         {
             "id": 10,
@@ -144,7 +154,8 @@
             "discountPrice": 75,
             "originalPrice": 90,
             "category": ["Burgers", "Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "burger"
         },
         {
             "id": 11,
@@ -159,7 +170,8 @@
             "discountPrice": 30,
             "originalPrice": 50,
             "category": ["Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "rice"
         },
         {
             "id": 12,
@@ -174,7 +186,8 @@
             "discountPrice": 6930,
             "originalPrice": 7258,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "chicken"
         },
         {
             "id": 13,
@@ -189,7 +202,8 @@
             "discountPrice": 1800,
             "originalPrice": 2350,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 14,
@@ -204,7 +218,8 @@
             "discountPrice": 155,
             "originalPrice": 180,
             "category": ["Pizzas", "Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "pizza"
         },
         {
             "id": 15,
@@ -219,7 +234,8 @@
             "discountPrice": 75,
             "originalPrice": 80,
             "category": ["Sandwiches", "Veg"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "sandwich"
         },
         {
             "id": 16,
@@ -235,7 +251,8 @@
             "discountPrice": 36,
             "originalPrice": 50,
             "category": ["Drinks"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "drinks"
         },
         {
             "id": 17,
@@ -249,7 +266,8 @@
             "discountPrice": 225,
             "originalPrice": 250,
             "category": ["Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 18,
@@ -263,7 +281,8 @@
             ],
             "discountPrice": 60,
             "category": ["Cakes"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "cake"
         },
         {
             "id": 19,
@@ -278,7 +297,8 @@
             "discountPrice": 185,
             "originalPrice": 250,
             "category": ["Non Veg", "Burgers"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "burger"
         },
         {
             "id": 20,
@@ -293,7 +313,8 @@
             "discountPrice": 20,
             "originalPrice": 30,
             "category": ["Veg"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "rice"
         },
         {
             "id": 21,
@@ -308,7 +329,8 @@
             "discountPrice": 7620,
             "originalPrice": 8240,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 22,
@@ -323,7 +345,8 @@
             "discountPrice": 1300,
             "originalPrice": 1590,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 23,
@@ -338,7 +361,8 @@
             "discountPrice": 155,
             "originalPrice": 180,
             "category": ["Pizzas", "Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "pizza"
         },
         {
             "id": 24,
@@ -353,7 +377,8 @@
             "discountPrice": 75,
             "originalPrice": 80,
             "category": ["Sandwiches", "Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "sandwich"
         },
         {
             "id": 25,
@@ -368,7 +393,8 @@
             "discountPrice": 35,
             "originalPrice": 50,
             "category": ["Drinks"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "drinks"
         },
         {
             "id": 26,
@@ -382,7 +408,8 @@
             "discountPrice": 140,
             "originalPrice": 250,
             "category": ["Non Veg", "Chicken Chups"],
-            "wishlist": false
+            "wishlist": false,
+            "tag":"chicken"
         },
         {
             "id": 27,
@@ -396,7 +423,8 @@
             ],
             "discountPrice": 60,
             "category": ["Cakes"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "cake"
         },
         {
             "id": 28,
@@ -411,7 +439,8 @@
             "discountPrice": 150,
             "originalPrice": 250,
             "category": ["Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 29,
@@ -426,7 +455,8 @@
             "discountPrice": 140,
             "originalPrice": 180,
             "category":["Veg", "Biryani"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "rice"
         },
         {
             "id": 30,
@@ -441,7 +471,8 @@
             "discountPrice": 4320,
             "originalPrice": 5420,
             "category": ["Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 31,
@@ -456,7 +487,8 @@
             "discountPrice": 290,
             "originalPrice": 550,
             "category": ["Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 32,
@@ -471,7 +503,8 @@
             "discountPrice": 155,
             "originalPrice": 180,
             "category": ["Pizzas", "Veg"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "pizza"
         },
         {
             "id": 33,
@@ -486,7 +519,8 @@
             "discountPrice": 75,
             "originalPrice": 80,
             "category": ["Sandwiches", "Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "sandwich"
         },
         {
             "id": 34,
@@ -501,7 +535,8 @@
             "discountPrice": 45,
             "originalPrice": 50,
             "category": ["Drinks"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "drinks"
         },
         {
             "id": 35,
@@ -515,7 +550,8 @@
             "discountPrice": 805,
             "originalPrice": 1230,
             "category": ["Non Veg"],
-            "wishlist": false
+            "wishlist": false,
+            "tag": "chicken"
         },
         {
             "id": 36,
@@ -529,7 +565,8 @@
             ],
             "discountPrice": 60,
             "category": ["Cakes"],
-            "wishlist": true
+            "wishlist": true,
+            "tag": "cake"
         }
     ]
 }

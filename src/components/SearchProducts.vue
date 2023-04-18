@@ -131,14 +131,14 @@
     <div class="product_tags_section">
       <span class="d-block h6 text-grey-1">Product Tags</span>
       <div class="tags normal-text-regular text-grey-2">
-        <span class="d-block tag">Services</span>
-        <span class="d-block tag">Our Menu</span>
+        <span class="d-block tag" v-for="tag in productTags" :key="tag" @click="productsStore.selectProductByTag(tag)">{{tag}}</span>
+        <!-- <span class="d-block tag">Our Menu</span>
         <span class="d-block tag">Pizza</span>
         <span class="d-block tag">Cupcake</span>
         <span class="d-block tag">Burger</span>
         <span class="d-block tag">Cookies</span>
         <span class="d-block tag">Our Shop</span>
-        <span class="d-block tag">Tandoori Chicken</span>
+        <span class="d-block tag">Tandoori Chicken</span> -->
       </div>
     </div>
   </b-card>
@@ -171,6 +171,15 @@ export default {
         "Non Veg",
         "Veg"
       ],
+      productTags: [
+        "chicken",
+        "burger",
+        "sandwich",
+        "cake",
+        "pizza",
+        "rice",
+        "drinks"
+      ]
       // selectedCategory: []
     };
   },

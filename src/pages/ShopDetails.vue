@@ -1,41 +1,46 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row no-gutters align-h="center" class="shop_details_section justify-content-center">
+    <b-row
+      no-gutters
+      align-h="center"
+      class="shop_details_section justify-content-center"
+      v-for="(product, i) in productsStore.productDetails"
+      :key="i"
+    >
       <b-col cols="12" sm="12" md="12" lg="10" xl="10">
-        <b-row no-gutters align-h="center" v-for="(product, i) in productsStore.productDetails" :key="i" ref="product_main">
+        <b-row no-gutters align-h="center" ref="product_main">
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="d-flex align-items-start display_images_section" style="gap: 24px">
               <div>
-                <div class="left_image">
-                  <img
-                    :src="product.thumbnails[1]"
-                    alt
-                    style="width: 100%; height: 100%;"
-                  />
+                <div
+                  class="left_image"
+                  @click="productsStore.getThumbnailImage(product.thumbnails[1])"
+                >
+                  <img :src="product.thumbnails[1]" alt style="width: 100%; height: 100%;" />
                 </div>
-                <div class="left_image">
-                  <img
-                  :src="product.thumbnails[2]"
-                    alt
-                    style="width: 100%;height: 100%;"
-                  />
+                <div
+                  class="left_image"
+                  @click="productsStore.getThumbnailImage(product.thumbnails[2])"
+                >
+                  <img :src="product.thumbnails[2]" alt style="width: 100%;height: 100%;" />
                 </div>
-                <div class="left_image">
-                  <img
-                  :src="product.thumbnails[3]"
-                    alt
-                    style="width: 100%;height: 100%;"
-                  />
+                <div
+                  class="left_image"
+                  @click="productsStore.getThumbnailImage(product.thumbnails[3])"
+                >
+                  <img :src="product.thumbnails[3]" alt style="width: 100%;height: 100%;" />
                 </div>
-                <div class="left_image">
-                  <img
-                  :src="product.thumbnails[4]"
-                    alt
-                    style="width: 100%;height: 100%;"
-                  />
+                <div
+                  class="left_image"
+                  @click="productsStore.getThumbnailImage(product.thumbnails[4])"
+                >
+                  <img :src="product.thumbnails[4]" alt style="width: 100%;height: 100%;" />
                 </div>
               </div>
-              <div class="display_img">
+              <div class="display_img" v-if="productsStore.thumbnailImage">
+                <img :src="productsStore.thumbnailImage" alt style="width: 100%; height: 100%;" />
+              </div>
+              <div class="display_img" v-else>
                 <img :src="product.thumbnails[0]" alt style="width: 100%; height: 100%;" />
               </div>
             </div>
@@ -43,33 +48,45 @@
           <b-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="d-flex align-items-center justify-content-between">
               <div>
-                <span class="in_stock small-text-regular bg-primary text-light">In stock</span>
+                <span
+                  class="in_stock small-text-regular bg-primary text-light"
+                  v-if="product.inStock"
+                >In stock</span>
+                <span class="in_stock small-text-regular bg-primary text-light" v-else>Out of stock</span>
               </div>
               <div
                 class="d-flex align-items-center justify-content-center medium-text-regular text-grey-3"
                 style="gap:20px"
               >
-                <span class="d-block">
+                <span
+                  class="d-block"
+                  style="cursor:pointer;"
+                  @click="productsStore.getProductDetails(product.id - 1)"
+                >
                   <b-icon-arrow-left font-scale="1.3" style="vertical-align: text-top;"></b-icon-arrow-left>
-                  <span class="ml-2 ">Pre</span>
+                  <span class="ml-2">Pre</span>
                 </span>
-                <span class="d-block">
+                <span
+                  class="d-block"
+                  style="cursor:pointer;"
+                  @click="productsStore.getProductDetails(product.id + 1)"
+                >
                   <span class="mr-2">Next</span>
                   <b-icon-arrow-right font-scale="1.3" style="vertical-align: text-top;"></b-icon-arrow-right>
                 </span>
               </div>
             </div>
-            <span class="h2 text-grey-1 d-block ">{{product.title}}</span>
+            <span class="h2 text-grey-1 d-block">{{product.title}}</span>
             <p
               class="product_description medium-text-regular text-grey-2"
-            >{{ product.description }}</p>
+            >{{ product.description.slice(0, 250) }}...</p>
             <div class="pricing_section">
-              <span class="h4 text-grey-1 d-block ">{{ product.discountPrice }}.00 $</span>
+              <span class="h4 text-grey-1 d-block">{{ product.discountPrice }}.00 $</span>
               <div class="rating_section">
                 <b-form-rating
                   id="rating-inline"
                   inline
-                  value="5"
+                  :value="product.rating"
                   no-border
                   color="#FF9F0D"
                   class="p-0 pr-3"
@@ -78,7 +95,7 @@
                   style="border-left: 1px solid #A9A9A9; border-right: 1px solid #A9A9A9;"
                   class="px-3 normal-text-regular text-grey-3"
                 >{{ product.rating }} Rating</span>
-                <span class="pl-3 normal-text-regular text-grey-3">{{ product.reviews }} Review</span>
+                <span class="pl-3 normal-text-regular text-grey-3">{{ product.reviews }} Reviews</span>
               </div>
               <span class="d-block medium-text-regular text-grey-1 my-3">Dictum/cursus/Risus</span>
               <div class="d-flex align-items-center justify-content-start add_to_cart_section">
@@ -91,7 +108,7 @@
                   </div>
                   <div
                     style="border-left: 1px solid #828282;border-right: 1px solid #828282; height: 50px"
-                    class="px-3  d-flex align-items-center font-weight-bold text-grey-1 product_quantity"
+                    class="px-3 d-flex align-items-center font-weight-bold text-grey-1 product_quantity"
                   >1</div>
                   <div class="px-3 d-flex align-items-center product_increment">
                     <b-icon-plus-lg></b-icon-plus-lg>
@@ -109,7 +126,16 @@
                 style="gap: 20px;"
               >
                 <div>
-                  <b-icon-heart class="mr-2"></b-icon-heart>
+                  <b-icon-heart-fill
+                    class="mr-2"
+                    v-if="product.wishlist"
+                    @click="productsStore.removeWishListDetailPage(product.id)"
+                  ></b-icon-heart-fill>
+                  <b-icon-heart
+                    class="mr-2"
+                    v-else
+                    @click="productsStore.addWishListDetailsPage(product.id)"
+                  ></b-icon-heart>
                   <span>Add to Wishlist</span>
                 </div>
                 <div>
@@ -123,7 +149,7 @@
               </span>
               <span class="medium-text-regular text-grey-1 d-block mt-2">
                 Tag:
-                <span class="medium-text-regular text-grey-2">Our Shop</span>
+                <span class="medium-text-regular text-grey-2">{{product.tag}}</span>
               </span>
               <span class="d-flex align-items-center medium-text-regular text-grey-1 mt-3">
                 Share:
@@ -141,27 +167,35 @@
         <b-row no-gutters class="description_review_section d-block" align-h="center">
           <div class="d-flex">
             <button
-             @click="activate(1)" class="normal-text-regular"
+              @click="activate(1)"
+              class="normal-text-regular"
               :class="[isBtnActive === 1 ? 'btn_active' : 'btn_inactive']"
             >Description</button>
             <button
-              @click="activate(2)" class="normal-text-regular"
+              @click="activate(2)"
+              class="normal-text-regular"
               :class="[isBtnActive === 2 ? 'btn_active' : 'btn_inactive']"
-            >Reviews(24)</button>
+            >Reviews({{ product.reviews }})</button>
           </div>
           <div v-if="isBtnActive === 1">
             <div class="description_text normal-text-regular text-grey-3">
-              <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.</p>
-              <p>Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.</p>
+              <p>{{ product.description.slice(0, 300) }}</p>
+              <p>{{ product.description.slice(300) }}</p>
             </div>
             <div class="benefits_main">
               <span class="medium-text-bold text-grey-2 d-block">Key Benefits</span>
-              <li class="small-text-regular text-grey-2 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li class="small-text-regular text-grey-2">Maecenas ullamcorper est et massa mattis condimentum.</li>
+              <li
+                class="small-text-regular text-grey-2 mt-3"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li
+                class="small-text-regular text-grey-2"
+              >Maecenas ullamcorper est et massa mattis condimentum.</li>
               <li
                 class="small-text-regular text-grey-2"
               >Vestibulum sed massa vel ipsum imperdiet malesuada id tempus nisl.</li>
-              <li class="small-text-regular text-grey-2">Etiam nec massa et lectus faucibus ornare congue in nunc.</li>
+              <li
+                class="small-text-regular text-grey-2"
+              >Etiam nec massa et lectus faucibus ornare congue in nunc.</li>
               <li class="small-text-regular text-grey-2">Mauris eget diam magna, in blandit turpis.</li>
             </div>
           </div>
@@ -192,8 +226,16 @@
           </div>
           <div class="carousel_main">
             <div class="carousel_section d-flex" ref="carousel">
-              <div v-for="(item, i) in arr" :key="i">
-                <FoodProductItem />
+              <div v-for="(item, i) in productsStore.similarProducts" :key="i">
+                <FoodProductItem
+                  :thumbnail="item.thumbnails[0]"
+                  :title="item.title"
+                  :originalPrice="item.originalPrice"
+                  :discountPrice="item.discountPrice"
+                  :id="item.id"
+                  :wishlist="item.wishlist"
+                  :category="item.category[0]"
+                />
                 <span>{{ i }}</span>
               </div>
             </div>
@@ -210,10 +252,10 @@ import { useProductsStore } from "../store/productsStore";
 export default {
   name: "ShopDetails",
   components: { FoodProductItem, Review },
-  props: ["id"],
-  setup(){
+  props: ["id", "category"],
+  setup() {
     const productsStore = useProductsStore();
-    return { productsStore }
+    return { productsStore };
   },
   data() {
     return {
@@ -229,10 +271,17 @@ export default {
   mounted() {
     this.updateScreenWidth();
     this.onScreenResize();
-    this.productsStore.getProductDetails(this.id)
+    this.productsStore.getProductDetails(this.id);
+    this.productsStore.similarProductsHandler(this.productsStore.productDetails[0].category[0]);
+    console.log(this.productsStore.productDetails[0].category);
+
+  },
+  updated() {
+    this.productsStore.getProductDetails(this.id); // here we are calling why becoz, when we click on similar products item it has to show in details section (on top). so we r calling in update()
   },
 
-  methods: {activate: function(el) {
+  methods: {
+    activate: function(el) {
       this.isBtnActive = el;
     },
     onScreenResize() {
@@ -299,8 +348,8 @@ export default {
 /* .btns_pre_next {
   font-family: "Inter";
   /* font-size: 18px; */
-  /* line-height: 26px; */
-  /* color: #828282; 
+/* line-height: 26px; */
+/* color: #828282; 
 } */
 /* .product_name {
   font-family: "Helvetica";
@@ -464,8 +513,8 @@ export default {
   /* .btns_pre_next {
     font-family: "Inter";
     /* font-size: 16px; */
-    /* line-height: 26px; */
-    /* color: #828282; 
+  /* line-height: 26px; */
+  /* color: #828282; 
   } */
   /* .product_name {
     font-family: "Helvetica";

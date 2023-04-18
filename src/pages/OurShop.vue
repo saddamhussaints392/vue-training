@@ -103,6 +103,7 @@ export default {
                     :discountPrice="item.discountPrice"
                     :id="item.id"
                     :wishlist="item.wishlist"
+                    :category="item.category[0]"
                   />
                 </div>
               </b-col>

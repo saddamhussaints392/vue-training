@@ -2,11 +2,12 @@
   <div id="my-table">
     <div class="position-relative grid_images_section">
       <img :src="thumbnail" alt="items" />
-      <router-link :to="{path: `/shop-details/${id}`, params: {id: id}}" style="text-decoration: none; color: inherit;">
-      <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1">{{ title }}</span>
+      <router-link :to="{name: 'shopDetails', params: {id: id}}" style="text-decoration: none; color: inherit;">
+      <span class="font-weight-bold item_name d-block medium-text-bold text-grey-1" @click="handleClick">{{ title }}</span>
       </router-link>
       <span class="normal-text-regular text-primary mr-2">${{ discountPrice }} </span>
       <s class="normal-text-regular text-grey-3" v-if="originalPrice">${{originalPrice}}</s>
+      {{ category}}
       <div class="icons_row align-items-center justify-content-between">
         <div class="icons_section d-flex align-items-center justify-content-center">
           <b-icon-bezier2></b-icon-bezier2>
@@ -27,19 +28,14 @@
 <script>
 import { useProductsStore } from "../store/productsStore.js";
 export default {
-  props: ["id","thumbnail", "title", "originalPrice", "discountPrice", "wishlist"],
+  props: ["id","thumbnail", "title", "originalPrice", "discountPrice", "wishlist", "category"],
   name: "FoodProductItem",
   setup(){
     const productsStore = useProductsStore();
     return { productsStore }
   },
 
-  methods: {
-    // navigateHandler() {
-    //   console.log(this.id, this.thumbnails, this.discountPrice);
-    //   this.$router.push({name: "shopDetails", params:{ id:this.id, thumbnails:this.thumbnails, discountPrice:this.discountPrice}})
-    // }
-  }
+
 };
 </script>
 <style scoped>
