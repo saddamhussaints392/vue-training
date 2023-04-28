@@ -5,15 +5,15 @@
         <b-row no-gutters>
           <b-col col="12" class="text-left testimonials_col">
             <h2 class="testimonials_text fw-normal">Testimonials</h2>
-            <span class="h2 text-light">
-                <span class="text-primary">Wh</span>at our client are saying
+            <span class="h2" :class="[from === 'about-us' ? 'text-dark' : 'text-light']">
+              What our client are saying
               </span>
           </b-col>
         </b-row>
         <b-row align-h="center" class="carousel_main" no-gutters>
           <b-col cols="12" sm="12" md="12" lg="6" class="text-center">
-            <div class="d-flex" v-for="(slide, i) in 4" :key="i">
-                <b-card class="rounded-0 p-5" v-if="i === currentIndex">
+            <div class="d-flex" v-for="(slide, i) in 4" :key="i" style="box-shadow: 0px 0px 80px rgba(205, 205, 205, 0.25);">
+                <b-card class="rounded-0 p-5 border-0" v-if="i === currentIndex">
                 <b-avatar src="https://placekitten.com/300/300" size="6rem" class="carousel_avatar"></b-avatar>
                 <img src="../assets/images/Quotes.png" class="d-block m-auto" alt="">
                 <span class="d-block my-4 medium-text-regular">{{i}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</span>
@@ -37,6 +37,7 @@
 </template>
 <script>
 export default {
+  props:["from"],
     data(){
         return {
             currentIndex: 0
@@ -52,6 +53,7 @@ export default {
 <style scoped>
 .carousel_section {
   padding: 123px 0;
+  
 }
 .carousel_main {
   margin-top: 55px;

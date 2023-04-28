@@ -1,25 +1,25 @@
 <template>
-  <b-container fluid class="p-0 footer_main_section position-relative">
-    <b-row align-h="center" no-gutters class="footer_first_section">
-      <b-col cols="12" sm="12" md="12" lg="10">
-        <b-row class="d-flex align-items-center footer_info_section" no-gutters>
-          <b-col cols="12" sm="12" md="12" lg="6" class="footer_info">
-            <span class="d-block text-light h4">
+  <div class="containers footer_main_section position-relative">
+    <div class="rows justify-content-center footer_first_section">
+      <div class="cols-sm-11 cols-10">
+        <div class="align-items-center footer_info_section rows">
+          <div class="footer_info  cols-sm-12 cols-md-12 cols-6 cols-lg-6 cols-xl-6 cols-xxl-6">
+            <span class="d-block text-light h4 still_you">
               <span class="text-primary">St</span>ill You Need Our Support ?
             </span>
             <span
               class="d-block text-light mt-2 normal-text-regular"
             >Don’t wait make a smart & logical quote here. Its pretty easy.</span>
-          </b-col>
-          <b-col cols="12" sm="12" md="12" lg="6" class="text-right subscribe_column">
+          </div>
+          <div class="text-right subscribe_column cols-sm-12 cols-md-12 cols-6 cols-lg-6 cols-xl-6 cols-xxl-6">
             <div class="d-flex align-items-center sub_section">
               <input type="text" placeholder="Enter Your Email" class="bg-primary text-light"/>
               <button class="btn_footer_subscribe normal-text-regular bg-light text-primary">Subscribe Now</button>
             </div>
-          </b-col>
-        </b-row>
-        <b-row class="footer_details" no-gutters>
-          <b-col cols="12" sm="12" md="12" lg="3">
+          </div>
+        </div>
+        <div class="footer_details rows mt-4">
+          <div class="cols-sm-12 cols-md-12 cols-3 cols-lg-3 cols-xl-3 cols-xxl-3 mb-3">
             <span class="d-block text-light h5">About Us.</span>
             <span class="d-block text-light my-3 normal-text-regular">
               orporate clients and leisure travelers 
@@ -28,20 +28,20 @@
               chauffeured car service in 
               major cities across World.
             </span>
-            <b-row>
-              <b-col cols="3">
+            <div class="rows">
+              <div class="cols-3">
                 <div class="footer_timer_icon d-flex align-items-center justify-content-center">
                   <b-icon-clock-history class="text-light" font-scale="2"></b-icon-clock-history>
                 </div>
-              </b-col>
-              <b-col cols="6">
+              </div>
+              <div class="cols-6">
                 <span class="d-flex text-light medium-text-regular">Opening Hours</span>
                 <span class="d-flex text-light small-text-regular">Mon - Sat(8.00 - 6.00)</span>
                 <span class="d-flex text-light small-text-regular">Sunday - Closed</span>
-              </b-col>
-            </b-row>
-          </b-col>
-          <b-col cols="6" sm="6" md="6" lg="3" class="justify-content-between">
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-between cols-sm-6 cols-md-6 cols-3 cols-lg-3 cols-xl-3 cols-xxl-3">
             <span class="d-block text-light h5 mb-3">Useful Links</span>
             <span class="d-block text-light mb-3 large-text-regular">About</span>
             <span class="d-block text-light mb-3 large-text-regular">News</span>
@@ -49,8 +49,8 @@
             <span class="d-block text-light mb-3 large-text-regular">Team</span>
             <span class="d-block text-light mb-3 large-text-regular">Menu</span>
             <span class="d-block text-light mb-3 large-text-regular">Contacts</span>
-          </b-col>
-          <b-col cols="6" sm="6" md="6" lg="3">
+          </div>
+          <div class="cols-sm-6 cols-md-6 cols-3 cols-lg-3 cols-xl-3 cols-xxl-3">
             <span class="d-block text-light h5 mb-3">Help?</span>
             <span class="d-block text-light mb-3 large-text-regular">FAQ</span>
             <span class="d-block text-light mb-3 large-text-regular">Term & conditions</span>
@@ -58,40 +58,40 @@
             <span class="d-block text-light mb-3 large-text-regular">Documentation</span>
             <span class="d-block text-light mb-3 large-text-regular">Support Policy</span>
             <span class="d-block text-light mb-3 large-text-regular">Privacy</span>
-          </b-col>
-          <b-col cols="12" sm="12" md="12" lg="3">
+          </div>
+          <div class="cols-sm-12 cols-md-12 cols-3 cols-3 cols-lg-3 cols-xl-3 cols-xxl-3">
             <span class="d-block text-light h5 mb-3">Recent Post</span>
-            <b-row class="mb-3">
-              <b-col cols="2">
+            <div class="mb-3 rows">
+              <div class="cols-2">
                 <img src="../assets/images/recent_post.png" alt />
-              </b-col>
-              <b-col cols="6">
+              </div>
+              <div class="cols-6">
                 <span class="d-block text-secondary normal-text-regular mb-1">20 Feb 2022</span>
                 <span class="d-block text-light normal-text-regular">Keep Your Business</span>
-              </b-col>
-            </b-row>
-            <b-row class="mb-3">
-              <b-col cols="2">
+              </div>
+            </div>
+            <div class="mb-3 rows">
+              <div class="cols-2">
                 <img src="../assets/images/recent_post.png" alt />
-              </b-col>
-              <b-col cols="6">
+              </div>
+              <div class="cols-6">
                 <span class="d-block text-secondary mb-1 normal-text-regular">20 Feb 2022</span>
                 <span class="d-block text-light normal-text-regular">Keep Your Business</span>
-              </b-col>
-            </b-row>
-            <b-row class="mb-3">
-              <b-col cols="2">
+              </div>
+            </div>
+            <div class="mb-3 rows">
+              <div class="cols-2">
                 <img src="../assets/images/recent_post.png" alt />
-              </b-col>
-              <b-col cols="6">
+              </div>
+              <div class="cols-6">
                 <span class="d-block text-secondary mb-1 normal-text-regular">20 Feb 2022</span>
                 <span class="d-block text-light normal-text-regular">Keep Your Business</span>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <b-row class="footer_copyrights  bg-primary d-flex align-items-center" align-h="center" no-gutters>
       <b-col cols="10" sm="10" md="10" lg="5">
         <span class="text-light normal-text-regular">Copyright © 2022 by Ayeman. All Rights Reserved.</span>
@@ -114,7 +114,7 @@
         </span>
       </b-col>
     </b-row>
-  </b-container>
+  </div>
 </template>
 <script>
 import {
@@ -147,7 +147,7 @@ export default {
 .footer_info_section {
   border-bottom: 1px solid #ff9f0d;
   padding: 120px 0 61px 0;
-  margin: 0 30px;
+  /* margin: 0 30px; */
 }
 /* .footer_info_title {
   font-family: "Helvetica";
@@ -167,7 +167,7 @@ export default {
   background: #ff9f0d;
 }
 .footer_details {
-  padding: 64px 0 46px 0;
+  /* padding: 64px 0 46px 0; */
 }
 .footer_copyrights {
   /* background: #ff9f0d; */
@@ -212,17 +212,17 @@ export default {
   .footer_info_section {
     border-bottom: 1px solid #ff9f0d;
     padding: 20px 0 32px 0;
-    margin: 0 20px;
+    /* margin: 0 20px; */
   }
   .subscribe_column {
     margin-top: 32px;
   }
   .footer_details {
-    padding: 32px 20px 32px 20px;
+    /* padding: 32px 20px 32px 20px; */
   }
-  .footer_details div:first-child {
+  /* .footer_details div:first-child {
     margin-bottom: 24px;
-  }
+  } */
   .footer_copyrights {
     padding: 24px 20px;
     /* height: 152px; */

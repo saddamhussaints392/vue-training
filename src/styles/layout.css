@@ -1,0 +1,335 @@
+.containers {
+    /* padding: 15px; */
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cols {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+.cols-1 {
+    flex-basis: calc(1 * 8.333333%);
+}
+
+.cols-2 {
+    flex-basis: calc(2 * 8.333333%);
+}
+
+.cols-3 {
+    flex-basis: calc(3 * 8.333333%);
+}
+
+.cols-4 {
+    flex-basis: calc(4 * 8.333333%);
+}
+
+.cols-5 {
+    flex-basis: calc(5 * 8.333333%);
+}
+
+.cols-6 {
+    flex-basis: calc(6 * 8.333333%);
+}
+
+.cols-7 {
+    flex-basis: calc(7 * 8.333333%);
+}
+
+.cols-8 {
+    flex-basis: calc(8 * 8.333333%);
+}
+
+.cols-9 {
+    flex-basis: calc(9 * 8.333333%);
+}
+
+.cols-10 {
+    flex-basis: calc(10 * 8.333333%);
+}
+
+.cols-11 {
+    flex-basis: calc(11 * 8.333333%);
+}
+
+.cols-12 {
+    flex-basis: calc(12 * 8.333333%);
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (min-width: 250px) and (max-width: 575.98px) {
+    .still_you {
+        color: red !important;
+    }
+    .cols-sm-1 {
+        flex-basis: calc(1 * 8.333333%) !important;
+    }
+
+    .cols-sm-2 {
+        flex-basis: calc(2 * 8.333333%) !important;
+    }
+
+    .cols-sm-3 {
+        flex-basis: calc(3 * 8.333333%) !important;
+    }
+
+    .cols-sm-4 {
+        flex-basis: calc(4 * 8.333333%) !important;
+    }
+
+    .cols-sm-5 {
+        flex-basis: calc(5 * 8.333333%) !important;
+    }
+
+    .cols-sm-6 {
+        flex-basis: calc(6 * 8.333333%) !important;
+    }
+
+    .cols-sm-7 {
+        flex-basis: calc(7 * 8.333333%) !important;
+    }
+
+    .cols-sm-8 {
+        flex-basis: calc(8 * 8.333333%) !important;
+    }
+
+    .cols-sm-9 {
+        flex-basis: calc(9 * 8.333333%) !important;
+    }
+
+    .cols-sm-10 {
+        flex-basis: calc(10 * 8.333333%) !important;
+    }
+
+    .cols-sm-11 {
+        flex-basis: calc(11 * 8.333333%) !important;
+    }
+
+    .cols-sm-12 {
+        flex-basis: calc(12 * 8.333333%) !important;
+    }
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .still_you {
+        color: green !important;
+    }
+    .cols-md-1 {
+        flex-basis: calc(1 * 8.333333%) !important;
+    }
+
+    .cols-md-2 {
+        flex-basis: calc(2 * 8.333333%) !important;
+    }
+
+    .cols-md-3 {
+        flex-basis: calc(3 * 8.333333%) !important;
+    }
+
+    .cols-md-4 {
+        flex-basis: calc(4 * 8.333333%) !important;
+    }
+
+    .cols-md-5 {
+        flex-basis: calc(5 * 8.333333%) !important;
+    }
+
+    .cols-md-6 {
+        flex-basis: calc(6 * 8.333333%) !important;
+    }
+
+    .cols-md-7 {
+        flex-basis: calc(7 * 8.333333%) !important;
+    }
+
+    .cols-md-8 {
+        flex-basis: calc(8 * 8.333333%) !important;
+    }
+
+    .cols-md-9 {
+        flex-basis: calc(9 * 8.333333%) !important;
+    }
+
+    .cols-md-10 {
+        flex-basis: calc(10 * 8.333333%) !important;
+    }
+
+    .cols-md-11 {
+        flex-basis: calc(11 * 8.333333%) !important;
+    }
+
+    .cols-md-12 {
+        flex-basis: calc(12 * 8.333333%) !important;
+    }
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .still_you {
+        color: blue !important;
+    }
+    .cols-lg-1 {
+        flex-basis: calc(1 * 8.333333%) !important;
+    }
+
+    .cols-lg-2 {
+        flex-basis: calc(2 * 8.333333%) !important;
+    }
+
+    .cols-lg-3 {
+        flex-basis: calc(3 * 8.333333%) !important;
+    }
+
+    .cols-lg-4 {
+        flex-basis: calc(4 * 8.333333%) !important;
+    }
+
+    .cols-lg-5 {
+        flex-basis: calc(5 * 8.333333%) !important;
+    }
+
+    .cols-lg-6 {
+        flex-basis: calc(6 * 8.333333%) !important;
+    }
+
+    .cols-lg-7 {
+        flex-basis: calc(7 * 8.333333%) !important;
+    }
+
+    .cols-lg-8 {
+        flex-basis: calc(8 * 8.333333%) !important;
+    }
+
+    .cols-lg-9 {
+        flex-basis: calc(9 * 8.333333%) !important;
+    }
+
+    .cols-lg-10 {
+        flex-basis: calc(10 * 8.333333%) !important;
+    }
+
+    .cols-lg-11 {
+        flex-basis: calc(11 * 8.333333%) !important;
+    }
+
+    .cols-lg-12 {
+        flex-basis: calc(12 * 8.333333%) !important;
+    }
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .still_you {
+        color: blueviolet !important;
+    }
+    .cols-xl-1 {
+        flex-basis: calc(1 * 8.333333%) !important;
+    }
+
+    .cols-xl-2 {
+        flex-basis: calc(2 * 8.333333%) !important;
+    }
+
+    .cols-xl-3 {
+        flex-basis: calc(3 * 8.333333%) !important;
+    }
+
+    .cols-xl-4 {
+        flex-basis: calc(4 * 8.333333%) !important;
+    }
+
+    .cols-xl-5 {
+        flex-basis: calc(5 * 8.333333%) !important;
+    }
+
+    .cols-xl-6 {
+        flex-basis: calc(6 * 8.333333%) !important;
+    }
+
+    .cols-xl-7 {
+        flex-basis: calc(7 * 8.333333%) !important;
+    }
+
+    .cols-xl-8 {
+        flex-basis: calc(8 * 8.333333%) !important;
+    }
+
+    .cols-xl-9 {
+        flex-basis: calc(9 * 8.333333%) !important;
+    }
+
+    .cols-xl-10 {
+        flex-basis: calc(10 * 8.333333%) !important;
+    }
+
+    .cols-xl-11 {
+        flex-basis: calc(11 * 8.333333%) !important;
+    }
+
+    .cols-xl-12 {
+        flex-basis: calc(12 * 8.333333%) !important;
+    }
+}
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) {
+    .still_you {
+        color: pink !important;
+    }
+    .cols-xxl-1 {
+        flex-basis: calc(1 * 8.333333%) !important;
+    }
+
+    .cols-xxl-2 {
+        flex-basis: calc(2 * 8.333333%) !important;
+    }
+
+    .cols-xxl-3 {
+        flex-basis: calc(3 * 8.333333%) !important;
+    }
+
+    .cols-xxl-4 {
+        flex-basis: calc(4 * 8.333333%) !important;
+    }
+
+    .cols-xxl-5 {
+        flex-basis: calc(5 * 8.333333%) !important;
+    }
+
+    .cols-xxl-6 {
+        flex-basis: calc(6 * 8.333333%) !important;
+    }
+
+    .cols-xxl-7 {
+        flex-basis: calc(7 * 8.333333%) !important;
+    }
+
+    .cols-xxl-8 {
+        flex-basis: calc(8 * 8.333333%) !important;
+    }
+
+    .cols-xxl-9 {
+        flex-basis: calc(9 * 8.333333%) !important;
+    }
+
+    .cols-xxl-10 {
+        flex-basis: calc(10 * 8.333333%) !important;
+    }
+
+    .cols-xxl-11 {
+        flex-basis: calc(11 * 8.333333%) !important;
+    }
+
+    .cols-xxl-12 {
+        flex-basis: calc(12 * 8.333333%) !important;
+    }
+}

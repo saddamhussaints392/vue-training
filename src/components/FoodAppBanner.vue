@@ -1,16 +1,16 @@
 <template>
-  <b-container fluid class="p-0">
-    <b-row no-gutters class="banner_main_section">
-      <b-col cols="12" sm="12" md="12" lg="12" class="text-center">
+  <div class="containers">
+    <div class="banner_main_section rows">
+      <div class="text-center cols-12 cols-sm-12 cols-md-12 cols-lg-12 cols-xl-12 cols-xxl-12">
         <span class="h2 text-light d-block">{{mainPage}}</span>
         <div class="d-flex align-items-center justify-content-center banner_page_names">
           <span class="text-light large-text-regular">Menu</span>
           <b-icon-chevron-right class="text-light"></b-icon-chevron-right>
           <span class="large-text-regular text-primary">{{subPage}}</span>
         </div>
-      </b-col>
-    </b-row>
-  </b-container>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {

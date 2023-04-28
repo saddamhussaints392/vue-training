@@ -2,6 +2,7 @@
 .h1,.h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
     font-family: "Helvetica";
+    display: block !important;
 }
 .h1 {
     font-size: var(--fs-h1);
@@ -109,4 +110,7 @@
 }
 .bg-transparent {
     background-color: transparent !important;
+}
+.border-radius-6 {
+    border-radius: 6px;
 }

@@ -8,6 +8,8 @@ import ShoppingCart from "../pages/ShoppingCart.vue";
 import OurShop from "../pages/OurShop.vue";
 import ShopDetails from "../pages/ShopDetails.vue";
 import BlogList from "../pages/BlogList.vue";
+import AboutUs from "../pages/AboutUs.vue"
+import OurChefs from "../pages/OurChefs.vue"
 const routes = [
     {
         path: "/",
@@ -75,6 +77,22 @@ const routes = [
         component: BlogList,
         meta: {
             name: "Blog List",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/about-us",
+        component: AboutUs,
+        meta: {
+            name: "About Us",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/our-chefs",
+        component: OurChefs,
+        meta: {
+            name: "Our Chefs",
             requiresAuth: true
         }
     }

@@ -243,6 +243,44 @@
         </b-row>
       </b-col>
     </b-row>
+    <b-row>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+      <b-col cols="6" sm="3">
+        <span>Hello</span>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 <script>

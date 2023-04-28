@@ -1,7 +1,7 @@
 <template>
-  <b-container fluid class="p-0">
-    <b-row align-h="center" class="signup_section" no-gutters>
-      <b-col cols="12" sm="12" md="12" lg="3">
+  <div class="containers">
+    <div class="signup_section rows justify-content-center" >
+      <div class="cols-sm-12 cols-md-12 cols-3">
         <form action @submit.prevent="signIn">
           <div class="signup_main">
             <span class="d-block h6 text-grey-1">Sign In</span>
@@ -59,9 +59,9 @@
             </div>
           </div>
         </form>
-      </b-col>
-    </b-row>
-  </b-container>
+      </div>
+    </div>
+  </div>
 </template>
   <script>
 import FoodAppBanner from "../components/FoodAppBanner.vue";

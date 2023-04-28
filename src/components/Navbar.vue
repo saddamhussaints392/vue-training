@@ -1,7 +1,7 @@
 <template>
-  <b-container fluid class="p-0" style="position: absolute; z-index: 900;">
-    <b-row no-gutters align-h="center" :style="{background: navBarColor}">
-      <b-col cols="10">
+  <div class="containers" style="position: absolute; z-index: 900;">
+    <div class="rows justify-content-center" :style="{background: navBarColor}">
+      <div class="cols-10">
         <nav>
           <div class="d-flex justify-content-center">
             <img src="../assets/images/Foodtuck.png" alt />
@@ -61,9 +61,9 @@
             </div>
           </div>
         </nav>
-      </b-col>
-    </b-row>
-  </b-container>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 import { useAuthStore } from '../store/authStore';
