@@ -10,6 +10,9 @@ import ShopDetails from "../pages/ShopDetails.vue";
 import BlogList from "../pages/BlogList.vue";
 import AboutUs from "../pages/AboutUs.vue"
 import OurChefs from "../pages/OurChefs.vue"
+import FAQuestions from "../pages/FAQuestions.vue"
+import ErrorPage from "../pages/404Error.vue"
+import CheckoutPage from "../pages/CheckoutPage.vue"
 const routes = [
     {
         path: "/",
@@ -93,6 +96,30 @@ const routes = [
         component: OurChefs,
         meta: {
             name: "Our Chefs",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/FAQ",
+        component: FAQuestions,
+        meta: {
+            name: "FAQ Page",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/:catchAll(.*)",
+        component: ErrorPage,
+        meta: {
+            name: "404 Error",
+            requiresAuth: true
+        }
+    },
+    {
+        path: "/checkout",
+        component: CheckoutPage,
+        meta: {
+            name: "Checkout Page",
             requiresAuth: true
         }
     }
