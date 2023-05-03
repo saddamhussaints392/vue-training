@@ -75,7 +75,7 @@
                 <span class="d-block medium-text-bold text-grey-1">$120.00</span>
               </div>
             </b-card>
-            <button class="mt-3 medium-text-regular btn_checkout w-100">
+            <button class="mt-3 medium-text-regular btn_checkout w-100" @click="$router.push('/checkout')">
               Proceed to Checkout
               <b-icon-check2-square></b-icon-check2-square>
             </button>

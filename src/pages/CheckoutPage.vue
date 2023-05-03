@@ -65,7 +65,7 @@
                   >Same as shipping address</b-form-checkbox>
                 </div>
                 <div class="mt-3">
-                  <button class="back_to_cart_btn text-grey-2 w-100">
+                  <button class="back_to_cart_btn text-grey-2 w-100" @click="$router.back()">
                     <b-icon-chevron-left></b-icon-chevron-left>
                     <span class="ml-1">Back to cart</span>
                   </button>

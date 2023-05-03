@@ -158,7 +158,7 @@
             </div>
             <div class="rows justify-content-center text-center view_menu_btn">
               <div class="cols-12">
-                <button class="view_btn normal-text-regular text-primary m-auto">View menu</button>
+                <button class="view_btn normal-text-regular text-primary m-auto" @click="$router.push('/menu')">View menu</button>
               </div>
             </div>
           </div>

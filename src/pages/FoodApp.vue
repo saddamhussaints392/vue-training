@@ -28,7 +28,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Varius sed pharetra dictum neque massa congue
                     </h6>
-                    <button class="btn_see_menu normal-text-regular rounded-pill">See Menu</button>
+                    <button class="btn_see_menu normal-text-regular rounded-pill" @click="$router.push('/menu')">See Menu</button>
                   </div>
                 </b-col>
               </b-row>

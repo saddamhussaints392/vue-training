@@ -25,25 +25,25 @@
                 </label>
               </li>
               <li>
-                <router-link to="/home" class="active normal-text-regular">Home</router-link>
+                <router-link to="/food-app" class="active normal-text-regular">Home</router-link>
               </li>
               <li>
                 <router-link to="/menu" class="normal-text-regular">Menu</router-link>
               </li>
               <li>
-                <router-link to="/blog" class="normal-text-regular">Blog</router-link>
+                <router-link to="/blog-list" class="normal-text-regular">Blog</router-link>
               </li>
               <li>
                 <router-link to="/pages" class="normal-text-regular">Pages</router-link>
               </li>
               <li>
-                <router-link to="#" class="d-flex align-items-end gap-3 text-light">
+                <router-link to="/about-us" class="d-flex align-items-end gap-3 text-light">
                   <span class="d-block">About</span>
                   <b-icon-chevron-down class="d-block ml-2" font-scale="1.1"></b-icon-chevron-down>
                 </router-link>
               </li>
               <li>
-                <router-link to="#">Shop</router-link>
+                <router-link to="/our-shop">Shop</router-link>
               </li>
               <li>
                 <router-link to="#">Contact</router-link>

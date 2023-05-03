@@ -114,7 +114,7 @@
                     <b-icon-plus-lg></b-icon-plus-lg>
                   </div>
                 </div>
-                <button class="btn_add_to_cart">
+                <button class="btn_add_to_cart" @click="$router.push('/shopping-cart')">
                   <b-icon-bag class="mr-2"></b-icon-bag>
                   <span class="medium-text-regular">Add to cart</span>
                 </button>
