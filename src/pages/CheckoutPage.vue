@@ -51,7 +51,7 @@
                 </div>
               </b-col>
             </b-row>
-            <b-row no-gutters class="align-items-end mt-4">
+            <b-row  class="align-items-end mt-4">
               <b-col  cols="12" sm="12" md="12" lg="6" xl="6" xxl="6">
                 <div>
                   <span class="h6">Billing Address</span>
