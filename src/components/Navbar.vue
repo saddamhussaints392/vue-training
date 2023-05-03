@@ -105,8 +105,6 @@ nav {
   cursor: pointer;
 }
 .navbar_items > li {
-  /* font-size: 16px;
-  line-height: 24px; */
   margin-right: 32px;
 }
 .navbar_items > li > a {
@@ -197,7 +195,6 @@ input::placeholder {
   .navbar_items {
     z-index: 100;
     display: none !important;
-    /* display: inline-block !important; */
     background: rgba(13, 13, 13, 0.95);
     width: 100%;
     height: 100vh;

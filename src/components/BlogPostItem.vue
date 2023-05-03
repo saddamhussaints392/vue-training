@@ -27,11 +27,6 @@ export default {};
 .blog_post_info {
   padding: 30px 43px;
 }
-/* .blog_post_date {
-  color: #ff9f0d;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-} */
 .blog_post_chart_icon {
   fill: #ff9f0d;
 }

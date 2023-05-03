@@ -156,11 +156,6 @@ export default {
 .our_shop_section {
   padding: 120px 0;
 }
-/* .sort_by_text {
-  font-family: "Inter";
-  font-size: 20px;
-  color: #333333;
-} */
 select {
   outline: none;
   padding: 10px 18px;
@@ -168,9 +163,6 @@ select {
   height: 46px;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
-  /* font-family: "Inter";
-  font-size: 18px;
-  color: #bdbdbd; */
 }
 .items_grid_section {
   display: grid;
@@ -235,7 +227,6 @@ select {
     grid-template-columns: auto auto;
     gap: 19px;
   }
-
   .pagination_section {
     margin-top: 20px;
   }

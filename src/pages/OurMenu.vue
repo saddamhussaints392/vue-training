@@ -123,26 +123,10 @@ export default { components: { MenuItem, Clients } };
 .menu_items_row >div> div:nth-child(2) {
   margin-top: 120px;
 }
-/* .menu_type {
-  font-family: "Helvetica";
-  font-size: 48px;
-  color: #333333;
-} */
+
 .menu_image_section {
   text-align: end !important;
 }
-/* .partners_clients_text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #333333;
-} */
-/* .partners_clients_title {
-  font-family: "Helvetica";
-  font-weight: 700;
-  font-size: 48px;
-  color: #333333;
-} */
 .clients_partners_section {
   padding-bottom: 122px;
 }
@@ -152,18 +136,6 @@ export default { components: { MenuItem, Clients } };
 }
 
 @media screen and (max-width: 480px) {
-  /* .menu_type {
-  font-family: "Helvetica";
-  font-size: 40px;
-  color: #333333;
-} */
-
-/* .partners_clients_title {
-  font-family: "Helvetica";
-  font-weight: 700;
-  font-size: 40px;
-  color: #333333; 
-}*/
   .menu_items_row {
   padding-top: 122px;
   padding-bottom: 122px;

@@ -199,7 +199,6 @@ export default {
 .blog_desc_section {
   border-top: 1px solid #e2e2e2;
   padding-top: 24px;
-  /*padding-bottom: 55px; */
   margin: 24px 300px 55px 0;
 }
 
@@ -229,7 +228,6 @@ export default {
   .blog_desc_section {
     border-top: 1px solid #e2e2e2;
     padding-top: 24px;
-    /*padding-bottom: 55px; */
     margin: 20px 0 32px 0;
   }
   .email_input {

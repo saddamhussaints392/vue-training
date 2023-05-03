@@ -147,32 +147,16 @@ export default {
 .footer_info_section {
   border-bottom: 1px solid #ff9f0d;
   padding: 120px 0 61px 0;
-  /* margin: 0 30px; */
 }
-/* .footer_info_title {
-  font-family: "Helvetica";
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-} */
-/* .footer_info_title > span {
-  color: #ff9f0d;
-} */
-/* .footer_titles {
-  font-size: 24px;
-} */
 .footer_timer_icon {
   width: 78px;
   height: 72px;
   background: #ff9f0d;
 }
 .footer_details {
-  /* padding: 64px 0 46px 0; */
 }
 .footer_copyrights {
-  /* background: #ff9f0d; */
   padding: 33px 0;
-  /* height: 100px; */
 }
 .footer_copyrights > div:nth-child(2) {
   gap: 20px;
@@ -180,19 +164,16 @@ export default {
 .social_network_item {
   width: 36px;
   height: 34px;
-  /* background: #ffffff; */
 }
 .social_network_item > svg {
   vertical-align: bottom;
 }
 
 .sub_section > input {
-  /* background-color: #ff9f0d; */
   padding: 16px 24px;
   border: none;
   outline: none;
   border-radius: 4px 0 0 4px;
-  /* color: #ffffff; */
 }
 .sub_section > input::placeholder {
   color: #ffffff;
@@ -212,7 +193,6 @@ export default {
   .footer_info_section {
     border-bottom: 1px solid #ff9f0d;
     padding: 20px 0 32px 0;
-    /* margin: 0 20px; */
   }
   .subscribe_column {
     margin-top: 32px;
@@ -220,12 +200,8 @@ export default {
   .footer_details {
     /* padding: 32px 20px 32px 20px; */
   }
-  /* .footer_details div:first-child {
-    margin-bottom: 24px;
-  } */
   .footer_copyrights {
     padding: 24px 20px;
-    /* height: 152px; */
   }
   .footer_copyrights div:first-child {
     text-align: center !important;
@@ -250,12 +226,9 @@ export default {
     font-size: 14px;
   }
   .btn_footer_subscribe {
-    /* background-color: #ffffff;
-    color: #ff9f0d; */
     border: none;
     font-family: "Inter";
     border-radius: 0 4px 4px 0;
-    /* font-size: 14px; */
     padding: 14px 20px !important;
   }
 }

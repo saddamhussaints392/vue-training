@@ -378,42 +378,17 @@ export default {
   padding: 120px 0;
 }
 .in_stock {
-  /* background: #ff9f0d; */
   padding: 3px 17px;
   border-radius: 6px;
-  /* font-family: "Inter"; */
 }
-/* .btns_pre_next {
-  font-family: "Inter";
-  /* font-size: 18px; */
-/* line-height: 26px; */
-/* color: #828282; 
-} */
-/* .product_name {
-  font-family: "Helvetica";
-  font-size: 48px;
-  color: #333333;
-} */
 .product_description {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 32px;
-  /* color: #4f4f4f; */
 }
 .pricing_section {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 34px;
 }
-/* .product_taste {
-  font-family: "Inter";
-  font-size: 18px;
-  color: #333333;
-} */
-/* .product_price,
-.similar_product-text {
-  font-family: "Helvetica";
-  font-size: 32px;
-  color: #333333;
-} */
 .rating_section {
   font-family: "Inter";
   font-size: 16px;
@@ -430,52 +405,14 @@ export default {
   height: 50px;
   cursor: pointer;
 }
-/* .product_quantity {
-  font-family: "Helvetica";
-  font-size: 20px;
-  color: #333333;
-} */
-
 .wish_socialmedia_section {
   border-bottom: 1px solid #e0e0e0;
   padding-top: 24px;
   padding-bottom: 32px;
 }
-/* .wishlist_compare_section {
-  font-family: "Inter";
-  font-size: 18px;
-  color: #4f4f4f;
-} */
-/* .category_text,
-.tag_text,
-.share_text {
-  font-family: "Inter";
-  font-size: 18px;
-  color: #333333;
-} */
-/* .category_name,
-.tag_name {
-  color: #4f4f4f;
-} */
-/* .description_text {
-  font-family: "Inter";
-  font-size: 16px;
-  color: #828282;
-} */
 .description_text p:first-child {
   margin-top: 32px;
 }
-/* .key_benefits_text {
-  font-family: "Helvetica";
-  font-size: 18px;
-  color: #4f4f4f;
-} */
-/* .key_points {
-  font-family: "Inter";
-  font-size: 14px;
-  line-height: 22px;
-  color: #4f4f4f;
-} */
 .description_review_section {
   margin-top: 56px;
   margin-bottom: 120px;
@@ -548,17 +485,6 @@ export default {
   .description_review_section {
     margin: 42px 0;
   }
-  /* .btns_pre_next {
-    font-family: "Inter";
-    /* font-size: 16px; */
-  /* line-height: 26px; */
-  /* color: #828282; 
-  } */
-  /* .product_name {
-    font-family: "Helvetica";
-    font-size: 40px;
-    color: #333333;
-  } */
   .btn_active {
     width: 100%;
     background: #ff9f0d;

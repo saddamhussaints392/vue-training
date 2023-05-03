@@ -611,18 +611,7 @@ export default {
 .choose_and_pick_fr {
   color: #ff9f0d !important;
 }
-/* .abt_us_title,
-.food_category_title,
-.why_choose_title,
-.choose_and_pick_title,
-.chefs_title,
-.restaurant_title,
-.blog_post_title,
-.the_art_title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-} */
+
 .twitter_icon {
   fill: #ff9f0d;
 }
@@ -671,46 +660,25 @@ export default {
 }
 .save_amount_text {
   border-radius: 6px;
-  /* color: #ff9f0d; */
   padding: 7px 19px;
-  /* font-weight: 700;
-  font-size: 18px;
-  line-height: 26px; */
   position: absolute;
   top: 35%;
   left: 30%;
 }
 .food_type {
-  /* font-weight: 700; */
-  /* font-size: 20px;
-  line-height: 28px; */
-  /* background: #ff9f0d; */
   border-radius: 6px;
-  /* color: #fff5f5; */
   padding: 9px 31px;
   position: absolute;
   left: 0;
   bottom: 100px;
 }
 .hamburger_icon {
-  /* background: #ff9f0d; */
   border-radius: 6px;
 }
 .why_choose_us_images {
   gap: 15px;
 }
 
-/* .years_of_text {
-  font-size: 20px;
-  line-height: 28px;
-  color: #1e1e1e;
-} */
-/* .experienced_text {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: #1e1e1e;
-} */
 .experience_section {
   border-left: 10px solid #ff9f0d;
   width: 374px;
@@ -804,19 +772,6 @@ export default {
     margin: auto;
   }
 
-  /* .abt_us_title,
-  .food_category_title,
-  .why_choose_title,
-  .choose_and_pick_title,
-  .chefs_title,
-  .restaurant_title,
-  .blog_post_title,
-  .the_art_title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-  } */
-
   .the_art_description,
   .abt_us_description,
   .restaurant_desccription,
@@ -846,31 +801,22 @@ export default {
   .about_us_images {
     display: none;
   }
-
   .save_amount_text {
     border-radius: 6px;
-    /* color: #ff9f0d; */
     padding: 5px 8px;
-    /* font-weight: 700; */
-    /* font-size: 10px;
-    line-height: 18px; */
     position: absolute;
     top: 35%;
     left: 30%;
   }
   .food_type {
-    /* font-weight: 700; */
     font-size: 12px;
     line-height: 20px;
-    /* background: #ff9f0d; */
     border-radius: 6px;
-    /* color: #fff5f5; */
     padding: 5px 12px;
     position: absolute;
     left: 0;
     bottom: 25px;
   }
-
   .food_category_cards > div:first-child,
   .chef_cards > div:first-child {
     padding: 0 0.5rem 0.5rem 0;
@@ -895,18 +841,6 @@ export default {
     flex-direction: column-reverse;
     margin-top: 62px;
   }
- 
-  /* .years_of_text {
-    font-size: 18px;
-    line-height: 26px;
-    color: #1e1e1e;
-  } */
-  /* .experienced_text {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    color: #1e1e1e;
-  } */
   .why_choose_us_images {
     gap: 7px;
   }

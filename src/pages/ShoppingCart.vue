@@ -53,7 +53,7 @@
               >Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laudantium dolorum numquam nemo</span>
               <div class="d-flex align-items-center coupon_code w-100 mt-4">
                 <input type="text" placeholder="Enter Here Code" class="w-100 normal-text-regular text-grey-3 bg-light" />
-                <button class="btn_code_apply medium-text-regular bg-primary">Apply</button>
+                <button class="btn_code_apply medium-text-regular">Apply</button>
               </div>
             </b-card>
           </b-col>
@@ -92,19 +92,7 @@ export default {};
 .shopping_cart_section {
   padding: 120px 0;
 }
-/* .coupon_code_text,
-.total_bill_text {
-   font-family: "Helvetica"; 
-   font-size: 32px;
-  color: #333333; 
-} */
-/* .coupon_description {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  color: #828282;
-} */
 .coupon_code > input {
-  /* background-color: #ffffff; */
   padding: 16px 24px;
   border: 1px solid #e0e0e0;
   outline: none;
@@ -115,10 +103,7 @@ export default {};
   font-family: "Inter";
 }
 .btn_code_apply {
-  /* background-color: #ff9f0d;
-  color: #ffffff; */
-  /* border: 1px solid #ff9f0d; */
-  /* font-family: "Inter"; */
+  background: #ff9f0d;
   border-radius: 4px;
 }
 .total_amount_section {
@@ -127,13 +112,8 @@ export default {};
 .btn_checkout {
   background: #ff9f0d;
 }
-
-/* .table_title {
-  font-size: 18px;
-  color: #333333;
-} */
 .quantity_change_btn {
-  width: 110px;
+  width: 120px;
   padding: 10px;
   border-radius: 40px;
   border: 1px solid #e0e0e0;
@@ -141,9 +121,6 @@ export default {};
 .quantity_change_btn > svg {
   cursor: pointer;
 }
-/* .food_item_title {
-  font-size: 16px;
-} */
 .table_data_row  td{
   border-bottom: 1px solid #e0e0e0;
   padding-top: 32px;
@@ -170,12 +147,7 @@ export default {};
     font-size: 14px;
   }
   .btn_code_apply {
-    /* background-color: #ff9f0d;
-    color: #ffffff; */
-    border: 1px solid #ff9f0d;
-    /* font-family: "Inter"; */
-    /* border-radius: 4px; */
-    /* font-size: 14px; */
+    background-color: #ff9f0d;
     padding: 14px 20px !important;
   }
   .table_row {
@@ -223,12 +195,8 @@ table tr td:nth-child(5),table tr th:nth-child(5) {
     font-size: 14px;
   }
   .btn_code_apply {
-    /* color: #ffffff;
-    background-color: #ff9f0d; */
-    /* border: none; */
-    /* font-family: "Inter"; */
+    background-color: #ff9f0d; 
     border-radius: 4px;
-    /* font-size: 14px; */
     padding: 14px 20px !important;
   }
   .table_row {

@@ -109,13 +109,6 @@ export default {
 .signup_section {
   padding: 120px 0;
 }
-/* .signup_text {
-  font-family: "Helvetica";
-  font-weight: 700;
-  font-size: 20px;
-  color: #333333;
-} */
-
 .person_icon {
   top: 25%;
   left: 4%;
@@ -130,28 +123,17 @@ input {
   background: #ff9f0d;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* font-family: "Helvetica";
-  font-weight: 400;
-  font-size: 16px; */
   cursor: pointer;
 }
 .btn_google_signup,
 .btn_apple_signup {
-  /* color: #4f4f4f; */
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
 }
 .forget_password_text,
 .remember_me_text {
-  /* font-family: "Helvetica";
-  font-weight: 400;
-  font-size: 14px;
-  color: #828282; */
   text-align: end !important;
 }
-/* .remember_me_text {
-  color: #333333;
-} */
 input[type="checkbox"] {
   height: 20px;
   width: 20px;

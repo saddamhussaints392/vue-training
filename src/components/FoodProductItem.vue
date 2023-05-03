@@ -48,24 +48,10 @@ export default {
   object-fit: cover;
 }
 .item_name {
-  /* font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #333333; */
   margin-top: 8px;
   margin-bottom: 4px;
   cursor: pointer;
 }
-/* .item_price {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #ff9f0d;
-} */
-/* .item_discount {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #828282;
-} */
 .icons_row {
   display: none;
   position: absolute;
@@ -92,27 +78,11 @@ export default {
   border-radius: 2px;
   color: #ff9f0d;
 }
-/* .active_wishlist{
-  cursor: pointer;
-  width: 41px;
-  height: 34px;
-  background: #ff9f0d;
-  border-radius: 2px;
-  color: white;
-} */
-
 @media screen and (max-width: 480px) {
   .grid_images_section > img {
     width: 158px;
     height: 135px;
   }
-  /* .item_name {
-    font-size: 14px;
-  } */
-  /* .item_price,
-  .item_discount {
-    font-size: 12px;
-  } */
   .icons_row {
     position: absolute;
     top: 30%;

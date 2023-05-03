@@ -132,13 +132,6 @@
       <span class="d-block h6 text-grey-1">Product Tags</span>
       <div class="tags normal-text-regular text-grey-2">
         <span class="d-block tag" v-for="tag in productTags" :key="tag" @click="productsStore.selectProductByTag(tag)">{{tag}}</span>
-        <!-- <span class="d-block tag">Our Menu</span>
-        <span class="d-block tag">Pizza</span>
-        <span class="d-block tag">Cupcake</span>
-        <span class="d-block tag">Burger</span>
-        <span class="d-block tag">Cookies</span>
-        <span class="d-block tag">Our Shop</span>
-        <span class="d-block tag">Tandoori Chicken</span> -->
       </div>
     </div>
   </b-card>
@@ -237,17 +230,8 @@ export default {
 .product_tags_section {
   margin-top: 24px;
 }
-/* .category,
-.filter_by_price,
-.latest_products {
-  font-family: "Helvetica";
-  font-size: 20px;
-  color: #333333;
-} */
 .category_item {
   margin-top: 24px;
-  /* font-family: "Helvetica";
-  font-size: 18px; */
 }
 .category_img_section {
   margin-top: 24px;
@@ -258,23 +242,11 @@ export default {
   top: 29px;
   left: 23px;
 }
-/* .perfect_taste,
-.restaurant_item_price {
-  font-family: "Inter";
-  font-size: 16px;
-  color: white;
-} */
-/* .classic_restaurant {
-  font-family: "Helvetica";
-  font-size: 20px;
-  color: white;
-} */
 .shop_now_section {
   cursor: pointer;
   position: absolute;
   bottom: 31px;
   left: 23px;
-  /* color: white; */
 }
 .middle {
   position: relative;
@@ -340,42 +312,15 @@ input[type="range"]::-webkit-slider-thumb {
   background: red;
   -webkit-appearance: none;
 }
-/* .filter_range,
-.filter_text {
-  font-family: "Inter";
-  font-size: 16px;
-  color: #1e1e1e;
-} */
-/* .filter_text {
-  color: #0d0d0d;
-} */
 .latest_products_item > img {
   width: 72px;
 }
-/* .product_item_name {
-  font-family: "Helvetica";
-  font-size: 16px;
-  color: #4f4f4f;
-} */
-/* .product_item_price {
-  font-family: "Helvetica";
-  font-size: 14px;
-  color: #4f4f4f;
-} */
 .product_tags_section > .tags {
   display: flex;
   flex-wrap: wrap;
 }
-/* .product_tags {
-  font-family: "Helvetica";
-  font-size: 20px;
-  color: #333333;
-} */
 .tags > .tag {
   cursor: pointer;
-  /* font-family: "Inter";
-  font-size: 16px; */
-  /* color: #4f4f4f; */
   border-bottom: 1px solid #4f4f4f;
   margin-right: 10px;
 }
@@ -399,11 +344,6 @@ input[type="range"]::-webkit-slider-thumb {
     border: 1px solid #e0e0e0;
     border-radius: 6px;
   }
-  /* .sort_by_text {
-    font-family: "Inter";
-    font-size: 12px;
-    color: #333333;
-  } */
   .product_search input {
     width: 295px;
     outline: none;
@@ -426,7 +366,6 @@ input[type="range"]::-webkit-slider-thumb {
     position: absolute;
     bottom: 40px;
     left: 40px;
-    /* color: white; */
   }
 
   select {

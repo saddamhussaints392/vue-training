@@ -74,12 +74,6 @@ export default {
 .carousel_dots.active {
     background: #ff9f0d;
 }
-/* .chef_category {
-  font-family: "Helvetica";
-  font-weight: 400;
-  font-size: 16px;
-  color: #828282;
-} */
 .testimonials_wh {
     color: #ff9f0d;
 }

@@ -69,7 +69,6 @@ export default {
     url("../assets/images/clients_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
-  /* margin-top: 120px; */
   
 }
 .clients_section {
